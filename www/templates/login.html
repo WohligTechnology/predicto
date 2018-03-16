@@ -1,4 +1,4 @@
-<ion-modal-view>
+<!-- <ion-modal-view>
   <ion-header-bar>
     <h1 class="title">Login</h1>
     <div class="buttons">
@@ -22,4 +22,34 @@
       </div>
     </form>
   </ion-content>
-</ion-modal-view>
+</ion-modal-view> -->
+<ion-view view-title="Login">
+    <ion-content>
+        <div class="list login-section">
+            <div class="login-title text-center">
+                <h3> welcome to predicto</h3>
+            </div>
+            <form novalidate ng-submit="">
+                <div class="item-input-inset">
+                    <label class="item-input-wrapper">
+                  <input type="number" placeholder="Mobile Number">
+                </label>
+                </div>
+                <div class="item-input-inset">
+                    <label class="item-input-wrapper">
+                  <input type="password" placeholder="Password">
+                </label>
+                </div>
+                <div class="">
+                    <ion-checkbox class="checkbox-square">Keep me logged in.</ion-checkbox>
+                    <button class="button button-block button-energized">login</button>
+                    <a href="">Forgot Password?</a>
+                    <div class="text-center">
+                        <a class="button icon-left button-large ion-social-facebook button-positive">Connect</a>
+                        <a class="button icon-left button-large ion-social-twitter button-calm">Connect</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>

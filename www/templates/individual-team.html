@@ -1,0 +1,60 @@
+<ion-view view-title="IndividualTeam">
+    <ion-content scroll="false">
+        <ion-slides options="options" slider="data.slider">
+            <ion-slide-page ng-repeat="data in teamSlider track by $index">
+                <div style="display:flex; align-items: center; justify-content:center">
+                    <div ng-repeat="img in data.img track by $index" class=" test" style="flex:1">
+                        <img ng-src="{{img}}" alt="">
+                    </div>
+                </div>
+                <div class="padding test">time:</div>
+                <div>VS</div>
+            </ion-slide-page>
+        </ion-slides>
+
+        <div class="list">
+            <label class="padding-left padding-right">Who will hit the first six of  the game?
+</label>
+            <div class="item item-input-inset">
+                <label class="item-input-wrapper">
+      <input type="text" placeholder="click here to write">
+    </label>
+                <button class="button button-small">Submit</button>
+            </div>
+        </div>
+        <div class="list">
+            <label class="padding-left padding-right">Who will take the first wicket of the game?
+
+</label>
+            <div class="item item-input-inset">
+                <label class="item-input-wrapper">
+            <input type="text" placeholder="click here to write">
+        </label>
+                <button class="button button-small"> Submit</button>
+            </div>
+        </div>
+        <div class="list">
+            <label class="padding-left padding-right">How many runs will Aaron Finch score?
+
+</label>
+            <div class="item item-input-inset">
+                <label class="item-input-wrapper">
+            <input type="text" placeholder="click here to write">
+        </label>
+                <button class="button button-small"> Submit</button>
+            </div>
+        </div>
+        <div class="list">
+            <label class="padding-left padding-right">In what over will Akshar Patel bowl his first over 
+of the game?
+
+</label>
+            <div class="item item-input-inset">
+                <label class="item-input-wrapper">
+            <input type="text" placeholder="click here to write">
+        </label>
+                <button class="button button-small"> Submit</button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
