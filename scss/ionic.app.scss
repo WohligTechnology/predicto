@@ -17,7 +17,141 @@ $dark:                            #444 !default;
 
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
-
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
+@import "www/lib/ionic/bourbon/bourbon.scss";
+@import "_bourbon.scss";
+@font-face {
+    font-family: 'Oswald-Bold';
+    src: url("../lib/ionic/fonts/oswald/Oswald-Bold.ttf");
+}
 
+@font-face {
+    font-family: 'OpenSans-Regular';
+    src: url("../lib/ionic/fonts/open-sans/OpenSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'AmericanTypewriterRegular';
+    src: url("../lib/ionic/fonts/AmericanTypewriterRegular/AmericanTypewriterRegular.ttf");
+}
+
+@font-face {
+    font-family: 'fjalla';
+    src: url("../lib/ionic/fonts/fjalla/fjalla.ttf");
+}
+
+
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Predicto  
+    Description: This is html5 template
+    Author: Wohlig
+-----------------------------------------------------------------------------------
+  CSS INDEX (HAS BEEN ARRANGED AS PER App flow & As per BOX MODEL(width, height, padd, border, margin, alpha)
+    ===================
+    1 Theme default CSS 
+    2 header 
+    3 login
+    4 menu
+    5 home
+    6 individual-team
+
+-----------------------------------------------------------------------------------*/
+
+
+/*---------------------------------Theme default CSS*---------------------/**/
+
+.d-flex {
+    display: flex;
+}
+
+.d-inline {
+    display: inline-block;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-table {
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+.d-cell {
+    display: table-cell;
+}
+
+.align-top {
+    vertical-align: top;
+}
+
+.align-middle {
+    vertical-align: middle;
+}
+
+.align-bottom {
+    vertical-align: bottom;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-end {
+    justify-content: flex-end;
+}
+
+.justify-content-start {
+    justify-content: lex-start;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+.fix {
+    overflow: hidden
+}
+
+.clear {
+    clear: both;
+}
+
+.font-oswald-bold {
+    font-family: 'Oswald-Bold', sans-serif;
+}
+
+.font-opensans-rg {
+    font-family: 'OpenSans-Regular', sans-serif;
+}
+
+.font-american-rg {
+    font-family: 'AmericanTypewriterRegular', sans-serif;
+}
+
+.font-fjalla {
+    font-family: 'fjalla', sans-serif;
+}
+
+body {
+    font-size: 13px;
+    // font-family:
+    // we need to use GalanoGrotesq
+}
+
+
+/*---------------------------------Login CSS*---------------------/**/
+
+.login-section {
+    .login-title {
+        font-size: 27px!important;
+    }
+}
