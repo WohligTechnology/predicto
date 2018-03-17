@@ -14,13 +14,19 @@ $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
-
+$yellow:#fae90c !default;
+$black:#000 !default;
+$darkgray:#282828 !default;
+$light:#fff !default;
+$lightgray:#d2d2d2 !default;
+$darkblue:#375b8d !default;
+$lightblue:#75a9e9 !default;
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
-@import "www/lib/ionic/bourbon/bourbon.scss";
-@import "_bourbon.scss";
+// @import "www/lib/ionic/bourbon/bourbon.scss";
+// @import "_bourbon.scss";
 @font-face {
     font-family: 'Oswald-Bold';
     src: url("../lib/ionic/fonts/oswald/Oswald-Bold.ttf");
@@ -141,17 +147,142 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     font-family: 'fjalla', sans-serif;
 }
 
+.padd-lr{
+    padding: 0px 45px;
+}
+
 body {
     font-size: 13px;
     // font-family:
     // we need to use GalanoGrotesq
 }
-
-
+.bg-black{
+    background-color: $black;
+}
+.page-title{
+    h2{
+        padding: 20px;
+        color:$yellow ;
+        font-size: 36px;
+        background-color: $black;
+        font-family: 'AmericanTypewriterRegular';
+    }
+}
+  
 /*---------------------------------Login CSS*---------------------/**/
 
 .login-section {
     .login-title {
-        font-size: 27px!important;
+        background-color: $yellow;
+        margin: 15% 0%;
+        h3{
+            padding: 20px;
+            font-size: 27px!important;
+            font-family: 'AmericanTypewriterRegular';
+            color:$black;
+        }
+       
     }
+    .item-input-inset {
+        padding: 7px 0px;
+        input::placeholder{
+            font-size: 13px !important;
+            color: $lightgray;
+            font-family: 'OpenSans-Regular';
+        }
+    }
+    .item-input-wrapper {
+        border-radius: 0px !important;
+       
+    }
+   .item{
+       background: transparent;
+       border: none;
+       padding: 7px;
+   }
+   .item-checkbox{
+    padding-left: 32px;
+    font-size: 13px;
+    font-family: 'OpenSans-Regular';
+    color:$light;
+    .checkbox{
+        left: -8px;
+       }
+   } 
+}
+ .login-btn{
+    .btn-yellow{
+        margin-bottom: 4px !important;
+      font-size: 17px;
+      font-family: 'AmericanTypewriterRegular';
+      background-color: $yellow;
+      color:$black;
+      border-radius: 0px;
+      line-height: 31px;
+      min-height: 25px;
+    
+       }
+       a{
+           padding: 0px 4px;
+           font-size: 12px;
+           color:$light;
+           font-family: 'OpenSans-Regular';
+
+
+       }
+       
+ }
+ .social-btn{
+    .btn-facebook{
+        font-size: 18px;
+        background-color: $darkblue;
+     font-family: 'OpenSans-Regular';
+    }
+    .button-large.icon-right:before {
+       
+    }
+    .button-large.icon:before, .button-large.icon-left:before, .button-large.icon-right:before{
+        padding-bottom: 2px;
+        font-size: 33px !important;
+        line-height: 35px !important;
+        
+    }
+    .button-large {
+        padding: 0 16px;
+  
+        min-height: 47px;
+        font-size: 20px;
+        line-height: 40px;
+        border-radius: 0px;
+    }
+    .button-twitter{
+        background-color: $lightblue;
+    }
+ }  
+/*---------------------------------leaderboard css------------------*/
+.leaderboard-desc{
+    .item:first-child{
+        padding-top: 30px;
+    }
+    .list:first-child{
+        margin-top: -10px;
+    
+    }
+}
+.leaderboard-desc{
+    .name{
+        font-size: 17px;
+        color:$darkgray;
+    }
+    .item-number{
+        font-family: 'Oswald-Bold';
+        font-size: 31px;
+        color: $black;
+    }
+    .item{
+    border-bottom: 1px solid $black;
+    border-color: $black;
+border-right:none;
+    }
+   
 }

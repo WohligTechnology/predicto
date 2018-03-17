@@ -9613,10 +9613,10 @@ a.button {
     margin-top: env(safe-area-inset-top); }
 
 .platform-ios.platform-cordova:not(.fullscreen) .bar-header {
-  padding-left: calc( constant(safe-area-inset-left) + 5px);
+  padding-left: calc( constant(safe-area-inset-left) + 5px);
   padding-left: calc(env(safe-area-inset-left) + 5px);
-  padding-right: calc( constant(safe-area-inset-right) + 5px);
-  padding-right: calc( env(safe-area-inset-right) + 5px); }
+  padding-right: calc( constant(safe-area-inset-right) + 5px);
+  padding-right: calc( env(safe-area-inset-right) + 5px); }
   .platform-ios.platform-cordova:not(.fullscreen) .bar-header .buttons:last-child {
     right: calc(constant(safe-area-inset-right) + 5px);
     right: calc(env(safe-area-inset-right) + 5px); }
@@ -9874,11 +9874,199 @@ a.button {
 
 @font-face {
   font-family: 'Oswald-Bold';
-  src: url("../lib/ionic/fonts/Oswald-Bold.ttf"); }
+  src: url("../lib/ionic/fonts/oswald/Oswald-Bold.ttf"); }
+
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: url("../lib/ionic/fonts/open-sans/OpenSans-Regular.ttf"); }
+
+@font-face {
+  font-family: 'AmericanTypewriterRegular';
+  src: url("../lib/ionic/fonts/AmericanTypewriterRegular/AmericanTypewriterRegular.ttf"); }
+
+@font-face {
+  font-family: 'fjalla';
+  src: url("../lib/ionic/fonts/fjalla/fjalla.ttf"); }
+
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Predicto  
+    Description: This is html5 template
+    Author: Wohlig
+-----------------------------------------------------------------------------------
+  CSS INDEX (HAS BEEN ARRANGED AS PER App flow & As per BOX MODEL(width, height, padd, border, margin, alpha)
+    ===================
+    1 Theme default CSS 
+    2 header 
+    3 login
+    4 menu
+    5 home
+    6 individual-team
+
+-----------------------------------------------------------------------------------*/
+/*---------------------------------Theme default CSS*---------------------/**/
+.d-flex {
+  display: flex; }
+
+.d-inline {
+  display: inline-block; }
+
+.d-block {
+  display: block; }
+
+.d-table {
+  width: 100%;
+  height: 100%;
+  display: table; }
+
+.d-cell {
+  display: table-cell; }
+
+.align-top {
+  vertical-align: top; }
+
+.align-middle {
+  vertical-align: middle; }
+
+.align-bottom {
+  vertical-align: bottom; }
+
+.justify-content-center {
+  justify-content: center; }
+
+.justify-content-end {
+  justify-content: flex-end; }
+
+.justify-content-start {
+  justify-content: lex-start; }
+
+.align-items-center {
+  align-items: center; }
+
+.img-responsive {
+  max-width: 100%;
+  height: auto; }
+
+.fix {
+  overflow: hidden; }
+
+.clear {
+  clear: both; }
+
+.font-oswald-bold {
+  font-family: 'Oswald-Bold', sans-serif; }
+
+.font-opensans-rg {
+  font-family: 'OpenSans-Regular', sans-serif; }
+
+.font-american-rg {
+  font-family: 'AmericanTypewriterRegular', sans-serif; }
+
+.font-fjalla {
+  font-family: 'fjalla', sans-serif; }
+
+.padd-lr {
+  padding: 0px 45px; }
 
 body {
   font-size: 13px; }
 
-.test {
-  color: red;
-  font-family: 'Oswald-Bold', sans-serif; }
+.bg-black {
+  background-color: #000; }
+
+.page-title h2 {
+  padding: 20px;
+  color: #fae90c;
+  font-size: 36px;
+  background-color: #000;
+  font-family: 'AmericanTypewriterRegular'; }
+
+/*---------------------------------Login CSS*---------------------/**/
+.login-section .login-title {
+  background-color: #fae90c;
+  margin: 15% 0%; }
+  .login-section .login-title h3 {
+    padding: 20px;
+    font-size: 27px !important;
+    font-family: 'AmericanTypewriterRegular';
+    color: #000; }
+
+.login-section .item-input-inset {
+  padding: 7px 0px; }
+  .login-section .item-input-inset input::placeholder {
+    font-size: 13px !important;
+    color: #d2d2d2;
+    font-family: 'OpenSans-Regular'; }
+
+.login-section .item-input-wrapper {
+  border-radius: 0px !important; }
+
+.login-section .item {
+  background: transparent;
+  border: none;
+  padding: 7px; }
+
+.login-section .item-checkbox {
+  padding-left: 32px;
+  font-size: 13px;
+  font-family: 'OpenSans-Regular';
+  color: #fff; }
+  .login-section .item-checkbox .checkbox {
+    left: -8px; }
+
+.login-btn .btn-yellow {
+  margin-bottom: 4px !important;
+  font-size: 17px;
+  font-family: 'AmericanTypewriterRegular';
+  background-color: #fae90c;
+  color: #000;
+  border-radius: 0px;
+  line-height: 31px;
+  min-height: 25px; }
+
+.login-btn a {
+  padding: 0px 4px;
+  font-size: 12px;
+  color: #fff;
+  font-family: 'OpenSans-Regular'; }
+
+.social-btn .btn-facebook {
+  font-size: 18px;
+  background-color: #375b8d;
+  font-family: 'OpenSans-Regular'; }
+
+.social-btn .button-large.icon:before, .social-btn .button-large.icon-left:before, .social-btn .button-large.icon-right:before {
+  padding-bottom: 2px;
+  font-size: 33px !important;
+  line-height: 35px !important; }
+
+.social-btn .button-large {
+  padding: 0 16px;
+  min-height: 47px;
+  font-size: 20px;
+  line-height: 40px;
+  border-radius: 0px; }
+
+.social-btn .button-twitter {
+  background-color: #75a9e9; }
+
+/*---------------------------------leaderboard css------------------*/
+.leaderboard-desc .item:first-child {
+  padding-top: 30px; }
+
+.leaderboard-desc .list:first-child {
+  margin-top: -10px; }
+
+.leaderboard-desc .name {
+  font-size: 17px;
+  color: #282828; }
+
+.leaderboard-desc .item-number {
+  font-family: 'Oswald-Bold';
+  font-size: 31px;
+  color: #000; }
+
+.leaderboard-desc .item {
+  border-bottom: 1px solid #000;
+  border-color: #000;
+  border-right: none; }

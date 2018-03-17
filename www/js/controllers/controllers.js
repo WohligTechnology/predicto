@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+var connector = angular.module('starter.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout, $log) {
 
@@ -42,52 +42,12 @@ angular.module('starter.controllers', [])
     };
 })
 
-.controller('HomeCtrl', function($scope, $log, $window) {
-        $scope.options = {
-            autoplay: 3000,
-            loop: false,
-            initialSlide: 0,
-            //effect: 'fade',
-            speed: 300, //0.3s seconds
-            //slidesPerView: 2
-        };
-        $scope.teamSlider = [
-            { img: ["img/flower.jpg", "img/price.png"] },
-            { img: ["img/price.png", "img/flower.jpg"] }
-        ];
-        $scope.$on("$ionicSlides.sliderInitialized", function(event, data) {
-            // data.slider is the instance of Swiper
-            $scope.slider = data.slider;
-        });
-    })
-    .controller('IndividualTeamCtrl', function($scope, $log, $window) {
-        $scope.options = {
-            autoplay: 3000,
-            loop: false,
-            initialSlide: 0,
-            //effect: 'fade',
-            speed: 300, //0.3s seconds
-            //slidesPerView: 2
-        };
-        $scope.teamSlider = [
-            { img: ["img/flower.jpg", "img/price.png"] },
-            { img: ["img/price.png", "img/flower.jpg"] }
-        ];
-        $scope.$on("$ionicSlides.sliderInitialized", function(event, data) {
-            // data.slider is the instance of Swiper
-            $scope.slider = data.slider;
-        });
 
-    })
-    .controller('LeaderBoardCtrl', function($scope, $log, $window) {
+  
+    // .controller('LoginCtrl', function($scope, $log, $window) {
 
-    })
-    .controller('LoginCtrl', function($scope, $log, $window) {
+    // })
 
-    })
-    .controller('PrizeCtrl', function($scope, $log, $window) {
-
-    })
     .controller('PlaylistsCtrl', function($scope) {
         $scope.playlists = [
             { title: 'Reggae', id: 1 },
