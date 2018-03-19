@@ -1,14 +1,48 @@
 <ion-view view-title="Home">
-    <ion-content scroll="false">
+    <ion-content scroll="false" class="bg-black">
+        <div class="text-center home-title">
+            <h3>Mumbai Indians</h3>
+            <h1>VS</h1>
+            <h3>Knight Riders</h3>
+        </div>
+        <div>
+        </div>
         <ion-slides options="options" slider="data.slider">
             <ion-slide-page ng-repeat="data in teamSlider track by $index">
-                <div style="display:flex; align-items: center; justify-content:center">
-                    <div ng-repeat="img in data.img track by $index" class=" test" style="flex:1">
-                        <img ng-src="{{img}}" alt="">
-                    </div>
+                <div class="match-slider">
+                    <div class="question"><p>{{data.question}}</p></div>
+                    <div class="question-option"> 
+                         <label class="item item-icon-left item-radio" style="border: none">
+                            <input type="radio" name="group">
+                            <div class="item-content" style="margin-left:0px">
+                               {{data.option1}} 
+                            </div>
+                            <i class="radio-icon ion-checkmark"></i>
+                        </label>
+                        <label class="item item-icon-left item-radio" style="border: none">
+                            <input type="radio" name="group">
+                            <div class="item-content">
+                                {{data.option2}}
+                            </div>
+                            <i class="radio-icon ion-checkmark"></i>
+                        </label>
+                        <label class="item item-icon-left item-radio" style="border: none">
+                            <input type="radio" name="group">
+                            <div class="item-content">
+                                {{data.option3}}
+                            </div>
+                            <i class="radio-icon ion-checkmark"></i>
+                        </label>
+                        <label class="item item-icon-left item-radio" style="border: none">
+                            <input type="radio" name="group">
+                            <div class="item-content">
+                                {{data.option4}}
+                            </div>
+                            <i class="radio-icon ion-checkmark"></i>
+                        </label></div>
+                  
+                    <button class="button btn-submit"> SUBMIT</button>
                 </div>
-                <div class="padding">time:</div>
-                <div>VS</div>
             </ion-slide-page>
         </ion-slides>
     </ion-content>

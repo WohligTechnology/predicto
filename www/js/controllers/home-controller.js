@@ -9,8 +9,20 @@ myApp.controller('HomeCtrl', function($scope, $log, $window) {
         //slidesPerView: 2
     };
     $scope.teamSlider = [
-        { img: ["img/flower.jpg", "img/price.png"] },
-        { img: ["img/price.png", "img/flower.jpg"] }
+      {
+          question:"How many runs will Aaron Finch score?",
+          option1:"40-50",
+          option2:"40-50",
+          option3:"40-50",
+          option4:"40-50"
+      },
+      {
+        question:"How many runs will Aaron",
+        option1:"40-50",
+        option2:"40-50",
+        option3:"40-50",
+        option4:"40-50"
+    }
     ];
     $scope.$on("$ionicSlides.sliderInitialized", function(event, data) {
         // data.slider is the instance of Swiper

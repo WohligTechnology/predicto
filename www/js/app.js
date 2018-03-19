@@ -22,9 +22,12 @@ myApp.run(function($ionicPlatform) {
     });
 })
 
-myApp.config(function($stateProvider, $urlRouterProvider) {
-    $stateProvider
+myApp.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
+ 
 
+    $ionicConfigProvider.form.checkbox('square');
+    $ionicConfigProvider.form.toggle('small');
+    $stateProvider
         .state('app', {
             url: '/app',
             abstract: true,
