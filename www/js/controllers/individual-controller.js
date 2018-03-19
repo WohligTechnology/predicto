@@ -1,5 +1,5 @@
 
-    connector.controller('IndividualTeamCtrl', function($scope, $log, $window) {
+    myApp.controller('IndividualTeamCtrl', function($scope, $log, $window) {
         $scope.options = {
             autoplay: 3000,
             loop: false,

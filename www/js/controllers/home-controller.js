@@ -1,5 +1,5 @@
 
-connector.controller('HomeCtrl', function($scope, $log, $window) {
+myApp.controller('HomeCtrl', function($scope, $log, $window) {
     $scope.options = {
         autoplay: 3000,
         loop: false,

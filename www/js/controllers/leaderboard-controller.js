@@ -1,4 +1,4 @@
-connector.controller('LeaderBoardCtrl', function($scope, $log, $window) {
+myApp.controller('LeaderBoardCtrl', function($scope, $log, $window) {
 
 $scope.leaderboard = [
     {

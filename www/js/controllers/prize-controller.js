@@ -1,3 +1,3 @@
-connector.controller('PrizeCtrl', function($scope, $log, $window) {
+myApp.controller('PrizeCtrl', function($scope, $log, $window) {
 
 })

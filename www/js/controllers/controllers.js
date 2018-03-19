@@ -1,4 +1,4 @@
-var connector = angular.module('starter.controllers', [])
+var myApp = angular.module('starter.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout, $log) {
 
