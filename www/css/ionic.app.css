@@ -10055,7 +10055,7 @@ body {
   padding-top: 30px; }
 
 .leaderboard-desc .list:first-child {
-  margin-top: -10px; }
+  margin-top: -11px; }
 
 .leaderboard-desc .name {
   font-size: 17px;
@@ -10069,4 +10069,5 @@ body {
 .leaderboard-desc .item {
   border-bottom: 1px solid #000;
   border-color: #000;
-  border-right: none; }
+  border-right: none;
+  border-left: none; }

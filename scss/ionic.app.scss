@@ -265,7 +265,7 @@ body {
         padding-top: 30px;
     }
     .list:first-child{
-        margin-top: -10px;
+        margin-top: -11px;
     
     }
 }
@@ -282,7 +282,8 @@ body {
     .item{
     border-bottom: 1px solid $black;
     border-color: $black;
-border-right:none;
+    border-right:none;
+    border-left:none;
     }
    
 }
