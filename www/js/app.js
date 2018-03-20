@@ -6,8 +6,8 @@
 // 'starter.controllers' is found in controllers.js
 var myApp = angular.module('starter', ['ionic', 'starter.controllers']);
 
-myApp.run(function($ionicPlatform) {
-    $ionicPlatform.ready(function() {
+myApp.run(function ($ionicPlatform) {
+    $ionicPlatform.ready(function () {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
         if (window.cordova && window.cordova.plugins.Keyboard) {
@@ -22,8 +22,8 @@ myApp.run(function($ionicPlatform) {
     });
 })
 
-myApp.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
- 
+myApp.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+
 
     $ionicConfigProvider.form.checkbox('square');
     $ionicConfigProvider.form.toggle('small');
@@ -34,20 +34,29 @@ myApp.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
             templateUrl: 'templates/menu.html',
             controller: 'AppCtrl'
         })
-        .state('home', {
+        .state('app.home', {
             url: '/home',
-            templateUrl: 'templates/home.html',
-            controller: 'HomeCtrl'
+            views: {
+                'menuContent': {
+                    templateUrl: 'templates/home.html',
+                    controller: 'HomeCtrl'
+
+                }
+            }
         })
         .state('individual', {
             url: '/individual-team',
             templateUrl: 'templates/individual-team.html',
             controller: 'IndividualTeamCtrl'
         })
-        .state('leaderboard', {
+        .state('app.leaderboard', {
             url: '/leaderboard',
-            templateUrl: 'templates/leaderboard.html',
-            controller: 'LeaderBoardCtrl'
+            views: {
+                'menuContent': {
+                    templateUrl: 'templates/leaderboard.html',
+                    controller: 'LeaderBoardCtrl'
+                }
+            }
         })
         .state('login', {
             url: '/login',
@@ -59,17 +68,50 @@ myApp.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
             templateUrl: 'templates/prize.html',
             controller: 'PrizeCtrl'
         })
-
-    .state('app.search', {
-        url: '/search',
-        views: {
-            'menuContent': {
-                templateUrl: 'templates/search.html'
+        .state('app.calender', {
+            url: '/calender',
+            views: {
+                'menuContent': {
+                    templateUrl: 'templates/calender.html',
+                    controller: 'CalenderCtrl'
+                }
             }
-        }
-    })
+        })
+        .state('live', {
+            url: '/live',
+            templateUrl: 'templates/live.html',
+            controller: 'LiveCtrl'
+        })
+        .state('app.terms', {
+            url: '/terms',
 
-    .state('app.browse', {
+            
+            views: {
+                'menuContent': {
+                    templateUrl: 'templates/terms.html',
+                    controller: 'TermsCtrl'
+                }
+            }
+        })
+        .state('app.profile', {
+            url: '/profile',
+            views: {
+                'menuContent': {
+                    templateUrl: 'templates/profile.html',
+                    controller: 'ProfileCtrl'
+                }
+            }
+        })
+        .state('app.search', {
+            url: '/search',
+            views: {
+                'menuContent': {
+                    templateUrl: 'templates/search.html'
+                }
+            }
+        })
+
+        .state('app.browse', {
             url: '/browse',
             views: {
                 'menuContent': {
@@ -87,15 +129,15 @@ myApp.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
             }
         })
 
-    .state('app.single', {
-        url: '/playlists/:playlistId',
-        views: {
-            'menuContent': {
-                templateUrl: 'templates/playlist.html',
-                controller: 'PlaylistCtrl'
+        .state('app.single', {
+            url: '/playlists/:playlistId',
+            views: {
+                'menuContent': {
+                    templateUrl: 'templates/playlist.html',
+                    controller: 'PlaylistCtrl'
+                }
             }
-        }
-    });
+        });
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('login');
 });
