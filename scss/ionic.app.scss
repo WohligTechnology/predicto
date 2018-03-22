@@ -22,6 +22,7 @@ $lightgray:#d2d2d2 !default;
 $graydark:#b2b2b2  !default;
 $darkblue:#375b8d !default;
 $lightblue:#75a9e9 !default;
+$purpal:#b200e2 !default;
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
@@ -172,21 +173,30 @@ body {
         font-family: 'AmericanTypewriterRegular';
     }
 }
-.bar.bar-energized .title{
+.bar.bar-energized{
+
+} .title{
     font-size: 30px;
     font-family:'Lobster-Regular';
+}
+.bar.bar-energized{
+    background-color: $purpal;
+}
+.bar{
+    height: 70px;
+   
 }
 /*---------------------------------Login CSS*---------------------/**/
 
 .login-section {
     .login-title {
-        background-color: $yellow;
+        background-color:$purpal;
         margin: 15% 0%;
         h3{
             padding: 20px;
             font-size: 27px!important;
             font-family: 'AmericanTypewriterRegular';
-            color:$black;
+            color:#fff;
         }
        
     }
@@ -222,12 +232,11 @@ body {
         margin-bottom: 4px !important;
       font-size: 17px;
       font-family: 'AmericanTypewriterRegular';
-      background-color: $yellow;
-      color:$black;
+      background-color: $purpal;
+      color:#fff;
       border-radius: 0px;
       line-height: 31px;
       min-height: 25px;
-    
        }
        a{
            padding: 0px 4px;
