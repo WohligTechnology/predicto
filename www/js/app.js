@@ -63,10 +63,14 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider)
             templateUrl: 'templates/login.html',
             controller: 'LoginCtrl'
         })
-        .state('prize', {
+        .state('app.prize', {
             url: '/prize',
-            templateUrl: 'templates/prize.html',
-            controller: 'PrizeCtrl'
+            views: {
+                'menuContent': {
+                    templateUrl: 'templates/prize.html',
+                    controller: 'PrizeCtrl'
+                }
+            }
         })
         .state('app.calender', {
             url: '/calender',
@@ -77,16 +81,20 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider)
                 }
             }
         })
-        .state('live', {
+        .state('app.live', {
             url: '/live',
-            templateUrl: 'templates/live.html',
-            controller: 'LiveCtrl'
+            views: {
+                'menuContent': {
+                    templateUrl: 'templates/live.html',
+                   controller: 'LiveCtrl'
+                }
+            }
+           
         })
         .state('app.terms', {
             url: '/terms',
 
-            
-            views: {
+           views: {
                 'menuContent': {
                     templateUrl: 'templates/terms.html',
                     controller: 'TermsCtrl'

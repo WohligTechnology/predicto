@@ -9885,6 +9885,14 @@ a.button {
   src: url("../lib/ionic/fonts/open-sans/OpenSans-Regular.ttf"); }
 
 @font-face {
+  font-family: 'Play-Regular';
+  src: url("../lib/ionic/fonts/open-sans/Play-Regular.ttf"); }
+
+@font-face {
+  font-family: 'Play-Bold';
+  src: url("../lib/ionic/fonts/open-sans/Play-Bold.ttf"); }
+
+@font-face {
   font-family: 'AmericanTypewriterRegular';
   src: url("../lib/ionic/fonts/AmericanTypewriterRegular/AmericanTypewriterRegular.ttf"); }
 
@@ -9957,6 +9965,12 @@ a.button {
 .clear {
   clear: both; }
 
+.has-header {
+  top: 70px; }
+
+.color-yellow {
+  color: #fae90c; }
+
 .font-oswald-bold {
   font-family: 'Oswald-Bold', sans-serif; }
 
@@ -9972,25 +9986,45 @@ a.button {
 .padd-lr {
   padding: 0px 45px; }
 
+.color-white {
+  color: #fff; }
+
 body {
   font-size: 13px; }
+
+.has-bottom {
+  margin-bottom: 200px; }
 
 .bg-black {
   background-color: #000; }
 
-.page-title h2 {
-  padding: 20px;
-  color: #fae90c;
-  font-size: 36px;
-  background-color: #000;
-  font-family: 'AmericanTypewriterRegular'; }
+.padd-9 {
+  padding: 9px 0px; }
 
-.title {
+.page-title h2 {
+  padding: 21px;
+  color: #fff;
   font-size: 30px;
-  font-family: 'Lobster-Regular'; }
+  background-color: #000;
+  font-family: 'Play-Regular'; }
 
 .bar.bar-energized {
   background-color: #b200e2; }
+  .bar.bar-energized .title {
+    font-size: 30px;
+    font-family: 'Lobster-Regular';
+    margin-top: 15px; }
+  .bar.bar-energized .button.button-clear {
+    margin-top: 20px; }
+  .bar.bar-energized .back-text {
+    display: none; }
+  .bar.bar-energized .w35 {
+    width: 35px;
+    border-radius: 50%; }
+
+.bar .title + .buttons {
+  top: 21px;
+  right: 10px; }
 
 .bar {
   height: 70px; }
@@ -9998,7 +10032,7 @@ body {
 /*---------------------------------Login CSS*---------------------/**/
 .login-section .login-title {
   background-color: #b200e2;
-  margin: 15% 0%; }
+  margin: 15% 45px; }
   .login-section .login-title h3 {
     padding: 20px;
     font-size: 27px !important;
@@ -10049,7 +10083,9 @@ body {
   background-color: #375b8d;
   font-family: 'OpenSans-Regular'; }
 
-.social-btn .button-large.icon:before, .social-btn .button-large.icon-left:before, .social-btn .button-large.icon-right:before {
+.social-btn .button-large.icon:before,
+.social-btn .button-large.icon-left:before,
+.social-btn .button-large.icon-right:before {
   padding-bottom: 2px;
   font-size: 33px !important;
   line-height: 35px !important; }
@@ -10073,10 +10109,11 @@ body {
 
 .leaderboard-desc .name {
   font-size: 17px;
-  color: #282828; }
+  color: #282828;
+  font-family: 'Play-Regular'; }
 
 .leaderboard-desc .item-number {
-  font-family: 'Oswald-Bold';
+  font-family: 'Play-Bold';
   font-size: 31px;
   color: #000; }
 
@@ -10093,16 +10130,15 @@ body {
   font-family: 'AmericanTypewriterRegular'; }
 
 /*------------------------home-------------*/
-.home-title h3 {
-  font-family: 'AmericanTypewriterRegular';
-  color: #fae90c;
-  font-size: 20px; }
+.home-city {
+  margin-top: 25px; }
+  .home-city h2 {
+    margin-top: 5px; }
 
-.home-title h1 {
-  color: #fff;
-  font-family: 'AmericanTypewriterRegular';
-  font-size: 30px;
-  line-height: 20px; }
+.slide-height {
+  height: 81% !important; }
+  .slide-height .swiper-pagination-bullet {
+    background: #fff !important; }
 
 .match-slider {
   background-color: #fff;
@@ -10110,11 +10146,14 @@ body {
   padding: 60px 30px;
   border-radius: 40px; }
   .match-slider .item-icon-left .item-content {
-    font-size: 21px; }
+    font-size: 19px;
+    font-family: 'Play-Regular';
+    margin: 3px 0px; }
 
 .question {
-  font-size: 19px;
-  line-height: 28px; }
+  font-size: 20px;
+  line-height: 28px;
+  font-family: 'Play-Regular'; }
 
 .question-option {
   margin: 30px 0px; }
@@ -10127,7 +10166,8 @@ body {
   margin-left: 18px;
   line-height: 20px;
   min-height: 20px;
-  border-radius: 0px; }
+  border-radius: 0px;
+  font-family: 'Play-Bold'; }
 
 .item-icon-left .item-content {
   padding-left: 3em !important;
@@ -10137,10 +10177,10 @@ body {
 
 .item-icon-left i {
   left: 0;
-  padding-top: 2px !important;
+  padding-top: 7px !important;
   padding-bottom: 5px !important;
   right: auto;
-  color: #D4201F !important;
+  color: #b200e2 !important;
   font-size: 20px !important; }
 
 .item-radio input ~ .radio-icon {
@@ -10164,3 +10204,124 @@ body {
   border: 1px solid #980021;
   box-shadow: inset 0 2px 3px 0 rgba(255, 255, 255, 0.3), inset 0 -3px 6px 0 rgba(0, 0, 0, 0.2), 0 3px 2px 0 rgba(0, 0, 0, 0.2);
   background-image: linear-gradient(to bottom, #cf2b4f, #980021 100%); }
+
+/*-----------------------------calender--------------------*/
+.mumbai-vs-riders h2 {
+  font-size: 21px;
+  font-family: 'Play-Regular'; }
+
+.mumbai-vs-riders span {
+  font-size: 25px;
+  font-family: 'Play-Regular'; }
+
+.bor-right:after {
+  content: "";
+  position: absolute;
+  height: 72%;
+  top: 15%;
+  left: 56%;
+  border-right: 1px solid #c0baba; }
+
+.date-time {
+  float: right; }
+  .date-time img {
+    width: 17%;
+    margin-top: 7px; }
+  .date-time span {
+    font-size: 20px;
+    font-family: 'Play-Regular'; }
+
+.calender .card {
+  border-radius: 15px; }
+
+/*-------------------terms and conditions--------------------------*/
+.terms-condition {
+  padding: 10px 30px 10px 40px; }
+  .terms-condition li {
+    padding: 10px 0px;
+    font-size: 15px;
+    text-align: justify;
+    font-family: 'Play-Regular';
+    list-style-type: square; }
+
+/*---------------------live-----------------*/
+.score-detail {
+  padding: 30px;
+  margin: 30% 8%;
+  position: relative;
+  background-color: #000;
+  color: #fff;
+  border-radius: 40px; }
+
+.score {
+  position: absolute;
+  background-color: #b200e2;
+  top: -50px;
+  left: 15%;
+  padding: 25px 15px;
+  border-radius: 15px; }
+  .score span {
+    padding: 0px 8px;
+    font-size: 25px;
+    color: #000;
+    font-family: 'Play-Regular'; }
+
+.live {
+  padding: 5px 14px;
+  position: absolute;
+  top: -75px;
+  left: 41%;
+  z-index: 1;
+  background-color: black;
+  border-radius: 9px; }
+  .live span {
+    font-size: 20px;
+    color: #fff;
+    font-family: 'Play-Regular'; }
+
+.run-rate {
+  font-size: 16px;
+  color: #fff;
+  font-family: 'Play-Regular'; }
+
+.user-name span {
+  font-size: 25px;
+  font-family: 'Play-Regular'; }
+
+.font-13 {
+  font-size: 13px !important; }
+
+.padd-tb {
+  padding: 50px 10px; }
+
+.padd-b {
+  padding-bottom: 65px;
+  padding-left: 10px; }
+
+.mar-t {
+  margin-top: 8px; }
+
+.bor-right:after {
+  content: "";
+  position: absolute;
+  height: 22px;
+  top: 24px;
+  left: 173px;
+  border-right: 2px solid #000; }
+
+.this-over {
+  font-size: 10px !important;
+  border: 1px solid #fae90c;
+  border-radius: 50px;
+  padding: 3px 6px;
+  color: #fae90c; }
+
+/*--------------------prize-----------------*/
+.prize-img {
+  margin: 90px 40px; }
+
+/*---------------side menu-----------------------*/
+.playlists .item {
+  font-size: 17px;
+  font-family: 'Play-Regular';
+  background-color: #b200e2 !important; }

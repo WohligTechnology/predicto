@@ -1,13 +1,15 @@
-<ion-view view-title="predicto">
-   <ion-content scroll="false" class="bg-black">
-        <div class="text-center home-title">
-            <h3>Mumbai Indians</h3>
-            <h1>VS</h1>
-            <h3>Knight Riders</h3>
+<ion-view view-title="predicto"  class="bg-black has-bottom">
+   <ion-content scroll="false">
+    <div class="mumbai-vs-riders text-center home-city">
+        <h2 class="color-white">Mumbai Indians</h2>
+        <div>
+            <span class="color-white">VS</span>
         </div>
+        <h2 class="color-white mar-t">Knight Riders</h2>
+    </div>
         <div>
         </div>
-        <ion-slides options="options" slider="data.slider">
+        <ion-slides options="options" slider="data.slider" class="slide-height">
             <ion-slide-page ng-repeat="data in teamSlider track by $index">
                 <div class="match-slider">
                     <div class="question"><p>{{data.question}}</p></div>
