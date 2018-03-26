@@ -1,11 +1,11 @@
 
 myApp.controller('HomeCtrl', function($scope, $log, $window) {
     $scope.options = {
-        autoplay: 3000,
+        // autoplay: 3000,
         loop: false,
         initialSlide: 0,
         //effect: 'fade',
-        speed: 300, //0.3s seconds
+        // speed: 900, //0.3s seconds
         //slidesPerView: 2
     };
     $scope.teamSlider = [

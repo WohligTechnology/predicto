@@ -1,64 +1,31 @@
 <ion-view view-title="predicto">
-<ion-content>
-        <div class="card">
-                <div class="item item-divider">
-                  <div class="row">
+    <ion-content class="calender">
+        <div class="card text-center" ng-repeat="card in carddata">
+            <div class="item item-divider">
+                <div class="row">
                     <div class="col">
-                        <div>
-                           <h2>Mumbai Indians</h2>
-                           <h1>VS</h1>
-                           <h2>Knight Riders</h2>
-                       </div>
-                   </div>
-               <div class="col">
-                   <div>
-                       <img src="img/clock.png">
-                       <p>10/03/2016</p>
-                       <p>10/03/2016</p>
-                   </div>
-               </div>
-                  </div>
-                </div>
-            </div>
-            <div class="card">
-                    <div class="item item-divider">
-                      <div class="row">
-                        <div class="col">
-                            <div>
-                               <h2>Mumbai Indians</h2>
-                               <h1>VS</h1>
-                               <h2>Knight Riders</h2>
-                           </div>
-                       </div>
-                   <div class="col">
-                       <div>
-                           <img src="img/clock.png">
-                           <p>10/03/2016</p>
-                           <p>10/03/2016</p>
-                       </div>
-                   </div>
-                      </div>
-                    </div>
-                </div>
-                <div class="card">
-                        <div class="item item-divider">
-                          <div class="row">
-                            <div class="col">
-                                <div>
-                                   <h2>Mumbai Indians</h2>
-                                   <h1>VS</h1>
-                                   <h2>Knight Riders</h2>
-                               </div>
-                           </div>
-                       <div class="col">
-                           <div>
-                               <img src="img/clock.png">
-                               <p>10/03/2016</p>
-                               <p>10/03/2016</p>
-                           </div>
-                       </div>
+                        <div class="mumbai-vs-riders">
+                            <div class="bor-right"> 
+                                 <h2>{{card.city}}</h2>
+                                <div class="padding">
+                                    <span>VS</span>
+                                </div>
+                                <h2>{{card.city2}}</h2></div>
                           </div>
+                    </div>
+                    <div class="col">
+                        <div class="date-time">
+                            <img src="img/clock.png">
+                            <div class="padd-9">
+                                <span>{{card.date}}</span>
+                            </div>
+                            <div>
+                                <span>{{card.time}}</span>
+                            </div>
                         </div>
                     </div>
-                </ion-content>
-            </ion-view>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
