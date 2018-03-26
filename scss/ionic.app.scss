@@ -14,14 +14,16 @@ $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
+
 $yellow:#fae90c !default;
 $black:#000 !default;
 $darkgray:#282828 !default;
 $light:#fff !default;
 $lightgray:#d2d2d2 !default;
-$graydark:#b2b2b2  !default;
+$graydark:#b2b2b2 !default;
 $darkblue:#375b8d !default;
 $lightblue:#75a9e9 !default;
+// $ligtviolet: #b200e2!default;
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
@@ -32,10 +34,12 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     font-family: 'Oswald-Bold';
     src: url("../lib/ionic/fonts/oswald/Oswald-Bold.ttf");
 }
-@font-face{
-    font-family:'Lobster-Regular';
+
+@font-face {
+    font-family: 'Lobster-Regular';
     src: url("../lib/ionic/fonts/Lobster-Regular.ttf");
 }
+
 @font-face {
     font-family: 'OpenSans-Regular';
     src: url("../lib/ionic/fonts/open-sans/OpenSans-Regular.ttf");
@@ -151,7 +155,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     font-family: 'fjalla', sans-serif;
 }
 
-.padd-lr{
+.padd-lr {
     padding: 0px 45px;
 }
 
@@ -160,39 +164,43 @@ body {
     // font-family:
     // we need to use GalanoGrotesq
 }
-.bg-black{
+
+.bg-black {
     background-color: $black;
 }
-.page-title{
-    h2{
+
+.page-title {
+    h2 {
         padding: 20px;
-        color:$yellow ;
+        color: $yellow;
         font-size: 36px;
         background-color: $black;
         font-family: 'AmericanTypewriterRegular';
     }
 }
-.bar.bar-energized .title{
+
+.bar.bar-energized .title {
     font-size: 30px;
-    font-family:'Lobster-Regular';
+    font-family: 'Lobster-Regular';
 }
+
+
 /*---------------------------------Login CSS*---------------------/**/
 
 .login-section {
     .login-title {
-        background-color: $yellow;
+        background-color: red;
         margin: 15% 0%;
-        h3{
+        h3 {
             padding: 20px;
             font-size: 27px!important;
             font-family: 'AmericanTypewriterRegular';
-            color:$black;
+            color: $black;
         }
-       
     }
     .item-input-inset {
         padding: 7px 0px;
-        input::placeholder{
+        input::placeholder {
             font-size: 13px !important;
             color: $lightgray;
             font-family: 'OpenSans-Regular';
@@ -200,140 +208,146 @@ body {
     }
     .item-input-wrapper {
         border-radius: 0px !important;
-       
     }
-   .item{
-       background: transparent;
-       border: none;
-       padding: 7px;
-   }
-   .item-checkbox{
-    padding-left: 32px;
-    font-size: 13px;
-    font-family: 'OpenSans-Regular';
-    color:$light;
-    .checkbox{
-        left: -8px;
-       }
-   } 
+    .item {
+        background: transparent;
+        border: none;
+        padding: 7px;
+    }
+    .item-checkbox {
+        padding-left: 32px;
+        font-size: 13px;
+        font-family: 'OpenSans-Regular';
+        color: $light;
+        .checkbox {
+            left: -8px;
+        }
+    }
 }
- .login-btn{
-    .btn-yellow{
+
+.login-btn {
+    .btn-yellow {
         margin-bottom: 4px !important;
-      font-size: 17px;
-      font-family: 'AmericanTypewriterRegular';
-      background-color: $yellow;
-      color:$black;
-      border-radius: 0px;
-      line-height: 31px;
-      min-height: 25px;
-    
-       }
-       a{
-           padding: 0px 4px;
-           font-size: 12px;
-           color:$light;
-           font-family: 'OpenSans-Regular';
+        font-size: 17px;
+        font-family: 'AmericanTypewriterRegular';
+        background-color: $yellow;
+        color: $black;
+        border-radius: 0px;
+        line-height: 31px;
+        min-height: 25px;
+    }
+    a {
+        padding: 0px 4px;
+        font-size: 12px;
+        color: $light;
+        font-family: 'OpenSans-Regular';
+    }
+}
 
-
-       }
-       
- }
- .social-btn{
-    .btn-facebook{
+.social-btn {
+    .btn-facebook {
         font-size: 18px;
         background-color: $darkblue;
-     font-family: 'OpenSans-Regular';
+        font-family: 'OpenSans-Regular';
     }
+    .button-large.icon-right:before {}
+    .button-large.icon:before,
+    .button-large.icon-left:before,
     .button-large.icon-right:before {
-       
-    }
-    .button-large.icon:before, .button-large.icon-left:before, .button-large.icon-right:before{
         padding-bottom: 2px;
         font-size: 33px !important;
         line-height: 35px !important;
-        
     }
     .button-large {
         padding: 0 16px;
-  
         min-height: 47px;
         font-size: 20px;
         line-height: 40px;
         border-radius: 0px;
     }
-    .button-twitter{
+    .button-twitter {
         background-color: $lightblue;
     }
- }  
+}
+
+
 /*---------------------------------leaderboard css------------------*/
-.leaderboard-desc{
-    .item:first-child{
+
+.leaderboard-desc {
+    .item:first-child {
         padding-top: 30px;
     }
-    .list:first-child{
+    .list:first-child {
         margin-top: -11px;
-    
     }
 }
-.leaderboard-desc{
-    .name{
+
+.leaderboard-desc {
+    .name {
         font-size: 17px;
-        color:$darkgray;
+        color: $darkgray;
     }
-    .item-number{
+    .item-number {
         font-family: 'Oswald-Bold';
         font-size: 31px;
         color: $black;
     }
-    .item{
-    border-bottom: 1px solid $black;
-    border-color: $black;
-    border-right:none;
-    border-left:none;
+    .item {
+        border-bottom: 1px solid $black;
+        border-color: $black;
+        border-right: none;
+        border-left: none;
     }
-   
 }
-/*-----------------------------playlists------------------*/
-.playlists{
-    .item{
-        font-size: 17px;
-        color:$black;
-        font-family: 'AmericanTypewriterRegular';
 
+
+/*-----------------------------playlists------------------*/
+
+.playlists {
+    .item {
+        font-size: 17px;
+        color: $black;
+        font-family: 'AmericanTypewriterRegular';
     }
 }
+
+
 /*------------------------home-------------*/
-.home-title{
-    h3{
+
+.home-title {
+    h3 {
         font-family: 'AmericanTypewriterRegular';
-        color:$yellow;
+        color: $yellow;
         font-size: 20px;
     }
-    h1{
-        color:$light;
+    h1 {
+        color: $light;
         font-family: 'AmericanTypewriterRegular';
         font-size: 30px;
         line-height: 20px;
     }
 }
-.match-slider{
+
+.match-slider {
     background-color: $light;
     margin: 10px 40px;
     padding: 60px 30px;
     border-radius: 40px;
-    .item-icon-left .item-content{
+    .item-icon-left .item-content {
         font-size: 21px;
     }
 }
-.question{
+
+.question {
     font-size: 19px;
     line-height: 28px;
 }
-.question-option{
+
+.question-option {
     margin: 30px 0px;
 }
-.btn-submit{
+
+.btn-submit {
     font-size: 13px;
     background-color: $black;
     color: $light;
@@ -343,43 +357,46 @@ body {
     min-height: 20px;
     border-radius: 0px;
 }
+
 //radio buttons
 .item-icon-left .item-content {
-    padding-left:3em !important;  
-    padding-top:5px !important;
-    padding-bottom:5px !important;
-    background-color: white !important;  
-  }
-  
-  .item-icon-left i {
-    left:0;
-    padding-top:2px !important;
-    padding-bottom:5px !important;
+    padding-left: 3em !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    background-color: white !important;
+}
+
+.item-icon-left i {
+    left: 0;
+    padding-top: 2px !important;
+    padding-bottom: 5px !important;
     right: auto;
     color: #D4201F !important;
     font-size: 20px !important;
-  }
-  
-  .item-radio input ~ .radio-icon {
-      visibility: visible !important;
-  }
-  
-  .item-radio > .radio-icon:before {
-      content: "\f3a6" !important; /*deselected - Ionic class = ion-android-radio-button-off */
-  }
-  
-  .item-radio > input[type=radio]:checked ~ .radio-icon:before {
-      content: "\f3a7" !important; /*selected Ionic class = ion-android-radio-button-on */
-  }
-  
-  .bg {
-    height:auto;
-  padding: 40px 0;
-  color:#fff;
-  font-size:20px;
-  text-align:center;
-  border-radius:4px;
-  border:1px solid #980021;
-  box-shadow: inset 0 2px 3px 0 rgba(255,255,255,.3), inset 0 -3px 6px 0 rgba(0,0,0,.2), 0 3px 2px 0 rgba(0,0,0,.2);
-  background-image: linear-gradient(to bottom, #cf2b4f, #980021 100%);  
-  }
+}
+
+.item-radio input~.radio-icon {
+    visibility: visible !important;
+}
+
+.item-radio>.radio-icon:before {
+    content: "\f3a6" !important;
+    /*deselected - Ionic class = ion-android-radio-button-off */
+}
+
+.item-radio>input[type=radio]:checked~.radio-icon:before {
+    content: "\f3a7" !important;
+    /*selected Ionic class = ion-android-radio-button-on */
+}
+
+.bg {
+    height: auto;
+    padding: 40px 0;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid #980021;
+    box-shadow: inset 0 2px 3px 0 rgba(255, 255, 255, .3), inset 0 -3px 6px 0 rgba(0, 0, 0, .2), 0 3px 2px 0 rgba(0, 0, 0, .2);
+    background-image: linear-gradient(to bottom, #cf2b4f, #980021 100%);
+}
