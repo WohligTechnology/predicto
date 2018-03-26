@@ -30,38 +30,38 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // @import "www/lib/ionic/bourbon/bourbon.scss";
 // @import "_bourbon.scss";
 @font-face {
- font-family: 'Oswald-Bold';
- src: url("../lib/ionic/fonts/oswald/Oswald-Bold.ttf");
+    font-family: 'Oswald-Bold';
+    src: url("../lib/ionic/fonts/oswald/Oswald-Bold.ttf");
 }
 
 @font-face {
- font-family: 'Lobster-Regular';
- src: url("../lib/ionic/fonts/Lobster-Regular.ttf");
+    font-family: 'Lobster-Regular';
+    src: url("../lib/ionic/fonts/Lobster-Regular.ttf");
 }
 
 @font-face {
- font-family: 'OpenSans-Regular';
- src: url("../lib/ionic/fonts/open-sans/OpenSans-Regular.ttf");
+    font-family: 'OpenSans-Regular';
+    src: url("../lib/ionic/fonts/open-sans/OpenSans-Regular.ttf");
 }
 
 @font-face {
- font-family: 'Play-Regular';
- src: url("../lib/ionic/fonts/open-sans/Play-Regular.ttf");
+    font-family: 'Play-Regular';
+    src: url("../lib/ionic/fonts/open-sans/Play-Regular.ttf");
 }
 
 @font-face {
- font-family: 'Play-Bold';
- src: url("../lib/ionic/fonts/open-sans/Play-Bold.ttf");
+    font-family: 'Play-Bold';
+    src: url("../lib/ionic/fonts/open-sans/Play-Bold.ttf");
 }
 
 @font-face {
- font-family: 'AmericanTypewriterRegular';
- src: url("../lib/ionic/fonts/AmericanTypewriterRegular/AmericanTypewriterRegular.ttf");
+    font-family: 'AmericanTypewriterRegular';
+    src: url("../lib/ionic/fonts/AmericanTypewriterRegular/AmericanTypewriterRegular.ttf");
 }
 
 @font-face {
- font-family: 'fjalla';
- src: url("../lib/ionic/fonts/fjalla/fjalla.ttf");
+    font-family: 'fjalla';
+    src: url("../lib/ionic/fonts/fjalla/fjalla.ttf");
 }
 
 
@@ -84,512 +84,647 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 /*---------------------------------Theme default CSS*---------------------/**/
 
 .d-flex {
- display: flex;
+    display: flex;
 }
 
 .d-inline {
- display: inline-block;
+    display: inline-block;
 }
 
 .d-block {
- display: block;
+    display: block;
 }
 
 .d-table {
- width: 100%;
- height: 100%;
- display: table;
+    width: 100%;
+    height: 100%;
+    display: table;
 }
 
 .d-cell {
- display: table-cell;
+    display: table-cell;
 }
 
 .align-top {
- vertical-align: top;
+    vertical-align: top;
 }
 
 .align-middle {
- vertical-align: middle;
+    vertical-align: middle;
 }
 
 .align-bottom {
- vertical-align: bottom;
+    vertical-align: bottom;
 }
 
 .justify-content-center {
- justify-content: center;
+    justify-content: center;
 }
 
 .justify-content-end {
- justify-content: flex-end;
+    justify-content: flex-end;
 }
 
 .justify-content-start {
- justify-content: lex-start;
+    justify-content: lex-start;
 }
 
 .align-items-center {
- align-items: center;
+    align-items: center;
 }
 
 .img-responsive {
- max-width: 100%;
- height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 .fix {
- overflow: hidden
+    overflow: hidden
 }
 
 .clear {
- clear: both;
+    clear: both;
 }
 
 .has-header {
- top: 70px;
+    top: 70px;
 }
-.color-yellow{
-color:$yellow;
+
+.color-yellow {
+    color: $yellow;
 }
+
 .font-oswald-bold {
- font-family: 'Oswald-Bold', sans-serif;
+    font-family: 'Oswald-Bold', sans-serif;
 }
 
 .font-opensans-rg {
- font-family: 'OpenSans-Regular', sans-serif;
+    font-family: 'OpenSans-Regular', sans-serif;
 }
 
-.font-american-rg {
- font-family: 'AmericanTypewriterRegular', sans-serif;
+.font-Play-Bold {
+    font-family: 'Play-Bold';
+    font-weight: 600;
 }
 
-.font-fjalla {
- font-family: 'fjalla', sans-serif;
+.font-Play-Regular {
+    font-family: 'Play-Regular';
 }
 
 .padd-lr {
- padding: 0px 45px;
+    padding: 0px 45px;
 }
 
 .color-white {
- color: $light;
+    color: $light;
 }
 
 body {
- font-size: 13px; // font-family:
- // we need to use GalanoGrotesq
+    font-size: 13px; // font-family:
+    // we need to use GalanoGrotesq
+    font-family: 'Play-Regular';
 }
-.has-bottom{
- margin-bottom: 200px;
+h4{
+    font-size: 19px;
 }
+
+.has-bottom {
+    margin-bottom: 200px;
+}
+
 .bg-black {
- background-color: $black;
+    background-color: $black;
 }
 
 .padd-9 {
- padding: 9px 0px;
+    padding: 9px 0px;
 }
 
 .page-title {
- h2 {
- padding: 21px;
- color: $light;
- font-size: 30px;
- background-color: $black;
- font-family: 'Play-Regular';
- }
+    h2 {
+        padding: 21px;
+        color: $light;
+        font-size: 30px;
+        background-color: $black;
+        font-family: 'Play-Regular';
+    }
 }
 
 .bar.bar-energized {
- background-color: $purpal;
- .title {
- font-size: 30px;
- font-family: 'Lobster-Regular';
- margin-top: 15px;
- }
- .button.button-clear {
- margin-top: 20px;
- }
- .back-text {
- display: none;
- }
- .w35 {
- width: 35px;
- border-radius: 50%;
- }
+    background-color: $purpal;
+    .title {
+        font-size: 30px;
+        font-family: 'Lobster-Regular';
+        margin-top: 15px;
+    }
+    .button.button-clear {
+        margin-top: 20px;
+    }
+    .back-text {
+        display: none;
+    }
+    .w35 {
+        width: 35px;
+        border-radius: 50%;
+    }
 }
 
 .bar .title+.buttons {
- top: 21px;
- right: 10px;
+    top: 21px;
+    right: 10px;
 }
 
 .bar {
- height: 70px;
+    height: 70px;
 }
 
 
 /*---------------------------------Login CSS*---------------------/**/
 
 .login-section {
- .login-title {
- background-color: $purpal;
- margin: 15% 45px;
- h3 {
- padding: 20px;
- font-size: 27px!important;
- font-family: 'AmericanTypewriterRegular';
- color: #fff;
- }
- }
- .item-input-inset {
- padding: 7px 0px;
- input::placeholder {
- font-size: 13px !important;
- color: $lightgray;
- font-family: 'OpenSans-Regular';
- }
- }
- .item-input-wrapper {
- border-radius: 0px !important;
- }
- .item {
- background: transparent;
- border: none;
- padding: 7px;
- }
- .item-checkbox {
- padding-left: 32px;
- font-size: 13px;
- font-family: 'OpenSans-Regular';
- color: $light;
- .checkbox {
- left: -8px;
- }
- }
+    .login-title {
+        background-color: $purpal;
+        margin: 30% 9% 17%;
+        border-radius: 15px;
+        h3 {
+            padding: 17px;
+            font-size: 27px !important;
+            font-family: 'Play-Regular';
+            color: #fff;
+        }
+    }
+    .item-input-inset {
+        padding: 7px 0px;
+        input::placeholder {
+            font-size: 13px !important;
+            color: $lightgray;
+            font-family: 'OpenSans-Regular';
+        }
+    }
+    .item-input-wrapper {
+        border-radius: 0px !important;
+    }
+    .item {
+        background: transparent;
+        border: none;
+        padding: 7px;
+    }
+    .item-checkbox {
+        padding-left: 32px;
+        font-size: 13px;
+        font-family: 'OpenSans-Regular';
+        color: $light;
+        .checkbox {
+            left: -8px;
+        }
+    }
 }
 
 .login-btn {
- .btn-yellow {
- margin-bottom: 4px !important;
- font-size: 17px;
- font-family: 'AmericanTypewriterRegular';
- background-color: $purpal;
- color: #fff;
- border-radius: 0px;
- line-height: 31px;
- min-height: 25px;
- }
- a {
- padding: 0px 4px;
- font-size: 12px;
- color: $light;
- font-family: 'OpenSans-Regular';
- }
+    .btn-yellow {
+        margin-bottom: 4px !important;
+        font-size: 17px;
+        font-family: 'AmericanTypewriterRegular';
+        background-color: $purpal;
+        color: #fff;
+        border-radius: 0px;
+        line-height: 31px;
+        min-height: 25px;
+    }
+    a {
+        padding: 0px 4px;
+        font-size: 12px;
+        color: $light;
+        font-family: 'OpenSans-Regular';
+    }
 }
-
+.for-got{
+    float: right;
+    padding-top: 5px !important;
+}
 .social-btn {
- .btn-facebook {
- font-size: 18px;
- background-color: $darkblue;
- font-family: 'OpenSans-Regular';
- }
- .button-large.icon-right:before {}
- .button-large.icon:before,
- .button-large.icon-left:before,
- .button-large.icon-right:before {
- padding-bottom: 2px;
- font-size: 33px !important;
- line-height: 35px !important;
- }
- .button-large {
- padding: 0 16px;
- min-height: 47px;
- font-size: 20px;
- line-height: 40px;
- border-radius: 0px;
- }
- .button-twitter {
- background-color: $lightblue;
- }
+    .btn-facebook {
+        font-size: 18px;
+        background-color: $darkblue;
+        font-family: 'OpenSans-Regular';
+    }
+    .button-large.icon-right:before {}
+    .button-large.icon:before,
+    .button-large.icon-left:before,
+    .button-large.icon-right:before {
+        padding-bottom: 2px;
+        font-size: 33px !important;
+        line-height: 35px !important;
+    }
+    .button-large {
+        padding: 0 16px;
+        min-height: 47px;
+        font-size: 20px;
+        line-height: 40px;
+        border-radius: 0px;
+    }
+    .button-twitter {
+        background-color: $lightblue;
+    }
+ 
 }
-
+.twitter-btn{
+    a.button-twitter:before, a.button.icon:before, a.button.icon-left:before, {
+        font-size: 20px !important;
+    }
+}
 
 /*---------------------------------leaderboard css------------------*/
 
 .leaderboard-desc {
- .item:first-child {
- padding-top: 30px;
- }
- .list:first-child {
- margin-top: -11px;
- }
+    .item:first-child {
+        padding-top: 30px;
+    }
+    .list:first-child {
+        margin-top: -11px;
+    }
 }
 
 .leaderboard-desc {
- .name {
- font-size: 17px;
- color: $darkgray;
- font-family: 'Play-Regular';
- }
- .item-number {
- font-family: 'Play-Bold';
- font-size: 31px;
- color: $black;
- }
- .item {
- border-bottom: 1px solid $black;
- border-color: $black;
- border-right: none;
- border-left: none;
- }
+    .name {
+        font-size: 17px;
+        color: $darkgray;
+        font-family: 'Play-Regular';
+    }
+    .item-number {
+        font-family: 'Play-Bold';
+        font-size: 31px;
+        color: $black;
+    }
+    .item {
+        border-bottom: 1px solid $black;
+        border-color: $black;
+        border-right: none;
+        border-left: none;
+    }
 }
 
 
 /*-----------------------------playlists------------------*/
 
 .playlists {
- .item {
- font-size: 17px;
- color: $black;
- font-family: 'AmericanTypewriterRegular';
- }
+    .item {
+        font-size: 17px;
+        color: $black;
+        font-family: 'AmericanTypewriterRegular';
+    }
 }
 
 
 /*------------------------home-------------*/
 
 .home-city {
- margin-top: 25px;
- h2 {
- margin-top: 5px;
- }
+    margin-top: 25px;
+    h2 {
+        margin-top: 5px;
+    }
 }
 
 .slide-height {
- height: 81% !important;
- .swiper-pagination-bullet {
- background: $light !important;
- }
+    height: 81% !important;
+    .swiper-pagination-bullet {
+        background: $light !important;
+    }
 }
 
 .match-slider {
- background-color: $light;
- margin: 10px 40px;
- padding: 60px 30px;
- border-radius: 40px;
- .item-icon-left .item-content {
- font-size: 19px;
- font-family: 'Play-Regular';
- margin: 3px 0px;
- }
-}
+    background-color: $light;
+    margin: 10px 40px;
+    padding: 60px 30px;
+    border-radius: 40px;
+    position: relative;
+    .item-icon-left .item-content {
+    font-size: 19px;
+    font-family: 'Play-Regular';
+    margin: 3px 0px;
+    }
+    .match-restriction {
+    padding: 0 15px;
+    background-color: rgba(0, 0, 0, 0.41);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 4;
+    }
+    }
 
 .question {
- font-size: 20px;
- line-height: 28px;
- font-family: 'Play-Regular';
+    font-size: 20px;
+    line-height: 28px;
+    font-family: 'Play-Regular';
 }
 
 .question-option {
- margin: 30px 0px;
+    margin: 30px 0px;
 }
 
 .btn-submit {
- font-size: 13px;
- background-color: $black;
- color: $light;
- padding: 5px 20px;
- margin-left: 18px;
- line-height: 20px;
- min-height: 20px;
- border-radius: 0px;
- font-family: 'Play-Bold';
+    font-size: 13px;
+    background-color: $black;
+    color: $light;
+    padding: 5px 20px;
+    margin-left: 18px;
+    line-height: 20px;
+    min-height: 20px;
+    border-radius: 0px;
+    font-family: 'Play-Bold';
 }
 
 //radio buttons
 .item-icon-left .item-content {
- padding-left: 3em !important;
- padding-top: 5px !important;
- padding-bottom: 5px !important;
- background-color: white !important;
+    padding-left: 3em !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    background-color: white !important;
 }
 
 .item-icon-left i {
- left: 0;
- padding-top: 7px !important;
- padding-bottom: 5px !important;
- right: auto;
- color: $purpal !important;
- font-size: 20px !important;
+    left: 0;
+    padding-top: 7px !important;
+    padding-bottom: 5px !important;
+    right: auto;
+    color: $purpal !important;
+    font-size: 20px !important;
 }
 
 .item-radio input~.radio-icon {
- visibility: visible !important;
+    visibility: visible !important;
 }
 
 .item-radio>.radio-icon:before {
- content: "\f3a6" !important;
- /*deselected - Ionic class = ion-android-radio-button-off */
+    content: "\f3a6" !important;
+    /*deselected - Ionic class = ion-android-radio-button-off */
 }
 
 .item-radio>input[type=radio]:checked~.radio-icon:before {
- content: "\f3a7" !important;
- /*selected Ionic class = ion-android-radio-button-on */
+    content: "\f3a7" !important;
+    /*selected Ionic class = ion-android-radio-button-on */
 }
 
 .bg {
- height: auto;
- padding: 40px 0;
- color: #fff;
- font-size: 20px;
- text-align: center;
- border-radius: 4px;
- border: 1px solid #980021;
- box-shadow: inset 0 2px 3px 0 rgba(255, 255, 255, .3), inset 0 -3px 6px 0 rgba(0, 0, 0, .2), 0 3px 2px 0 rgba(0, 0, 0, .2);
- background-image: linear-gradient(to bottom, #cf2b4f, #980021 100%);
+    height: auto;
+    padding: 40px 0;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid #980021;
+    box-shadow: inset 0 2px 3px 0 rgba(255, 255, 255, .3), inset 0 -3px 6px 0 rgba(0, 0, 0, .2), 0 3px 2px 0 rgba(0, 0, 0, .2);
+    background-image: linear-gradient(to bottom, #cf2b4f, #980021 100%);
 }
 
 
 /*-----------------------------calender--------------------*/
 
 .mumbai-vs-riders {
- h2 {
- font-size: 21px;
- font-family: 'Play-Regular';
- }
- span {
- font-size: 25px;
- font-family: 'Play-Regular';
- }
+    h2 {
+        font-size: 19px;
+        font-family: 'Play-Regular';
+    }
+    span {
+        font-size: 25px;
+        font-family: 'Play-Regular';
+    }
 }
 
 .bor-right:after {
- content: "";
- position: absolute;
- height: 72%;
- top: 15%;
- left: 56%;
- border-right: 1px solid #c0baba;
+    content: "";
+    position: absolute;
+    height: 72%;
+    top: 15%;
+    left: 56%;
+    border-right: 1px solid #c0baba;
 }
 
 .date-time {
- float: right;
- img {
- width: 17%;
- margin-top: 7px;
- }
- span {
- font-size: 20px;
- font-family: 'Play-Regular';
- }
+    float: right;
+    img {
+        width: 17%;
+        margin-top: 7px;
+    }
+    span {
+        font-size: 20px;
+        font-family: 'Play-Regular';
+    }
 }
 
 .calender {
- .card {
- // margin: 20px 23px;
- border-radius: 15px;
- }
+    .card {
+        // margin: 20px 23px;
+        border-radius: 15px;
+    }
 }
-/*-------------------terms and conditions--------------------------*/
-.terms-condition{
- padding: 10px 30px 10px 40px;
- li{
- padding: 10px 0px;
- font-size: 15px;
- text-align: justify;
- font-family: 'Play-Regular';
- list-style-type: square;
- }
-}
-/*---------------------live-----------------*/
-.score-detail{
- padding: 30px;
- margin: 30% 8%;
- position: relative;
- background-color: $black;
- color: $light;
- border-radius: 40px;
-}
-.score{
- position: absolute;
- background-color: $purpal;
- top: -50px;
- left: 15%;
- padding: 25px 15px;
- border-radius: 15px;
- span{
- padding: 0px 8px;
- font-size: 25px;
- color: $black;
- font-family: 'Play-Regular';
- }
-}
-.live{
- padding: 5px 14px;
- position: absolute;
- top: -75px;
- 
- left: 41%;
- z-index: 1;
- background-color: black;
- 
- border-radius: 9px;
- span{
- font-size: 20px;
- color: $light;
- font-family: 'Play-Regular';
 
- }
+
+/*-------------------terms and conditions--------------------------*/
+
+.terms-condition {
+    padding: 10px 30px 10px 40px;
+    li {
+        padding: 10px 0px;
+        font-size: 15px;
+        text-align: justify;
+        font-family: 'Play-Regular';
+        list-style-type: square;
+    }
 }
-.run-rate{
- font-size: 16px;
- color: $light;
- font-family: 'Play-Regular';
+
+
+/*---------------------live-----------------*/
+
+.score-detail {
+    padding: 30px;
+    border-radius: 40px;
+    margin: 30% 8%;
+    position: relative;
+    background-color: $black;
+    color: $light;
 }
-.user-name{
- span{
- font-size: 25px;
- font-family: 'Play-Regular';
- }
+
+.score {
+    max-width: 210px;
+    padding: 25px 20px;
+    border-radius: 15px;
+    margin: auto;
+    position: absolute;
+    top: -35px;
+    right: 0;
+    left: 0;
+    background-color: $purpal;
+    // span {
+    //     padding: 0px 8px;
+    //     font-size: 25px;
+    //     color: $black;
+    //     font-family: 'Play-Regular';
+    // }
+    .score-area {
+        color: $black;
+        font-size: 19px;
+    }
+    .score-type1 {
+        min-width: 60px;
+        margin-left: 5px;
+        margin-right: 10px;
+        position: relative;
+        &::after {
+            content: "";
+            width: 1px;
+            height: 15px;
+            background-color: black;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+    }
 }
-.font-13{
- font-size: 13px !important;
+
+.live {
+    padding: 2px 10px;
+    border-radius: 9px;
+    background-color: black;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    span {
+        font-size: 17px;
+        color: $light;
+        font-family: 'Play-Regular';
+    }
 }
-.padd-tb{
- padding: 50px 10px;
+
+.run-rate {
+    margin-top: 15px;
+    font-size: 16px;
+    color: $light;
+    font-family: 'Play-Regular';
 }
-.padd-b{
- padding-bottom: 65px;
- padding-left: 10px;
+
+.user-name {
+    span {
+        font-size: 19px;
+        font-family: 'Play-Regular';
+    }
 }
-.mar-t{
- margin-top: 8px;
+
+.font-13 {
+    font-size: 13px !important;
 }
-.bor-right:after{
- content: "";
- position: absolute;
- height: 22px;
- top: 24px;
- left: 173px;
- 
- border-right: 2px solid #000;
+
+.padd-tb {
+    padding: 50px 10px;
 }
-.this-over{
- font-size: 10px !important;
- border: 1px solid $yellow;
- border-radius: 50px;
- padding: 3px 6px;
- color: $yellow;
+
+.padd-b {
+    padding-bottom: 65px;
+    padding-left: 10px;
 }
+
+.mar-t {
+    margin-top: 8px;
+}
+
+// .bor-right:after {
+//     content: "";
+//     position: absolute;
+//     height: 22px;
+//     top: 24px;
+//     left: 173px;
+//     border-right: 2px solid #000;
+// }
+
+.this-over {
+    min-width: 17px;
+    min-height: 17px;
+    margin: 0 3px;
+    line-height: 5px;
+    font-size: 10px !important;
+    border: 1px solid $yellow;
+    border-radius: 50px;
+    color: $yellow;
+}
+
 /*--------------------prize-----------------*/
-.prize-img{
- margin: 90px 40px;
-}
+
+.prize-desc-area {
+    padding: 70px 0;
+    position: relative;
+    .prize-img {
+    width: 240px;
+    margin: auto;
+    }
+    &::after {
+    width: 100%;
+    height: 140px;
+    content: "";
+    background-color: $purpal;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: -1;
+    }
+    .prize-title {
+    padding-top: 15px;
+    font-size: 19px;
+    }
+    }
+
 /*---------------side menu-----------------------*/
-.playlists .item {
- font-size: 17px;
- font-family: 'Play-Regular';
- background-color: $purpal !important;
+
+
+
+
+a.item-content {
+    font-size: 17px;
+    }
+    
+    .item-content.activated {
+    background-color: $purpal!important;
+    color: $black;
+    }
+// .item-content:active{
+//     background-color: $purpal !important;
+// }
+
+/*-------------------------profile-----------------*/
+
+.user-profile {
+    margin: 40px 0px;
+    h4 {
+        font-size: 19px;
+        text-transform: capitalize;
+    }
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.table-data {
+    margin: 40px 30px;
+    td {
+        font-size: 20px;
+        padding: 4px 10px;
+    }
+    span {
+        font-size: 17px;
+    }
+}
+
+.icon-color {
+    font-size: 40px;
+    color: $black;
 }
