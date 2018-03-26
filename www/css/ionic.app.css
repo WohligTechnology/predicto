@@ -1,21 +1,17 @@
-<<<<<<< HEAD
-=======
 @charset "UTF-8";
 /*
 To customize the look and feel of Ionic, you can override the variables
 in ionic's _variables.scss file.
-
 For example, you might change some of the default colors:
-
-$light:                           #fff !default;
-$stable:                          #f8f8f8 !default;
-$positive:                        #387ef5 !default;
-$calm:                            #11c1f3 !default;
-$balanced:                        #33cd5f !default;
-$energized:                       #ffc900 !default;
-$assertive:                       #ef473a !default;
-$royal:                           #886aea !default;
-$dark:                            #444 !default;
+$light: #fff !default;
+$stable: #f8f8f8 !default;
+$positive: #387ef5 !default;
+$calm: #11c1f3 !default;
+$balanced: #33cd5f !default;
+$energized: #ffc900 !default;
+$assertive: #ef473a !default;
+$royal: #886aea !default;
+$dark: #444 !default;
 */
 /*!
   Ionicons, v2.0.1
@@ -9903,20 +9899,18 @@ a.button {
   src: url("../lib/ionic/fonts/fjalla/fjalla.ttf"); }
 
 /*-----------------------------------------------------------------------------------
-
-    Template Name: Predicto  
-    Description: This is html5 template
-    Author: Wohlig
+ Template Name: Predicto 
+ Description: This is html5 template
+ Author: Wohlig
 -----------------------------------------------------------------------------------
-  CSS INDEX (HAS BEEN ARRANGED AS PER App flow & As per BOX MODEL(width, height, padd, border, margin, alpha)
-    ===================
-    1 Theme default CSS 
-    2 header 
-    3 login
-    4 menu
-    5 home
-    6 individual-team
-
+ CSS INDEX (HAS BEEN ARRANGED AS PER App flow & As per BOX MODEL(width, height, padd, border, margin, alpha)
+ ===================
+ 1 Theme default CSS 
+ 2 header 
+ 3 login
+ 4 menu
+ 5 home
+ 6 individual-team
 -----------------------------------------------------------------------------------*/
 /*---------------------------------Theme default CSS*---------------------/**/
 .d-flex {
@@ -10327,4 +10321,3 @@ body {
   font-size: 17px;
   font-family: 'Play-Regular';
   background-color: #b200e2 !important; }
->>>>>>> a560e5a91b773393f8f66e3075f7be42fac2bb22
