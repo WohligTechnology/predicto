@@ -21,16 +21,9 @@ $darkgray:#282828 !default;
 $light:#fff !default;
 $lightgray:#d2d2d2 !default;
 $graydark:#b2b2b2 !default;
-<<<<<<< HEAD
 $darkblue:#375b8d !default;
 $lightblue:#75a9e9 !default;
 // $ligtviolet: #b200e2!default;
-=======
-$edarkgray:#c0baba !default;
-$darkblue:#375b8d !default;
-$lightblue:#75a9e9 !default;
-$purpal:#b200e2 !default;
->>>>>>> a560e5a91b773393f8f66e3075f7be42fac2bb22
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
@@ -190,34 +183,15 @@ body {
     font-size: 13px; // font-family:
     // we need to use GalanoGrotesq
 }
-<<<<<<< HEAD
-
-=======
-.has-bottom{
-    margin-bottom: 200px;
-}
->>>>>>> a560e5a91b773393f8f66e3075f7be42fac2bb22
 .bg-black {
     background-color: $black;
 }
 
-<<<<<<< HEAD
 .page-title {
     h2 {
         padding: 20px;
         color: $yellow;
         font-size: 36px;
-=======
-.padd-9 {
-    padding: 9px 0px;
-}
-
-.page-title {
-    h2 {
-        padding: 21px;
-        color: $light;
-        font-size: 30px;
->>>>>>> a560e5a91b773393f8f66e3075f7be42fac2bb22
         background-color: $black;
         font-family: 'Play-Regular';
     }
@@ -247,14 +221,9 @@ body {
     right: 10px;
 }
 
-<<<<<<< HEAD
 .bar.bar-energized .title {
     font-size: 30px;
     font-family: 'Lobster-Regular';
-=======
-.bar {
-    height: 70px;
->>>>>>> a560e5a91b773393f8f66e3075f7be42fac2bb22
 }
 
 
@@ -262,22 +231,13 @@ body {
 
 .login-section {
     .login-title {
-<<<<<<< HEAD
         background-color: red;
         margin: 15% 0%;
-=======
-        background-color: $purpal;
-        margin: 15% 45px;
->>>>>>> a560e5a91b773393f8f66e3075f7be42fac2bb22
         h3 {
             padding: 20px;
             font-size: 27px!important;
             font-family: 'AmericanTypewriterRegular';
-<<<<<<< HEAD
             color: $black;
-=======
-            color: #fff;
->>>>>>> a560e5a91b773393f8f66e3075f7be42fac2bb22
         }
     }
     .item-input-inset {
@@ -312,13 +272,8 @@ body {
         margin-bottom: 4px !important;
         font-size: 17px;
         font-family: 'AmericanTypewriterRegular';
-<<<<<<< HEAD
         background-color: $yellow;
         color: $black;
-=======
-        background-color: $purpal;
-        color: #fff;
->>>>>>> a560e5a91b773393f8f66e3075f7be42fac2bb22
         border-radius: 0px;
         line-height: 31px;
         min-height: 25px;
@@ -373,16 +328,9 @@ body {
     .name {
         font-size: 17px;
         color: $darkgray;
-<<<<<<< HEAD
     }
     .item-number {
         font-family: 'Oswald-Bold';
-=======
-        font-family: 'Play-Regular';
-    }
-    .item-number {
-        font-family: 'Play-Bold';
->>>>>>> a560e5a91b773393f8f66e3075f7be42fac2bb22
         font-size: 31px;
         color: $black;
     }
@@ -408,7 +356,6 @@ body {
 
 /*------------------------home-------------*/
 
-<<<<<<< HEAD
 .home-title {
     h3 {
         font-family: 'AmericanTypewriterRegular';
@@ -420,19 +367,6 @@ body {
         font-family: 'AmericanTypewriterRegular';
         font-size: 30px;
         line-height: 20px;
-=======
-.home-city {
-    margin-top: 25px;
-    h2 {
-        margin-top: 5px;
-    }
-}
-
-.slide-height {
-    height: 81% !important;
-    .swiper-pagination-bullet {
-        background: $light !important;
->>>>>>> a560e5a91b773393f8f66e3075f7be42fac2bb22
     }
 }
 
@@ -442,22 +376,12 @@ body {
     padding: 60px 30px;
     border-radius: 40px;
     .item-icon-left .item-content {
-<<<<<<< HEAD
         font-size: 21px;
-=======
-        font-size: 19px;
-        font-family: 'Play-Regular';
-        margin: 3px 0px;
->>>>>>> a560e5a91b773393f8f66e3075f7be42fac2bb22
     }
 }
 
 .question {
-<<<<<<< HEAD
     font-size: 19px;
-=======
-    font-size: 20px;
->>>>>>> a560e5a91b773393f8f66e3075f7be42fac2bb22
     line-height: 28px;
     font-family: 'Play-Regular';
 }
@@ -488,11 +412,7 @@ body {
 
 .item-icon-left i {
     left: 0;
-<<<<<<< HEAD
     padding-top: 2px !important;
-=======
-    padding-top: 7px !important;
->>>>>>> a560e5a91b773393f8f66e3075f7be42fac2bb22
     padding-bottom: 5px !important;
     right: auto;
     color: $purpal !important;
@@ -523,150 +443,4 @@ body {
     border: 1px solid #980021;
     box-shadow: inset 0 2px 3px 0 rgba(255, 255, 255, .3), inset 0 -3px 6px 0 rgba(0, 0, 0, .2), 0 3px 2px 0 rgba(0, 0, 0, .2);
     background-image: linear-gradient(to bottom, #cf2b4f, #980021 100%);
-<<<<<<< HEAD
-=======
-}
-
-
-/*-----------------------------calender--------------------*/
-
-.mumbai-vs-riders {
-    h2 {
-        font-size: 21px;
-        font-family: 'Play-Regular';
-    }
-    span {
-        font-size: 25px;
-        font-family: 'Play-Regular';
-    }
-}
-
-.bor-right:after {
-    content: "";
-    position: absolute;
-    height: 72%;
-    top: 15%;
-    left: 56%;
-    border-right: 1px solid #c0baba;
-}
-
-.date-time {
-    float: right;
-    img {
-        width: 17%;
-        margin-top: 7px;
-    }
-    span {
-        font-size: 20px;
-        font-family: 'Play-Regular';
-    }
-}
-
-.calender {
-    .card {
-        //   margin: 20px 23px;
-        border-radius: 15px;
-    }
-}
-/*-------------------terms and conditions--------------------------*/
-.terms-condition{
-    padding: 10px 30px 10px 40px;
-   li{
-       padding: 10px 0px;
-       font-size: 15px;
-       text-align: justify;
-       font-family: 'Play-Regular';
-       list-style-type: square;
-   }
-}
-/*---------------------live-----------------*/
-.score-detail{
-    padding: 30px;
-    margin: 30% 8%;
-    position: relative;
-    background-color: $black;
-    color: $light;
-    border-radius: 40px;
-}
-.score{
-    position: absolute;
-    background-color: $purpal;
-    top: -50px;
-    left: 15%;
-    padding: 25px 15px;
-    border-radius: 15px;
-    span{
-        padding: 0px 8px;
-        font-size: 25px;
-        color: $black;
-        font-family: 'Play-Regular';
-    }
-}
-.live{
-    padding: 5px 14px;
-    position: absolute;
-    top: -75px;
-  
-    left: 41%;
-    z-index: 1;
-    background-color: black;
-  
-    border-radius: 9px;
-    span{
-        font-size: 20px;
-        color: $light;
-        font-family: 'Play-Regular';
-
-    }
-}
-.run-rate{
-    font-size: 16px;
-    color: $light;
-    font-family: 'Play-Regular';
-}
-.user-name{
-    span{
-         font-size: 25px;
-        font-family: 'Play-Regular';
-    }
-}
-.font-13{
-    font-size: 13px !important;
-}
-.padd-tb{
-    padding: 50px 10px;
-}
-.padd-b{
-    padding-bottom: 65px;
-    padding-left: 10px;
-}
-.mar-t{
-    margin-top: 8px;
-}
-.bor-right:after{
-    content: "";
-    position: absolute;
-    height: 22px;
-    top: 24px;
-    left: 173px;
- 
-    border-right: 2px solid #000;
-}
-.this-over{
-    font-size: 10px !important;
-    border: 1px solid $yellow;
-    border-radius: 50px;
-    padding: 3px 6px;
-    color: $yellow;
-}
-/*--------------------prize-----------------*/
-.prize-img{
-    margin: 90px 40px;
-}
-/*---------------side menu-----------------------*/
-.playlists .item {
-    font-size: 17px;
-    font-family: 'Play-Regular';
-    background-color: $purpal !important;
->>>>>>> a560e5a91b773393f8f66e3075f7be42fac2bb22
 }
