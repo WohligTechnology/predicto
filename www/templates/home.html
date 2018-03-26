@@ -1,20 +1,30 @@
-<ion-view view-title="predicto"  class="bg-black has-bottom">
-   <ion-content scroll="false">
-    <div class="mumbai-vs-riders text-center home-city">
-        <h2 class="color-white">Mumbai Indians</h2>
-        <div>
-            <span class="color-white">VS</span>
+<ion-view view-title="predicto" class="bg-black has-bottom">
+    <ion-content scroll="false">
+        <div class="mumbai-vs-riders text-center home-city">
+            <h2 class="color-white">Mumbai Indians</h2>
+            <div>
+                <span class="color-white">VS</span>
+            </div>
+            <h2 class="color-white mar-t">Knight Riders</h2>
         </div>
-        <h2 class="color-white mar-t">Knight Riders</h2>
-    </div>
         <div>
         </div>
         <ion-slides options="options" slider="data.slider" class="slide-height">
             <ion-slide-page ng-repeat="data in teamSlider track by $index">
                 <div class="match-slider">
-                    <div class="question"><p>{{data.question}}</p></div>
-                    <div class="question-option"> 
-                         <label class="item item-icon-left item-radio" style="border: none">
+                    <div class="match-restriction text-center">
+                        <div class="d-table">
+                            <div class="match-restriction-title d-cell align-middle">
+                                <h4>No More Predictions as the match is live!
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <p>{{data.question}}</p>
+                    </div>
+                    <div class="question-option">
+                        <label class="item item-icon-left item-radio" style="border: none">
                             <input type="radio" name="group">
                             <div class="item-content" style="margin-left:0px">
                                {{data.option1}} 
@@ -42,7 +52,7 @@
                             </div>
                             <i class="radio-icon ion-checkmark"></i>
                         </label></div>
-                   <button class="button btn-submit"> SUBMIT</button>
+                    <button class="button btn-submit"> SUBMIT</button>
                 </div>
             </ion-slide-page>
         </ion-slides>
