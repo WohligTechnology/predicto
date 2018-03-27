@@ -185,7 +185,7 @@ body {
     font-family: 'Play-Regular';
 }
 h4{
-    font-size: 19px;
+    font-size: 19px !important;
 }
 
 .has-bottom {
@@ -303,8 +303,9 @@ h4{
     padding-top: 5px !important;
 }
 .social-btn {
-    .btn-facebook {
-        font-size: 18px;
+
+    .button{
+        font-size: 17px !important;
         background-color: $darkblue;
         font-family: 'OpenSans-Regular';
     }
@@ -379,10 +380,8 @@ h4{
 /*------------------------home-------------*/
 
 .home-city {
-    margin-top: 25px;
-    h2 {
-        margin-top: 5px;
-    }
+    margin: 25px 0;
+   
 }
 
 .slide-height {
@@ -484,8 +483,8 @@ h4{
 /*-----------------------------calender--------------------*/
 
 .mumbai-vs-riders {
-    h2 {
-        font-size: 19px;
+    h4 {
+        // font-size: 19px;
         font-family: 'Play-Regular';
     }
     span {
@@ -529,7 +528,7 @@ h4{
     padding: 10px 30px 10px 40px;
     li {
         padding: 10px 0px;
-        font-size: 15px;
+        font-size: 17px;
         text-align: justify;
         font-family: 'Play-Regular';
         list-style-type: square;
@@ -542,7 +541,7 @@ h4{
 .score-detail {
     padding: 30px;
     border-radius: 40px;
-    margin: 30% 8%;
+    margin: 70px 25px;
     position: relative;
     background-color: $black;
     color: $light;
@@ -685,6 +684,7 @@ h4{
 
 a.item-content {
     font-size: 17px;
+    font-family: 'Play-Regular';
     }
     
     .item-content.activated {
