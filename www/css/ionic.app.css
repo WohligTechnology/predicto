@@ -9871,32 +9871,12 @@ a.button {
   transition-duration: 0s; }
 
 @font-face {
-  font-family: 'Oswald-Bold';
-  src: url("../lib/ionic/fonts/oswald/Oswald-Bold.ttf"); }
-
-@font-face {
-  font-family: 'Lobster-Regular';
-  src: url("../lib/ionic/fonts/Lobster-Regular.ttf"); }
-
-@font-face {
-  font-family: 'OpenSans-Regular';
-  src: url("../lib/ionic/fonts/open-sans/OpenSans-Regular.ttf"); }
-
-@font-face {
   font-family: 'Play-Regular';
   src: url("../lib/ionic/fonts/open-sans/Play-Regular.ttf"); }
 
 @font-face {
   font-family: 'Play-Bold';
   src: url("../lib/ionic/fonts/open-sans/Play-Bold.ttf"); }
-
-@font-face {
-  font-family: 'AmericanTypewriterRegular';
-  src: url("../lib/ionic/fonts/AmericanTypewriterRegular/AmericanTypewriterRegular.ttf"); }
-
-@font-face {
-  font-family: 'fjalla';
-  src: url("../lib/ionic/fonts/fjalla/fjalla.ttf"); }
 
 /*-----------------------------------------------------------------------------------
  Template Name: Predicto 
@@ -9906,11 +9886,15 @@ a.button {
  CSS INDEX (HAS BEEN ARRANGED AS PER App flow & As per BOX MODEL(width, height, padd, border, margin, alpha)
  ===================
  1 Theme default CSS 
- 2 header 
+ 2 header (side menu)
  3 login
- 4 menu
- 5 home
- 6 individual-team
+ 4 home
+ 5 profile
+ 6 calender
+ 7 home match live
+ 8 terms and condition
+ 9 leaderboard
+ 10 gratifications
 -----------------------------------------------------------------------------------*/
 /*---------------------------------Theme default CSS*---------------------/**/
 .d-flex {
@@ -9966,12 +9950,6 @@ a.button {
 
 .color-yellow {
   color: #fae90c; }
-
-.font-oswald-bold {
-  font-family: 'Oswald-Bold', sans-serif; }
-
-.font-opensans-rg {
-  font-family: 'OpenSans-Regular', sans-serif; }
 
 .font-Play-Bold {
   font-family: 'Play-Bold';
@@ -10030,7 +10008,54 @@ h4 {
 .bar {
   height: 70px; }
 
-/*---------------------------------Login CSS*---------------------/**/
+/*---------------2 header side menu-----------------------*/
+a.item-content {
+  font-size: 17px;
+  font-family: 'Play-Regular'; }
+
+.item-content.activated {
+  background-color: #b200e2 !important;
+  color: #000; }
+
+.btn-header {
+  border: none;
+  margin-top: 20px;
+  background: transparent; }
+  .btn-header span {
+    -webkit-transition: all 300ms linear;
+    transition: all 300ms linear; }
+  .btn-header:focus {
+    outline: none; }
+
+.hamburger-cross span {
+  -webkit-transition: all 300ms linear;
+  transition: all 300ms linear; }
+
+.hamburger-cross span:first-child {
+  position: relative;
+  top: 10px;
+  background-color: #000;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+.hamburger-cross span:nth-child(2) {
+  opacity: 0; }
+
+.hamburger-cross span:last-child {
+  position: relative;
+  bottom: 6px;
+  background-color: #000;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+
+.icon-bar {
+  display: block;
+  height: 3px;
+  width: 22px;
+  background-color: #fff;
+  margin: 5px; }
+
+/*---------------------------------3 Login CSS*---------------------/**/
 .login-section .login-title {
   background-color: #b200e2;
   margin: 30% 9% 17%;
@@ -10106,65 +10131,41 @@ h4 {
 .social-btn .button-twitter {
   background-color: #75a9e9; }
 
-.twitter-btn a.button-twitter:before, .twitter-btn a.button.icon:before, .twitter-btn a.button.icon-left:before {
+.twitter-btn a.button-twitter:before,
+.twitter-btn a.button.icon:before,
+.twitter-btn a.button.icon-left:before {
   font-size: 20px !important; }
 
-/*---------------------------------leaderboard css------------------*/
-.leaderboard-desc .item:first-child {
-  padding-top: 30px; }
-
-.leaderboard-desc .list:first-child {
-  margin-top: -11px; }
-
-.leaderboard-desc .name {
-  font-size: 17px;
-  color: #282828;
-  font-family: 'Play-Regular'; }
-
-.leaderboard-desc .item-number {
-  font-family: 'Play-Bold';
-  font-size: 31px;
-  color: #000; }
-
-.leaderboard-desc .item {
-  border-bottom: 1px solid #000;
-  border-color: #000;
-  border-right: none;
-  border-left: none; }
-
-/*-----------------------------playlists------------------*/
-.playlists .item {
-  font-size: 17px;
-  color: #000;
-  font-family: 'AmericanTypewriterRegular'; }
-
-/*------------------------home-------------*/
+/*------------------------4 home-------------*/
 .home-city {
   margin: 25px 0; }
 
 .slide-height {
-  height: 81% !important; }
+  height: 490px !important; }
   .slide-height .swiper-pagination-bullet {
     background: #fff !important; }
+  .slide-height .swiper-pagination {
+    bottom: 43px !important; }
 
 .match-slider {
+  border-radius: 40px;
   background-color: #fff;
   margin: 10px 40px;
-  padding: 60px 30px;
-  border-radius: 40px;
+  padding: 45px 30px;
   position: relative; }
   .match-slider .item-icon-left .item-content {
     font-size: 19px;
     font-family: 'Play-Regular';
     margin: 3px 0px; }
   .match-slider .match-restriction {
-    padding: 0 15px;
-    background-color: rgba(0, 0, 0, 0.41);
+    padding: 0px 15px;
+    border-radius: 40px;
+    background-color: rgba(128, 128, 128, 0.941176);
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
     z-index: 4; }
 
 .question {
@@ -10222,7 +10223,33 @@ h4 {
   box-shadow: inset 0 2px 3px 0 rgba(255, 255, 255, 0.3), inset 0 -3px 6px 0 rgba(0, 0, 0, 0.2), 0 3px 2px 0 rgba(0, 0, 0, 0.2);
   background-image: linear-gradient(to bottom, #cf2b4f, #980021 100%); }
 
-/*-----------------------------calender--------------------*/
+/*-------------------------5 profile-----------------*/
+.user-profile {
+  margin: 40px 0px; }
+  .user-profile h4 {
+    font-size: 19px;
+    text-transform: capitalize; }
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto; }
+
+.table-data {
+  margin: 40px 30px; }
+  .table-data td {
+    font-size: 20px;
+    padding: 4px 10px; }
+  .table-data span {
+    font-size: 17px; }
+
+.icon-color {
+  font-size: 40px;
+  color: #000; }
+
+/*-----------------------------6 calender--------------------*/
 .mumbai-vs-riders h4 {
   font-family: 'Play-Regular'; }
 
@@ -10250,17 +10277,7 @@ h4 {
 .calender .card {
   border-radius: 15px; }
 
-/*-------------------terms and conditions--------------------------*/
-.terms-condition {
-  padding: 10px 30px 10px 40px; }
-  .terms-condition li {
-    padding: 10px 0px;
-    font-size: 17px;
-    text-align: justify;
-    font-family: 'Play-Regular';
-    list-style-type: square; }
-
-/*---------------------live-----------------*/
+/*---------------------7 live-----------------*/
 .score-detail {
   padding: 30px;
   border-radius: 40px;
@@ -10343,58 +10360,62 @@ h4 {
   border-radius: 50px;
   color: #fae90c; }
 
-/*--------------------prize-----------------*/
+/*-------------------8 terms and conditions--------------------------*/
+.terms-condition {
+  padding: 10px 30px 10px 40px; }
+  .terms-condition li {
+    padding: 10px 0px;
+    font-size: 17px;
+    text-align: justify;
+    font-family: 'Play-Regular';
+    list-style-type: square; }
+
+/*---------------------------------9 leaderboard css------------------*/
+.leaderboard-desc .item:first-child {
+  padding-top: 30px; }
+
+.leaderboard-desc .list:first-child {
+  margin-top: -11px; }
+
+.leaderboard-desc .name {
+  font-size: 17px;
+  color: #282828;
+  font-family: 'Play-Regular'; }
+
+.leaderboard-desc .item-number {
+  font-family: 'Play-Bold';
+  font-size: 31px;
+  color: #000; }
+
+.leaderboard-desc .item {
+  border-bottom: 1px solid #000;
+  border-color: #000;
+  border-right: none;
+  border-left: none; }
+
+/*--------------------10 gratification-----------------*/
 .prize-desc-area {
-  padding: 70px 0;
+  padding: 50px 0;
   position: relative; }
   .prize-desc-area .prize-img {
     width: 240px;
     margin: auto; }
   .prize-desc-area::after {
     width: 100%;
-    height: 140px;
+    height: 170px;
     content: "";
     background-color: #b200e2;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 0;
-    transform: translateY(-50%);
+    transform: translateY(-45%);
     z-index: -1; }
   .prize-desc-area .prize-title {
     padding-top: 15px;
     font-size: 19px; }
 
-/*---------------side menu-----------------------*/
-a.item-content {
+/*-----------------------------playlists------------------*/
+.playlists .item {
   font-size: 17px;
-  font-family: 'Play-Regular'; }
-
-.item-content.activated {
-  background-color: #b200e2 !important;
-  color: #000; }
-
-/*-------------------------profile-----------------*/
-.user-profile {
-  margin: 40px 0px; }
-  .user-profile h4 {
-    font-size: 19px;
-    text-transform: capitalize; }
-
-.profile-img {
-  width: 200px;
-  height: 200px;
-  overflow: hidden;
-  border-radius: 50%;
-  margin: 0 auto; }
-
-.table-data {
-  margin: 40px 30px; }
-  .table-data td {
-    font-size: 20px;
-    padding: 4px 10px; }
-  .table-data span {
-    font-size: 17px; }
-
-.icon-color {
-  font-size: 40px;
-  color: #000; }
+  color: #000;
+  font-family: 'AmericanTypewriterRegular'; }

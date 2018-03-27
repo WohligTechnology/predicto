@@ -40,6 +40,23 @@ myApp.controller('AppCtrl', function($scope, $ionicModal, $timeout, $log) {
             $scope.closeLogin();
         }, 1000);
     };
+
+//   $scope.menu =  function myFunction(x) {
+//       console.log("********************8")
+//         x.classList.toggle("change");
+//     }
+
+$scope.showMenu = false;
+$scope.getMenu = function () {
+    if ($scope.showMenu == false) {
+        // alert('test');
+        $scope.showMenu = true;
+       
+    } else {
+        $scope.showMenu = false;
+       
+    }
+}
 })
 
 

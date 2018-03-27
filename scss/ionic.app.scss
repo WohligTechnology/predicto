@@ -30,21 +30,6 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // @import "www/lib/ionic/bourbon/bourbon.scss";
 // @import "_bourbon.scss";
 @font-face {
-    font-family: 'Oswald-Bold';
-    src: url("../lib/ionic/fonts/oswald/Oswald-Bold.ttf");
-}
-
-@font-face {
-    font-family: 'Lobster-Regular';
-    src: url("../lib/ionic/fonts/Lobster-Regular.ttf");
-}
-
-@font-face {
-    font-family: 'OpenSans-Regular';
-    src: url("../lib/ionic/fonts/open-sans/OpenSans-Regular.ttf");
-}
-
-@font-face {
     font-family: 'Play-Regular';
     src: url("../lib/ionic/fonts/open-sans/Play-Regular.ttf");
 }
@@ -52,16 +37,6 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @font-face {
     font-family: 'Play-Bold';
     src: url("../lib/ionic/fonts/open-sans/Play-Bold.ttf");
-}
-
-@font-face {
-    font-family: 'AmericanTypewriterRegular';
-    src: url("../lib/ionic/fonts/AmericanTypewriterRegular/AmericanTypewriterRegular.ttf");
-}
-
-@font-face {
-    font-family: 'fjalla';
-    src: url("../lib/ionic/fonts/fjalla/fjalla.ttf");
 }
 
 
@@ -73,11 +48,15 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
  CSS INDEX (HAS BEEN ARRANGED AS PER App flow & As per BOX MODEL(width, height, padd, border, margin, alpha)
  ===================
  1 Theme default CSS 
- 2 header 
+ 2 header (side menu)
  3 login
- 4 menu
- 5 home
- 6 individual-team
+ 4 home
+ 5 profile
+ 6 calender
+ 7 home match live
+ 8 terms and condition
+ 9 leaderboard
+ 10 gratifications
 -----------------------------------------------------------------------------------*/
 
 
@@ -154,14 +133,6 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     color: $yellow;
 }
 
-.font-oswald-bold {
-    font-family: 'Oswald-Bold', sans-serif;
-}
-
-.font-opensans-rg {
-    font-family: 'OpenSans-Regular', sans-serif;
-}
-
 .font-Play-Bold {
     font-family: 'Play-Bold';
     font-weight: 600;
@@ -184,7 +155,8 @@ body {
     // we need to use GalanoGrotesq
     font-family: 'Play-Regular';
 }
-h4{
+
+h4 {
     font-size: 19px !important;
 }
 
@@ -239,7 +211,62 @@ h4{
 }
 
 
-/*---------------------------------Login CSS*---------------------/**/
+/*---------------2 header side menu-----------------------*/
+
+a.item-content {
+    font-size: 17px;
+    font-family: 'Play-Regular';
+}
+
+.item-content.activated {
+    background-color: $purpal!important;
+    color: $black;
+}
+
+//btn toggle
+.btn-header {
+    border: none;
+    margin-top: 20px;
+    span {
+        @include transition(all 300ms linear);
+    }
+    background: transparent;
+    &:focus {
+        outline: none;
+    }
+}
+
+.hamburger-cross {
+    span {
+        @include transition(all 300ms linear);
+    }
+    span:first-child {
+        position: relative;
+        top: 10px;
+        background-color: $black;
+        @include transform(rotate(45deg));
+    }
+    span:nth-child(2) {
+        opacity: 0;
+    }
+    span:last-child {
+        position: relative;
+        bottom: 6px;
+        background-color: $black;
+        @include transform(rotate(-45deg));
+    }
+}
+
+.icon-bar {
+    display: block;
+    height: 3px;
+    width: 22px;
+    background-color: $light;
+    margin: 5px;
+}
+
+
+/*---------------------------------3 Login CSS*---------------------/**/
 
 .login-section {
     .login-title {
@@ -298,13 +325,14 @@ h4{
         font-family: 'OpenSans-Regular';
     }
 }
-.for-got{
+
+.for-got {
     float: right;
     padding-top: 5px !important;
 }
-.social-btn {
 
-    .button{
+.social-btn {
+    .button {
         font-size: 17px !important;
         background-color: $darkblue;
         font-family: 'OpenSans-Regular';
@@ -327,92 +355,57 @@ h4{
     .button-twitter {
         background-color: $lightblue;
     }
- 
 }
-.twitter-btn{
-    a.button-twitter:before, a.button.icon:before, a.button.icon-left:before, {
+
+.twitter-btn {
+    a.button-twitter:before,
+    a.button.icon:before,
+    a.button.icon-left:before,
+    {
         font-size: 20px !important;
     }
 }
 
-/*---------------------------------leaderboard css------------------*/
 
-.leaderboard-desc {
-    .item:first-child {
-        padding-top: 30px;
-    }
-    .list:first-child {
-        margin-top: -11px;
-    }
-}
-
-.leaderboard-desc {
-    .name {
-        font-size: 17px;
-        color: $darkgray;
-        font-family: 'Play-Regular';
-    }
-    .item-number {
-        font-family: 'Play-Bold';
-        font-size: 31px;
-        color: $black;
-    }
-    .item {
-        border-bottom: 1px solid $black;
-        border-color: $black;
-        border-right: none;
-        border-left: none;
-    }
-}
-
-
-/*-----------------------------playlists------------------*/
-
-.playlists {
-    .item {
-        font-size: 17px;
-        color: $black;
-        font-family: 'AmericanTypewriterRegular';
-    }
-}
-
-
-/*------------------------home-------------*/
+/*------------------------4 home-------------*/
 
 .home-city {
     margin: 25px 0;
-   
 }
 
 .slide-height {
-    height: 81% !important;
+    height: 490px !important;
     .swiper-pagination-bullet {
         background: $light !important;
+    }
+    .swiper-pagination {
+        bottom: 43px !important;
     }
 }
 
 .match-slider {
+    border-radius: 40px;
     background-color: $light;
     margin: 10px 40px;
-    padding: 60px 30px;
-    border-radius: 40px;
+    padding: 45px 30px;
     position: relative;
     .item-icon-left .item-content {
-    font-size: 19px;
-    font-family: 'Play-Regular';
-    margin: 3px 0px;
+        font-size: 19px;
+        font-family: 'Play-Regular';
+        margin: 3px 0px;
     }
     .match-restriction {
-    padding: 0 15px;
-    background-color: rgba(0, 0, 0, 0.41);
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 4;
+        padding: 0px 15px;
+        border-radius: 40px;
+        background-color: rgba(128, 128, 128, 0.941176);
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        z-index: 4;
     }
-    }
+}
 
 .question {
     font-size: 20px;
@@ -480,7 +473,42 @@ h4{
 }
 
 
-/*-----------------------------calender--------------------*/
+/*-------------------------5 profile-----------------*/
+
+.user-profile {
+    margin: 40px 0px;
+    h4 {
+        font-size: 19px;
+        text-transform: capitalize;
+    }
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.table-data {
+    margin: 40px 30px;
+    td {
+        font-size: 20px;
+        padding: 4px 10px;
+    }
+    span {
+        font-size: 17px;
+    }
+}
+
+.icon-color {
+    font-size: 40px;
+    color: $black;
+}
+
+
+/*-----------------------------6 calender--------------------*/
 
 .mumbai-vs-riders {
     h4 {
@@ -522,21 +550,7 @@ h4{
 }
 
 
-/*-------------------terms and conditions--------------------------*/
-
-.terms-condition {
-    padding: 10px 30px 10px 40px;
-    li {
-        padding: 10px 0px;
-        font-size: 17px;
-        text-align: justify;
-        font-family: 'Play-Regular';
-        list-style-type: square;
-    }
-}
-
-
-/*---------------------live-----------------*/
+/*---------------------7 live-----------------*/
 
 .score-detail {
     padding: 30px;
@@ -556,8 +570,7 @@ h4{
     top: -35px;
     right: 0;
     left: 0;
-    background-color: $purpal;
-    // span {
+    background-color: $purpal; // span {
     //     padding: 0px 8px;
     //     font-size: 25px;
     //     color: $black;
@@ -639,7 +652,6 @@ h4{
 //     left: 173px;
 //     border-right: 2px solid #000;
 // }
-
 .this-over {
     min-width: 17px;
     min-height: 17px;
@@ -651,80 +663,87 @@ h4{
     color: $yellow;
 }
 
-/*--------------------prize-----------------*/
+
+/*-------------------8 terms and conditions--------------------------*/
+
+.terms-condition {
+    padding: 10px 30px 10px 40px;
+    li {
+        padding: 10px 0px;
+        font-size: 17px;
+        text-align: justify;
+        font-family: 'Play-Regular';
+        list-style-type: square;
+    }
+}
+
+
+/*---------------------------------9 leaderboard css------------------*/
+
+.leaderboard-desc {
+    .item:first-child {
+        padding-top: 30px;
+    }
+    .list:first-child {
+        margin-top: -11px;
+    }
+}
+
+.leaderboard-desc {
+    .name {
+        font-size: 17px;
+        color: $darkgray;
+        font-family: 'Play-Regular';
+    }
+    .item-number {
+        font-family: 'Play-Bold';
+        font-size: 31px;
+        color: $black;
+    }
+    .item {
+        border-bottom: 1px solid $black;
+        border-color: $black;
+        border-right: none;
+        border-left: none;
+    }
+}
+
+
+/*--------------------10 gratification-----------------*/
 
 .prize-desc-area {
-    padding: 70px 0;
+    padding: 50px 0;
     position: relative;
     .prize-img {
-    width: 240px;
-    margin: auto;
+        width: 240px;
+        margin: auto;
     }
     &::after {
-    width: 100%;
-    height: 140px;
-    content: "";
-    background-color: $purpal;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    z-index: -1;
+        width: 100%;
+        height: 170px;
+        content: "";
+        background-color: #b200e2;
+        position: absolute;
+        top: 45%;
+        left: 0;
+        transform: translateY(-45%);
+        z-index: -1;
     }
     .prize-title {
-    padding-top: 15px;
-    font-size: 19px;
-    }
-    }
-
-/*---------------side menu-----------------------*/
-
-
-
-
-a.item-content {
-    font-size: 17px;
-    font-family: 'Play-Regular';
-    }
-    
-    .item-content.activated {
-    background-color: $purpal!important;
-    color: $black;
-    }
-// .item-content:active{
-//     background-color: $purpal !important;
-// }
-
-/*-------------------------profile-----------------*/
-
-.user-profile {
-    margin: 40px 0px;
-    h4 {
+        padding-top: 15px;
         font-size: 19px;
-        text-transform: capitalize;
     }
 }
 
-.profile-img {
-    width: 200px;
-    height: 200px;
-    overflow: hidden;
-    border-radius: 50%;
-    margin: 0 auto;
-}
 
-.table-data {
-    margin: 40px 30px;
-    td {
-        font-size: 20px;
-        padding: 4px 10px;
-    }
-    span {
+/*-----------------------------playlists------------------*/
+
+.playlists {
+    .item {
         font-size: 17px;
+        color: $black;
+        font-family: 'AmericanTypewriterRegular';
     }
 }
 
-.icon-color {
-    font-size: 40px;
-    color: $black;
-}
+/////////////////////////////////
