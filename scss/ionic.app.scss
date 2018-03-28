@@ -23,6 +23,7 @@ $edarkgray:#c0baba !default;
 $darkblue:#375b8d !default;
 $lightblue:#75a9e9 !default;
 $purpal:#b200e2 !default;
+$orange:#d64937 !default;
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
@@ -354,6 +355,9 @@ a.item-content {
     }
     .button-twitter {
         background-color: $lightblue;
+    }
+    .button-google{
+        background-color: $orange;
     }
 }
 
