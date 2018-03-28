@@ -35,7 +35,7 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider)
             controller: 'AppCtrl'
         })
         .state('app.home', {
-            url: '/home',
+            url: '/home/:id',
             views: {
                 'menuContent': {
                     templateUrl: 'templates/home.html',

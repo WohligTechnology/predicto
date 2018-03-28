@@ -1,11 +1,11 @@
 <ion-view view-title="predicto" class="bg-black has-bottom">
     <ion-content scroll="true">
         <div class="mumbai-vs-riders text-center home-city">
-            <h4 class="color-white">Mumbai Indians</h4>
+            <h4 class="color-white">{{matchName.team1.teamName}}</h4>
             <div>
                 <span class="color-white">VS</span>
             </div>
-            <h4 class="color-white mar-t">Knight Riders</h4>
+            <h4 class="color-white mar-t">{{matchName.team2.teamName}}</h4>
         </div>
         <div>
         </div>
@@ -21,38 +21,52 @@
                         </div>
                     </div> -->
                     <div class="question">
-                        <p>{{data.question}}</p>
+                        <p>{{data.description}}</p>
                     </div>
-                    <div class="question-option">
-                        <label class="item item-icon-left item-radio" style="border: none">
-                            <input type="radio" name="group">
-                            <div class="item-content" style="margin-left:0px">
-                               {{data.option1}} 
+                    <div class="question-option" ng-if="data.betName=='tossWinner' || data.betName=='Winner' ">
+                        <form>
+                            <label class="item item-icon-left item-radio" style="border: none">
+                                <input type="radio" name="group" value="team1" ng-model="bets.answerTeam">
+                                <div class="item-content" style="margin-left:0px">
+                                    {{matchName.team1.shortName}}
+                                </div>
+                                <i class="radio-icon ion-checkmark"></i>
+                            </label>
+                            <label class="item item-icon-left item-radio" style="border: none">
+                                <input type="radio" name="group" value="team2" ng-model="bets.answerTeam">
+                                <div class="item-content">
+                                    {{matchName.team2.shortName}}
+                                </div>
+                                <i class="radio-icon ion-checkmark"></i>
+                            </label>
+                            <label class="item item-icon-left item-radio" style="border: none">
+                                <input type="radio" name="group" value="draw" ng-model="bets.answerTeam">
+                                <div class="item-content">
+                                    draw
+                                </div>
+                                <i class="radio-icon ion-checkmark"></i>
+                            </label>
+                            <button class="button btn-submit" ng-click="predict(bets)"> SUBMIT</button>
+                        </form>
+                    </div>
+                    <div class="question-option" ng-if="data.betName=='IstInningScore'|| data.betName=='playerScore'">
+                        <form>
+                            <div>
+                                <input type="number" class="input-bor" ng-model="bets.answer">
                             </div>
-                            <i class="radio-icon ion-checkmark"></i>
-                        </label>
-                        <label class="item item-icon-left item-radio" style="border: none">
-                            <input type="radio" name="group">
-                            <div class="item-content">
-                                {{data.option2}}
+                            <button class="button btn-submit" ng-click="predict(bets)"> SUBMIT</button>
+                        </form>
+                    </div>
+                    <div class="question-option" ng-if="data.betName=='tournamentWinner'">
+                        <form>
+                            <div>
+                                <select ng-model="bets.teamName.answerFinal">
+                                    <option ng-repeat="team in teamList">{{team.teamName}}</option>
+                                </select>
                             </div>
-                            <i class="radio-icon ion-checkmark"></i>
-                        </label>
-                        <label class="item item-icon-left item-radio" style="border: none">
-                            <input type="radio" name="group">
-                            <div class="item-content">
-                                {{data.option3}}
-                            </div>
-                            <i class="radio-icon ion-checkmark"></i>
-                        </label>
-                        <label class="item item-icon-left item-radio" style="border: none">
-                            <input type="radio" name="group">
-                            <div class="item-content">
-                                {{data.option4}}
-                            </div>
-                            <i class="radio-icon ion-checkmark"></i>
-                        </label></div>
-                    <button class="button btn-submit"> SUBMIT</button>
+                            <button class="button btn-submit" ng-click="predictfinal(bets)"> SUBMIT</button>
+                        </form>
+                    </div>
                 </div>
             </ion-slide-page>
         </ion-slides>

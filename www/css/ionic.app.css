@@ -10422,3 +10422,6 @@ a.item-content {
   font-size: 17px;
   color: #000;
   font-family: 'AmericanTypewriterRegular'; }
+
+.input-bor {
+  border: 1px solid gray !important; }
