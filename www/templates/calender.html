@@ -1,26 +1,26 @@
 <ion-view view-title="predicto">
     <ion-content class="calender">
-        <div class="card text-center" ng-repeat="card in carddata">
+        <div class="card text-center" ng-repeat="match in matchList">
             <div class="item item-divider">
                 <div class="row">
                     <div class="col">
                         <div class="mumbai-vs-riders">
                             <div class="bor-right"> 
-                                 <h4>{{card.city}}</h4>
+                                 <h4>{{match.team1.teamName}}</h4>
                                 <div class="padding">
                                     <span>VS</span>
                                 </div>
-                                <h4>{{card.city2}}</h4></div>
+                                <h4>{{match.team2.teamName}}</h4></div>
                           </div>
                     </div>
                     <div class="col">
                         <div class="date-time">
                             <img src="img/clock.png">
                             <div class="padd-9">
-                                <span>{{card.date}}</span>
+                                <span>{{match.startingTime|date}}</span>
                             </div>
                             <div>
-                                <span>{{card.time}}</span>
+                                <span>{{match.startingTime|date:'HH:mm'}}</span>
                             </div>
                         </div>
                     </div>
