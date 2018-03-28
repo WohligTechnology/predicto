@@ -1,4 +1,5 @@
-var adminurl = "http://localhost:80/api/"
+// var adminurl = "http://localhost:80/api/"
+var adminurl = "http://192.168.2.45:80/api/"
 
 angular.module('starter.services', [])
 
