@@ -46,7 +46,7 @@
                                 </div>
                                 <i class="radio-icon ion-checkmark"></i>
                             </label>
-                            <button class="button btn-submit" ng-click="predict(bets)"> SUBMIT</button>
+                            <button class="button btn-submit" ng-click="predict(bets,data)"> SUBMIT</button>
                         </form>
                     </div>
                     <div class="question-option" ng-if="data.betName=='IstInningScore'|| data.betName=='playerScore'">
@@ -64,7 +64,7 @@
                                     <option ng-repeat="team in teamList">{{team.teamName}}</option>
                                 </select>
                             </div>
-                            <button class="button btn-submit" ng-click="predict(bets)"> SUBMIT</button>
+                            <button class="button btn-submit" ng-click="predict(bets,matchName)"> SUBMIT</button>
                         </form>
                     </div>
                 </div>

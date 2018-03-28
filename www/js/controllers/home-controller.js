@@ -1,6 +1,8 @@
 
 myApp.controller('HomeCtrl', function ($scope, $log, $window, Predict, $stateParams) {
     console.log($stateParams.id)
+
+    var userId = $.jStorage.get('user');
     var matchId = $stateParams.id
     // $scope.IstInningScore = false;
     // $scope.tossWinner = false;
@@ -30,21 +32,23 @@ myApp.controller('HomeCtrl', function ($scope, $log, $window, Predict, $statePar
         console.log("***********************************", data)
     })
 
-    $scope.predict = function (bets) {
-        console.log("bets",bets)
-        bets.match=matchId
-               Predict.callApiWithData("UserBets/save", bets, function (data) {
-                  console.log("$$$$$$$$$$$$$$$", data)
+    $scope.predict = function (bets, data) {
+        console.log("bets", data)
+        bets.betType = data._id
+        bets.match = matchId
+        bets.user = userId
+        Predict.callApiWithData("UserBets/save", bets, function (data) {
+            console.log("$$$$$$$$$$$$$$$", data)
             // if($scope.teamSlider.betName==IstInningScore){
         })
     }
-// $scope.predictfinal = function(bets){
-//     var data1 = {}
-//     data1.teamName = bets
-//     Predict.callApiWithData("UserBets/save", data1, function (data) {
-//         console.log("$$$$$$$$$$$$$$$", data)
- 
-// })
-// }
+    // $scope.predictfinal = function(bets){
+    //     var data1 = {}
+    //     data1.teamName = bets
+    //     Predict.callApiWithData("UserBets/save", data1, function (data) {
+    //         console.log("$$$$$$$$$$$$$$$", data)
+
+    // })
+    // }
 
 })
