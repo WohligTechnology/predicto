@@ -10131,6 +10131,9 @@ a.item-content {
 .social-btn .button-twitter {
   background-color: #75a9e9; }
 
+.social-btn .button-google {
+  background-color: #d64937; }
+
 .twitter-btn a.button-twitter:before,
 .twitter-btn a.button.icon:before,
 .twitter-btn a.button.icon-left:before {
