@@ -60,11 +60,11 @@
                     <div class="question-option" ng-if="data.betName=='tournamentWinner'">
                         <form>
                             <div>
-                                <select ng-model="bets.teamName.answerFinal">
+                                <select ng-model="bets.answerFinal">
                                     <option ng-repeat="team in teamList">{{team.teamName}}</option>
                                 </select>
                             </div>
-                            <button class="button btn-submit" ng-click="predictfinal(bets)"> SUBMIT</button>
+                            <button class="button btn-submit" ng-click="predict(bets)"> SUBMIT</button>
                         </form>
                     </div>
                 </div>
