@@ -29,8 +29,10 @@ myApp.controller('HomeCtrl', function ($scope, $log, $window, Predict, $statePar
         $scope.matchName = data.data.data
         console.log("***********************************", data)
     })
+
     $scope.predict = function (bets) {
         console.log("bets",bets)
+        bets.match=matchId
                Predict.callApiWithData("UserBets/save", bets, function (data) {
                   console.log("$$$$$$$$$$$$$$$", data)
             // if($scope.teamSlider.betName==IstInningScore){
