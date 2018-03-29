@@ -5,32 +5,32 @@
                 <img class="img-responsive" src="img/profile.png">
                 <!-- <img src="img/download.png"> -->
             </div>
-            <h4 class="font-Play-Bold text-center">sarvesh bramhe</h4>
+            <h4 class="font-Play-Bold text-center">{{userDetail.name}}</h4>
         </div>
         <div>
             <table class="table-data">
                 <tr>
                     <td>birthday:</td>
                     <td>
-                        <span>13/04/2016</span>
+                        <span>{{userDetail.dob|date}}</span>
                     </td>
                 </tr>
                 <tr>
                     <td>number:</td>
                     <td>
-                        <span>9404849912</span>
+                        <span>{{userDetail.mobile}}</span>
                     </td>
                 </tr>
                 <tr>
                     <td>email:</td>
                     <td>
-                        <span>suresh@g.com</span>
+                        <span>{{userDetail.email}}</span>
                     </td>
                 </tr>
                 <tr>
                     <td>score:</td>
                     <td>
-                        <span>398</span>
+                        <span>{{userDetail.points}}</span>
                     </td>
                 </tr>
             </table>
