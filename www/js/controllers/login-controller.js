@@ -23,7 +23,7 @@ myApp.controller('LoginCtrl', function($scope, $ionicModal, $timeout, $log, $win
 //         });
 //     }
 $scope.facebookLogin = function() {
- $cordovaOauth.facebook("299757727221295", ["email", "user_location", "user_relationships"]).then(function (result) {
+ $cordovaOauth.facebook("1814304471935090", ["email", "user_location", "user_relationships"]).then(function (result) {
       console.log("Response Object -> " + JSON.stringify(result));
       console.log("facebookLogin", result)
       $.jStorage.set("socialLogin", result);
