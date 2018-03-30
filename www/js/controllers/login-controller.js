@@ -64,6 +64,24 @@ myApp.controller('LoginCtrl', function($scope, $ionicModal, $timeout, $log, $win
 //     })
 
 //   }
+
+$scope.twitterLogin=function(){
+  console.log("In twitter")
+  $cordovaOauth.facebook("4lIW80CHbKp0waLOlyfazBIeG","j2qu0FKv0LLfj8eZ1UC35mfyYDGatlWDiZFRmDJvpxcpOYsOY5").then(function (result) {
+    oauth_token = result.oauth_token;
+                    oauth_token_secret = result.oauth_token_secret;
+                    user_id = result.user_id;
+                    screen_name = result.screen_name;
+                    
+                    alert(screen_name);
+                    alert(user_id);
+                    alert(oauth_token);
+                    alert(oauth_token_secret);
+                }, function(error) {
+                    alert("Error: " + error);
+                });
+}
+
     
 $scope.facebookLogin = function () {
   $cordovaOauth.facebook("1979088845454078", ["email", "user_location", "user_relationships"]).then(function (result) {
