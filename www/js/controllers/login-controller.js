@@ -77,9 +77,10 @@ myApp.controller('LoginCtrl', function ($scope, $ionicModal, $timeout, $log, $wi
       alert(user_id);
       alert(oauth_token);
       alert(oauth_token_secret);
+      console.log(result);
     }, function (error) {
       alert("Error: " + error);
-      console.log(result);
+     
     });
   }
 
@@ -146,5 +147,45 @@ myApp.controller('LoginCtrl', function ($scope, $ionicModal, $timeout, $log, $wi
     })
 
   }
+
+  // google login
+//   $scope.googleLogin = function() {
+//     console.log("button clicked");
+//     $cordovaOauth.google("323609618732-47m84dip4vkgkfn04e55d9qoe0thhibo.apps.googleusercontent.com", ["email", "profile"]).then(function(result) {
+//       console.log("in google");
+//         $scope.details = result.access_token;
+//         console.log("google result:", result);
+//     }, function(error) {
+//       // Error code here
+//       console.log("error code");
+//     });
+// }
+
+$scope.googleLogin = function() {
+  window.plugins.googleplus.login(
+    {
+      // 'scopes': '... ', // optional, space-separated list of scopes, If not included or empty, defaults to `profile` and `email`.
+      'webClientId': '408325132592-2i25vp68b2h8f2cvmigdff27m530k03r.apps.googleusercontent.com', // optional clientId of your Web application from Credentials settings of your project - On Android, this MUST be included to get an idToken. On iOS, it is not required.
+      'offline': true // optional, but requires the webClientId - if set to true the plugin will also return a serverAuthCode, which can be used to grant offline access to a non-Google server
+    },
+    function (obj) {
+      alert(JSON.stringify(obj)); // do something useful instead of alerting
+    },
+    function (msg) {
+      alert('error: ' + msg);
+    }
+  );
+}
+
+
+// $scope.googleLogin = function() {
+//   $cordovaOauth.google("779493027260-fqlm2b2s6lircrd1k77vt8hvr7ne3gq8.apps.googleusercontent.com", ["email", "profile"]).then(function(result) {
+//     console.log("Google login", result);
+//       $scope.details = result.access_token;
+//   }, function(error) {
+//     // Error code here
+//     console.log("in errors", error);
+//   });
+// }
 
 })
