@@ -10178,6 +10178,11 @@ a.item-content {
 
 .question-option {
   margin: 30px 0px; }
+  .question-option .item-select {
+    height: 35px; }
+    .question-option .item-select select {
+      max-width: 100%;
+      direction: ltr; }
 
 .btn-submit {
   font-size: 13px;
