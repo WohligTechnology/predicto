@@ -46,25 +46,42 @@
                                 </div>
                                 <i class="radio-icon ion-checkmark"></i>
                             </label>
-                            <button class="button btn-submit" ng-click="predict(bets,data)"> SUBMIT</button>
+                            <p class="padding-top">
+                                <button class="button btn-submit" ng-click="predict(bets,data)"> SUBMIT</button>
+                            </p>
                         </form>
                     </div>
                     <div class="question-option" ng-if="data.betName=='IstInningScore'|| data.betName=='playerScore'">
-                        <form>
-                            <div>
-                                <input type="number" class="input-bor" ng-model="bets.answer">
+                        <form novalidate>
+                            <div class="list">
+                                <label class="item item-input">
+                              <input type="number" ng-model="bets.answer">
+                            </label>
                             </div>
-                            <button class="button btn-submit" ng-click="predict(bets,data)"> SUBMIT</button>
+                            <!-- <div>
+                                <input type="number" class="input-bor" ng-model="bets.answer">
+                            </div> -->
+                            <p>  <button class="button btn-submit" ng-click="predict(bets,data)"> SUBMIT</button> </p>
                         </form>
                     </div>
                     <div class="question-option" ng-if="data.betName=='tournamentWinner'">
-                        <form>
-                            <div>
+                        <form novalidate>
+                            <div class="list">
+
+                                <label class="item item-input item-select">
+       <select ng-model="bets.answerFinal">
+                                    <option ng-repeat="team in teamList" value="{{team._id}}">{{team.teamName}}</option>
+                                </select>
+  </label>
+                            </div>
+                            <!-- <div>
                                 <select ng-model="bets.answerFinal">
                                     <option ng-repeat="team in teamList" value="{{team._id}}">{{team.teamName}}</option>
                                 </select>
-                            </div>
-                            <button class="button btn-submit" ng-click="predict(bets,data)"> SUBMIT</button>
+                            </div> -->
+                            <p>
+                                <button class="button btn-submit" ng-click="predict(bets,data)"> SUBMIT</button>
+                            </p>
                         </form>
                     </div>
                 </div>
