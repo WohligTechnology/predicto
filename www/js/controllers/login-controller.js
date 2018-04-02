@@ -200,14 +200,54 @@ myApp.controller('LoginCtrl', function ($scope, $ionicModal, $timeout, $log, $wi
   }
 
 
-  // $scope.googleLogin = function() {
-  //   $cordovaOauth.google("779493027260-fqlm2b2s6lircrd1k77vt8hvr7ne3gq8.apps.googleusercontent.com", ["email", "profile"]).then(function(result) {
-  //     console.log("Google login", result);
-  //       $scope.details = result.access_token;
-  //   }, function(error) {
-  //     // Error code here
-  //     console.log("in errors", error);
-  //   });
-  // }
+  $scope.googleLogin = function () {
+    window.plugins.googleplus.login({
+        'scopes': '', // optional, space-separated list of scopes, If not included or empty, defaults to `profile` and `email`.
+        'webClientId': '779493027260-fqlm2b2s6lircrd1k77vt8hvr7ne3gq8.apps.googleusercontent.com', // optional clientId of your Web application from Credentials settings of your project - On Android, this MUST be included to get an idToken. On iOS, it is not required.
+        // 'offline': true // optional, but requires the webClientId - if set to true the plugin will also return a serverAuthCode, which can be used to grant offline access to a non-Google server
+      },
+      function (obj) {
+         // do something useful instead of alerting
+        console.log('done google login', obj)
+
+        $scope.profileData = obj;
+        // var Socialstate = result.data.location.name.split(",")
+        $scope.socialLoginData = {
+          name: $scope.profileData.displayName,
+          email: $scope.profileData.email,
+          socailLoginPhoto: $scope.profileData.imageUrl,
+          // state: Socialstate[1],
+          // city: Socialstate[0],
+          // country: "India"
+        }
+        Predict.apiCallWithData("User/getUserforSocailLoginFacebook", $scope.socialLoginData, function (data) {
+          if (data.value == true) {
+            $scope.userData = data.data;
+            $scope.userData.verified = false;
+            $.jStorage.set("user", $scope.userData);
+            $state.go("tab.explore")
+          } else {
+            Predict.apiCallWithData("User/save", $scope.socialLoginData, function (data) {
+              console.log("*********************after saving the user in database", data)
+              if (data.value == true) {
+                $scope.userData = data.data;
+                $scope.userData.verified = false;
+                $.jStorage.set("user", $scope.userData);
+                $state.go("inviteFriends")
+              } else {
+                console.log("display error")
+              }
+
+            })
+          }
+        })
+
+
+      },
+      function (msg) {
+        console.log('done google login', msg)
+      }
+    );
+  }
 
 })
