@@ -2,8 +2,8 @@
     <ion-content>
         <div class="user-profile">
             <div class="profile-img">
-                <img class="img-responsive" src="img/profile.png">
-                <!-- <img src="img/download.png"> -->
+                <img class="img-responsive" ng-src="{{userDetail.photo | serverimage}}" ng-if="!showuserProfImg">
+                <img src="img/download.png" ng-if="showuserProfImg">
             </div>
             <h4 class="font-Play-Bold text-center">{{userDetail.name}}</h4>
         </div>

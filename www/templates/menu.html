@@ -12,17 +12,18 @@
                         <button type="button" class="navbar btn-header"  menu-toggle="left" ng-class="{'hamburger-cross' : showMenu == true, '': showMenu == false}"
                         ng-click="getMenu();">
                         <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                     </button>
                     </span>
                 </div>
             </ion-nav-back-button>
             <ion-nav-buttons side="right" class="profile-item">
-                <div>
-                    <img src="img/profile2.png" class="w35">
+                <a class="profile-img" ui-sref="app.profile">
+                    <img class="img-responsive" ng-src="{{userDetail.photo | serverimage}}" ng-if="!showuserProfImg">
+                    <img class="img-responsive" src="img/download.png" ng-if="showuserProfImg">
                     <!-- <i class="icon ion-checkmark-circled icon-color"></i> -->
-                </div>
+                </a>
             </ion-nav-buttons>
         </ion-nav-bar>
         <ion-nav-view name="menuContent"></ion-nav-view>
@@ -30,32 +31,25 @@
     <ion-side-menu side="left">
         <ion-content>
             <ion-list class="playlists">
-                <ion-item ui-sref-active="actives" menu-close ui-sref="app.home"  ng-class="{'hamburger-cross' : showMenu == true, '': showMenu == false}"
-                ng-click="getMenu();">
+                <ion-item ui-sref-active="actives" menu-close ui-sref="app.home" ng-class="{'hamburger-cross' : showMenu == true, '': showMenu == false}" ng-click="getMenu();">
                     home
                 </ion-item>
-                <ion-item menu-close ui-sref="app.profile"  ng-class="{'hamburger-cross' : showMenu == true, '': showMenu == false}"
-                ng-click="getMenu();">
+                <ion-item menu-close ui-sref="app.profile" ng-class="{'hamburger-cross' : showMenu == true, '': showMenu == false}" ng-click="getMenu();">
                     profile
                 </ion-item>
-                <ion-item ui-sref-active="actives" menu-close ui-sref="app.leaderboard"  ng-class="{'hamburger-cross' : showMenu == true, '': showMenu == false}"
-                ng-click="getMenu();">
+                <ion-item ui-sref-active="actives" menu-close ui-sref="app.leaderboard" ng-class="{'hamburger-cross' : showMenu == true, '': showMenu == false}" ng-click="getMenu();">
                     leaderboard
                 </ion-item>
-                <ion-item menu-close ui-sref="app.calender"  ng-class="{'hamburger-cross' : showMenu == true, '': showMenu == false}"
-                ng-click="getMenu();">
+                <ion-item menu-close ui-sref="app.calender" ng-class="{'hamburger-cross' : showMenu == true, '': showMenu == false}" ng-click="getMenu();">
                     calender
                 </ion-item>
-                <ion-item menu-close ui-sref="app.live"  ng-class="{'hamburger-cross' : showMenu == true, '': showMenu == false}"
-                ng-click="getMenu();">
+                <ion-item menu-close ui-sref="app.live" ng-class="{'hamburger-cross' : showMenu == true, '': showMenu == false}" ng-click="getMenu();">
                     all mathches
                 </ion-item>
-                <ion-item menu-close ui-sref="app.prize"  ng-class="{'hamburger-cross' : showMenu == true, '': showMenu == false}"
-                ng-click="getMenu();">
+                <ion-item menu-close ui-sref="app.prize" ng-class="{'hamburger-cross' : showMenu == true, '': showMenu == false}" ng-click="getMenu();">
                     gratification
                 </ion-item>
-                <ion-item menu-close ui-sref="app.terms"  ng-class="{'hamburger-cross' : showMenu == true, '': showMenu == false}"
-                ng-click="getMenu();">
+                <ion-item menu-close ui-sref="app.terms" ng-class="{'hamburger-cross' : showMenu == true, '': showMenu == false}" ng-click="getMenu();">
                     terms and conditions
                 </ion-item>
             </ion-list>

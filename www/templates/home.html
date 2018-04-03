@@ -23,7 +23,7 @@
                     <div class="question">
                         <p>{{data.description}}</p>
                     </div>
-                    <div class="question-option" ng-if="data.betName=='tossWinner' || data.betName=='Winner' ">
+                    <div class="question-option" ng-if="data.betName=='tossWinner' ">
                         <form>
                             <label class="item item-icon-left item-radio" style="border: none">
                                 <input type="radio" name="group" value="team1" ng-model="bets.answerTeam">
@@ -47,11 +47,39 @@
                                 <i class="radio-icon ion-checkmark"></i>
                             </label>
                             <p class="padding-top">
-                                <button class="button btn-submit" ng-click="predict(bets,data)"> SUBMIT</button>
+                                <button class="button btn-submit" ng-click="predict(bets,data)" ng-disabled="btnDisableTossWinner || !bets.answerTeam"> SUBMIT</button>
                             </p>
                         </form>
                     </div>
-                    <div class="question-option" ng-if="data.betName=='IstInningScore'|| data.betName=='playerScore'">
+                    <div ng-if="data.betName=='Winner' ">
+                        <form>
+                            <label class="item item-icon-left item-radio" style="border: none">
+                                <input type="radio" name="group" value="team1" ng-model="bets.answerTeam">
+                                <div class="item-content" style="margin-left:0px">
+                                    {{matchName.team1.shortName}}
+                                </div>
+                                <i class="radio-icon ion-checkmark"></i>
+                            </label>
+                            <label class="item item-icon-left item-radio" style="border: none">
+                                <input type="radio" name="group" value="team2" ng-model="bets.answerTeam">
+                                <div class="item-content">
+                                    {{matchName.team2.shortName}}
+                                </div>
+                                <i class="radio-icon ion-checkmark"></i>
+                            </label>
+                            <label class="item item-icon-left item-radio" style="border: none">
+                                <input type="radio" name="group" value="draw" ng-model="bets.answerTeam">
+                                <div class="item-content">
+                                    draw
+                                </div>
+                                <i class="radio-icon ion-checkmark"></i>
+                            </label>
+                            <p class="padding-top">
+                                <button class="button btn-submit" ng-click="predict(bets,data)" ng-disabled="btnDisableWinner  || !bets.answerTeam"> SUBMIT</button>
+                            </p>
+                        </form>
+                    </div>
+                    <div class="question-option" ng-if="data.betName=='IstInningScore'">
                         <form novalidate>
                             <div class="list">
                                 <label class="item item-input">
@@ -61,7 +89,21 @@
                             <!-- <div>
                                 <input type="number" class="input-bor" ng-model="bets.answer">
                             </div> -->
-                            <p>  <button class="button btn-submit" ng-click="predict(bets,data)"> SUBMIT</button> </p>
+                            <p> <button class="button btn-submit" ng-click="predict(bets,data)" ng-disabled="btnDisableIstInningScore || !bets.answer"> SUBMIT</button> </p>
+                        </form>
+                    </div>
+                    <div ng-if="data.betName=='playerScore'">
+                        <form novalidate>
+                            <h5>Player Name: {{matchName.player}}</h5>
+                            <div class="list">
+                                <label class="item item-input">
+                              <input type="number" ng-model="bets.answer">
+                            </label>
+                            </div>
+                            <!-- <div>
+                                <input type="number" class="input-bor" ng-model="bets.answer">
+                            </div> -->
+                            <p> <button class="button btn-submit" ng-click="predict(bets,data)" ng-disabled="btnDisableIstPlayerScore || !bets.answer"> SUBMIT</button> </p>
                         </form>
                     </div>
                     <div class="question-option" ng-if="data.betName=='tournamentWinner'">
@@ -69,18 +111,13 @@
                             <div class="list">
 
                                 <label class="item item-input item-select">
-       <select ng-model="bets.answerFinal">
+                                    <select ng-model="bets.answerFinal">
                                     <option ng-repeat="team in teamList" value="{{team._id}}">{{team.teamName}}</option>
                                 </select>
-  </label>
+                                 </label>
                             </div>
-                            <!-- <div>
-                                <select ng-model="bets.answerFinal">
-                                    <option ng-repeat="team in teamList" value="{{team._id}}">{{team.teamName}}</option>
-                                </select>
-                            </div> -->
                             <p>
-                                <button class="button btn-submit" ng-click="predict(bets,data)"> SUBMIT</button>
+                                <button class="button btn-submit" ng-click="predict(bets,data)" ng-disabled="btnDisableTournamentWinner || !bets.answerFinal"> SUBMIT</button>
                             </p>
                         </form>
                     </div>

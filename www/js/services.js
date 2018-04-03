@@ -1,6 +1,6 @@
-// var adminurl = "http://localhost:80/api/"
-var adminurl = "http://192.168.2.45:80/api/"
-
+var adminurl = "http://localhost:80/api/"
+    // var adminurl = "http://192.168.2.45:80/api/"
+    // var adminurl = "http://predicto.wohlig.co.in/api/"
 angular.module('starter.services', [])
 
 .factory('Predict', function($http) {
@@ -10,7 +10,6 @@ angular.module('starter.services', [])
         },
         callApiWithData: function(url, data, callback) {
             $http.post(adminurl + url, data).then(function(data) {
-
                 callback(data);
             });
         },
