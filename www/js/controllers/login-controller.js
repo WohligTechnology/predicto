@@ -1,14 +1,19 @@
 // // angular.module('starter.controllers', [])
 myApp.controller('LoginCtrl', function($scope, $ionicModal, $timeout, $log, $window, $http, Predict, $cordovaOauth, $state) {
+    $log.log("in login controller ");
+    //to check a user is logged in or not 
+    if ($.jStorage.get("user")) {
+        $state.go("app.calender");
+    }
+
     $scope.login = function(userData) {
         Predict.callApiWithData("User/login", userData, function(data) {
-            console.log("value", data.data.value)
-            if (data.data.value == true) {
+            //console.log("value", data.data.value)
+            if (data.data.value) {
                 $.jStorage.set("user", data.data.data._id);
                 $state.go("app.calender");
-                console.log(data.data.data._id);
+                // console.log(data.data.data._id);
             }
-            // if($scope.teamSlider.betName==IstInningScore){
         });
     };
     // $scope.facebookLogin = function() {
@@ -66,30 +71,58 @@ myApp.controller('LoginCtrl', function($scope, $ionicModal, $timeout, $log, $win
     $scope.twitterLogin = function() {
         console.log("In twitter")
         $cordovaOauth.twitter("4lIW80CHbKp0waLOlyfazBIeG", "j2qu0FKv0LLfj8eZ1UC35mfyYDGatlWDiZFRmDJvpxcpOYsOY5").then(function(result) {
-            var oauth_token = result.oauth_token;
-            var oauth_token_secret = result.oauth_token_secret;
-            var user_id = result.user_id;
-            var screen_name = result.screen_name;
+            console.log("Response Object -> " + JSON.stringify(result));
+            console.log("twitterLogin", result)
+            $.jStorage.set("socialLogin", result);
+            $scope.socialLogin = $.jStorage.get("socialLogin")
+            console.log("$scope.socialLogin", $scope.socialLogin)
+            console.log("$scope.profileData.screen_name", result.screen_name)
+            $scope.profileData = result;
+            $scope.socialLoginData = {
+                name: $scope.profileData.screen_name
+                    // email: $scope.profileData.email,
+                    // socailLoginPhoto: $scope.profileData.picture.data.url
+                    // state: Socialstate[1],
+                    // city: Socialstate[0],
+                    // country: "India"
+            }
+            Predict.callApiWithData("User/getUserforSocailLogin", $scope.socialLoginData, function(data) {
+                console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%", data)
+                if (data.data.value == true) {
+                    $scope.userData = data.data.data;
+                    console.log("data after save###########", $scope.userData)
+                    $.jStorage.set("user", $scope.userData._id);
+                    $state.go("app.calender")
+                } else {
+                    Predict.callApiWithData("User/save", $scope.socialLoginData, function(data) {
+                        console.log("*********************after saving the user in database", data)
+                        if (data.data.value == true) {
+                            $scope.userData = data.data.data;
+                            console.log("data after save***************", $scope.userData)
+                            $.jStorage.set("user", $scope.userData._id);
+                            $state.go("app.calender")
+                        } else {
+                            console.log("display error")
+                        }
 
-            alert(screen_name);
-            alert(user_id);
-            alert(oauth_token);
-            alert(oauth_token_secret);
-            console.log(result);
+                    })
+                }
+            })
         }, function(error) {
-            alert("Error: " + error);
-
+            alert("There was a problem getting your profile. Check the logs for details.");
+            console.log(error);
+            $state.go("login");
         });
     }
 
 
     $scope.facebookLogin = function() {
-        $cordovaOauth.facebook("1979088845454078", ["email", "user_location", "user_relationships"]).then(function(result) {
+        $cordovaOauth.facebook("1814304471935090", ["email", "user_location", "user_relationships", "user_mobile_phone,user_birthday"]).then(function(result) {
             console.log("Response Object -> " + JSON.stringify(result));
             console.log("facebookLogin", result)
-            $.jStorage.set("socialLogin123", result);
+            $.jStorage.set("socialLogin", result);
             $scope.socialLogin = $.jStorage.get("socialLogin")
-            console.log($scope.socialLogin)
+            console.log("$scope.socialLogin", $scope.socialLogin)
             if ($scope.socialLogin.access_token != '') {
                 $http.get("https://graph.facebook.com/v2.5/me", {
                     params: {
@@ -99,28 +132,30 @@ myApp.controller('LoginCtrl', function($scope, $ionicModal, $timeout, $log, $win
                     }
                 }).then(function(result) {
                     $scope.profileData = result.data;
-                    // var Socialstate = result.data.location.name.split(",")
+                    console.log("$scope.profileData", $scope.profileData)
+                        // var Socialstate = result.data.location.name.split(",")
                     $scope.socialLoginData = {
                         name: $scope.profileData.name,
                         email: $scope.profileData.email,
-                        socailLoginPhoto: $scope.profileData.picture.data.url,
-                        // state: Socialstate[1],
-                        // city: Socialstate[0],
-                        // country: "India"
+                        socailLoginPhoto: $scope.profileData.picture.data.url
+                            // state: Socialstate[1],
+                            // city: Socialstate[0],
+                            // country: "India"
                     }
                     Predict.callApiWithData("User/getUserforSocailLoginFacebook", $scope.socialLoginData, function(data) {
-                        if (data.value == true) {
-                            $scope.userData = data.data;
-                            $scope.userData.verified = false;
-                            $.jStorage.set("user", $scope.userData);
+                        console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%", data)
+                        if (data.data.value == true) {
+                            $scope.userData = data.data.data;
+                            console.log("data after save###########", $scope.userData)
+                            $.jStorage.set("user", $scope.userData._id);
                             $state.go("app.calender")
                         } else {
                             Predict.callApiWithData("User/save", $scope.socialLoginData, function(data) {
                                 console.log("*********************after saving the user in database", data)
                                 if (data.data.value == true) {
-                                    $scope.userData = data.data;
-                                    $scope.userData.verified = false;
-                                    $.jStorage.set("user", $scope.userData);
+                                    $scope.userData = data.data.data;
+                                    console.log("data after save***************", $scope.userData)
+                                    $.jStorage.set("user", $scope.userData._id);
                                     $state.go("app.calender")
                                 } else {
                                     console.log("display error")
@@ -146,19 +181,6 @@ myApp.controller('LoginCtrl', function($scope, $ionicModal, $timeout, $log, $win
 
     }
 
-    // google login
-    //   $scope.googleLogin = function() {
-    //     console.log("button clicked");
-    //     $cordovaOauth.google("323609618732-47m84dip4vkgkfn04e55d9qoe0thhibo.apps.googleusercontent.com", ["email", "profile"]).then(function(result) {
-    //       console.log("in google");
-    //         $scope.details = result.access_token;
-    //         console.log("google result:", result);
-    //     }, function(error) {
-    //       // Error code here
-    //       console.log("error code");
-    //     });
-    // }
-
     $scope.googleLogin = function() {
         window.plugins.googleplus.login({
                 // 'scopes': '... ', // optional, space-separated list of scopes, If not included or empty, defaults to `profile` and `email`.
@@ -175,14 +197,54 @@ myApp.controller('LoginCtrl', function($scope, $ionicModal, $timeout, $log, $win
     }
 
 
-    // $scope.googleLogin = function() {
-    //   $cordovaOauth.google("779493027260-fqlm2b2s6lircrd1k77vt8hvr7ne3gq8.apps.googleusercontent.com", ["email", "profile"]).then(function(result) {
-    //     console.log("Google login", result);
-    //       $scope.details = result.access_token;
-    //   }, function(error) {
-    //     // Error code here
-    //     console.log("in errors", error);
-    //   });
-    // }
+    $scope.googleLogin = function() {
+        window.plugins.googleplus.login({
+                'scopes': '', // optional, space-separated list of scopes, If not included or empty, defaults to `profile` and `email`.
+                'webClientId': '779493027260-fqlm2b2s6lircrd1k77vt8hvr7ne3gq8.apps.googleusercontent.com', // optional clientId of your Web application from Credentials settings of your project - On Android, this MUST be included to get an idToken. On iOS, it is not required.
+                // 'offline': true // optional, but requires the webClientId - if set to true the plugin will also return a serverAuthCode, which can be used to grant offline access to a non-Google server
+            },
+            function(obj) {
+                // do something useful instead of alerting
+                console.log('done google login', obj)
+
+                $scope.profileData = obj;
+                // var Socialstate = result.data.location.name.split(",")
+                $scope.socialLoginData = {
+                    name: $scope.profileData.displayName,
+                    email: $scope.profileData.email,
+                    socailLoginPhoto: $scope.profileData.imageUrl,
+                    // state: Socialstate[1],
+                    // city: Socialstate[0],
+                    // country: "India"
+                }
+                Predict.apiCallWithData("User/getUserforSocailLoginFacebook", $scope.socialLoginData, function(data) {
+                    if (data.value == true) {
+                        $scope.userData = data.data;
+                        $scope.userData.verified = false;
+                        $.jStorage.set("user", $scope.userData);
+                        $state.go("tab.explore")
+                    } else {
+                        Predict.apiCallWithData("User/save", $scope.socialLoginData, function(data) {
+                            console.log("*********************after saving the user in database", data)
+                            if (data.value == true) {
+                                $scope.userData = data.data;
+                                $scope.userData.verified = false;
+                                $.jStorage.set("user", $scope.userData);
+                                $state.go("inviteFriends")
+                            } else {
+                                console.log("display error")
+                            }
+
+                        })
+                    }
+                })
+
+
+            },
+            function(msg) {
+                console.log('done google login', msg)
+            }
+        );
+    }
 
 })

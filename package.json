@@ -18,7 +18,7 @@
       "cordova-plugin-inappbrowser": {},
       "cordova-plugin-dialogs": {},
       "cordova-plugin-googleplus": {
-        "REVERSED_CLIENT_ID": "com.googleusercontent.apps.408325132592-2i25vp68b2h8f2cvmigdff27m530k03r"
+        "REVERSED_CLIENT_ID": "com.googleusercontent.apps.779493027260-fqlm2b2s6lircrd1k77vt8hvr7ne3gq8"
       }
     },
     "platforms": [
@@ -33,7 +33,7 @@
     "cordova-ios": "^4.5.4",
     "cordova-plugin-device": "^2.0.1",
     "cordova-plugin-dialogs": "^2.0.1",
-    "cordova-plugin-googleplus": "^5.2.2",
+    "cordova-plugin-googleplus": "git+https://github.com/EddyVerbruggen/cordova-plugin-googleplus.git",
     "cordova-plugin-inappbrowser": "^2.0.2",
     "cordova-plugin-ionic-keyboard": "^2.0.5",
     "cordova-plugin-ionic-webview": "^1.1.16",
