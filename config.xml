@@ -84,9 +84,9 @@
     <plugin name="cordova-plugin-inappbrowser" spec="^2.0.2" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
     <allow-navigation href="http://localhost:8101" />
-    <engine name="ios" spec="^4.5.4" />
-    <engine name="android" spec="~7.0.0" />
     <plugin name="cordova-plugin-googleplus" spec="https://github.com/EddyVerbruggen/cordova-plugin-googleplus">
         <variable name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.779493027260-fqlm2b2s6lircrd1k77vt8hvr7ne3gq8" />
     </plugin>
+    <engine name="ios" spec="^4.5.4" />
+    <engine name="android" spec="~7.0.0" />
 </widget>
