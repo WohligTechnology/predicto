@@ -1,30 +1,19 @@
-myApp.controller('HomeCtrl', function($scope, $log, $window, Predict, $stateParams) {
+myApp.controller('HomeCtrl', function($scope, $log, $window, Predict, $stateParams, $ionicPopover, $timeout, $ionicPopup) {
     console.log($stateParams.id)
-    $scope.matchRestriction=false
+    $scope.matchRestriction = false
     var userId = $.jStorage.get('user');
     var matchId = $stateParams.id
-    Predict.callApiWithData("Match/getone", { _id: matchId }, function (data) {
+    Predict.callApiWithData("Match/getone", { _id: matchId }, function(data) {
         $scope.matchName = data.data.data
         console.log("***********************************", data)
-        var endTime=moment(new Date()).add(30, 'minutes').format('MMMM Do YYYY, h:mm:ss a');
-        var startTime=moment($scope.matchName.startingTime).format('MMMM Do YYYY, h:mm:ss a');
+        var endTime = moment(new Date()).add(30, 'minutes').format('MMMM Do YYYY, h:mm:ss a');
+        var startTime = moment($scope.matchName.startingTime).format('MMMM Do YYYY, h:mm:ss a');
         console.log("match time before half hour", startTime)
-        
-        
-        console.log("system time",endTime)
-        if(startTime<=endTime){
-
-            $scope.matchRestriction=true
+        console.log("system time", endTime)
+        if (startTime <= endTime) {
+            $scope.matchRestriction = true
         }
     })
-
-    // $scope.IstInningScore = false;
-    // $scope.tossWinner = false;
-    // $scope.Winner = false;
-    // $scope.options = {
-    //    loop: false,
-    //     initialSlide: 0,
-    //    };
 
     $scope.$on("$ionicSlides.sliderInitialized", function(event, data) {
         // data.slider is the instance of Swiper
@@ -73,9 +62,26 @@ myApp.controller('HomeCtrl', function($scope, $log, $window, Predict, $statePara
                 $log.log("in tournamentwinner");
                 $scope.btnDisableTournamentWinner = true;
             }
-            Predict.callApiWithData("UserBets/save", bets, function(data) {
-                console.log("$$$$$$$$$$$$$$$", data);
-            });
+
+            //to check bet has been done or not
+            Predict.callApiWithData("UserBets/findBets", bets, function(data) {
+                console.log("is available", data.data.value);
+                var template = '<ion-popover-view><ion-content><h3>You have already bet</h3></ion-content></ion-popover-view>';
+                if (data.data.value == false) {
+                    Predict.callApiWithData("UserBets/save", bets, function(data) {
+                        console.log("$$$$$$$$$$$$$$$", data);
+                    });
+                } else {
+                    console.log("bet has already been done");
+                    var myPopup = $ionicPopup.show({
+                        title: 'bet has already been done',
+                        scope: $scope
+                    });
+                    $timeout(function() {
+                        myPopup.close();
+                    }, 1500);
+                }
+            })
         } // end of fun predict
 
 });
