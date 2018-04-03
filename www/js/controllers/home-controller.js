@@ -66,10 +66,16 @@ myApp.controller('HomeCtrl', function($scope, $log, $window, Predict, $statePara
             //to check bet has been done or not
             Predict.callApiWithData("UserBets/findBets", bets, function(data) {
                 console.log("is available", data.data.value);
-                var template = '<ion-popover-view><ion-content><h3>You have already bet</h3></ion-content></ion-popover-view>';
                 if (data.data.value == false) {
                     Predict.callApiWithData("UserBets/save", bets, function(data) {
                         console.log("$$$$$$$$$$$$$$$", data);
+                        var myPopup = $ionicPopup.show({
+                            title: 'bet successful',
+                            scope: $scope
+                        });
+                        $timeout(function() {
+                            myPopup.close();
+                        }, 1500);
                     });
                 } else {
                     console.log("bet has already been done");
