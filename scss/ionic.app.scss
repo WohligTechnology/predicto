@@ -196,9 +196,16 @@ h4 {
     .back-text {
         display: none;
     }
-    .w35 {
+    .profile-img {
         width: 35px;
+        height: 35px;
+        border: 1px solid transparent;
         border-radius: 50%;
+        display: block;
+        overflow: hidden;
+        img {
+            border-radius: 50%;
+        }
     }
 }
 
@@ -227,7 +234,7 @@ a.item-content {
 //btn toggle
 .btn-header {
     border: none;
-    margin-top: 20px;
+    margin-top: 15px;
     span {
         @include transition(all 300ms linear);
     }
