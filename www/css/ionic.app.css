@@ -9997,16 +9997,25 @@ h4 {
     margin-top: 20px; }
   .bar.bar-energized .back-text {
     display: none; }
-  .bar.bar-energized .w35 {
+  .bar.bar-energized .profile-img {
     width: 35px;
-    border-radius: 50%; }
+    height: 35px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    display: block;
+    overflow: hidden; }
+    .bar.bar-energized .profile-img img {
+      border-radius: 50%; }
 
 .bar .title + .buttons {
   top: 21px;
   right: 10px; }
 
 .bar {
-  height: 70px; }
+  height: 70px !important; }
+
+.platform-ios.bar {
+  height: 70px !important; }
 
 /*---------------2 header side menu-----------------------*/
 a.item-content {
@@ -10019,7 +10028,7 @@ a.item-content {
 
 .btn-header {
   border: none;
-  margin-top: 20px;
+  margin-top: 15px;
   background: transparent; }
   .btn-header span {
     -webkit-transition: all 300ms linear;
