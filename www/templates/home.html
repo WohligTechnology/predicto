@@ -28,24 +28,24 @@
                             <label class="item item-icon-left item-radio" style="border: none">
                                 <input type="radio" name="group" value="team1" ng-model="bets.answerTeam">
                                 <div class="item-content" style="margin-left:0px">
-                                    {{matchName.team1.shortName}}
+                                    {{matchName.team1.teamName}}
                                 </div>
                                 <i class="radio-icon ion-checkmark"></i>
                             </label>
                             <label class="item item-icon-left item-radio" style="border: none">
                                 <input type="radio" name="group" value="team2" ng-model="bets.answerTeam">
                                 <div class="item-content">
-                                    {{matchName.team2.shortName}}
+                                    {{matchName.team2.teamName}}
                                 </div>
                                 <i class="radio-icon ion-checkmark"></i>
                             </label>
-                            <label class="item item-icon-left item-radio" style="border: none">
+                            <!-- <label class="item item-icon-left item-radio" style="border: none">
                                 <input type="radio" name="group" value="draw" ng-model="bets.answerTeam">
                                 <div class="item-content">
                                     draw
                                 </div>
                                 <i class="radio-icon ion-checkmark"></i>
-                            </label>
+                            </label> -->
                             <p class="padding-top">
                                 <button class="button btn-submit" ng-click="predict(bets,data)" ng-disabled="btnDisableTossWinner || !bets.answerTeam"> SUBMIT</button>
                             </p>
@@ -56,24 +56,24 @@
                             <label class="item item-icon-left item-radio" style="border: none">
                                 <input type="radio" name="group" value="team1" ng-model="bets.answerTeam">
                                 <div class="item-content" style="margin-left:0px">
-                                    {{matchName.team1.shortName}}
+                                    {{matchName.team1.teamName}}
                                 </div>
                                 <i class="radio-icon ion-checkmark"></i>
                             </label>
                             <label class="item item-icon-left item-radio" style="border: none">
                                 <input type="radio" name="group" value="team2" ng-model="bets.answerTeam">
                                 <div class="item-content">
-                                    {{matchName.team2.shortName}}
+                                    {{matchName.team2.teamName}}
                                 </div>
                                 <i class="radio-icon ion-checkmark"></i>
                             </label>
-                            <label class="item item-icon-left item-radio" style="border: none">
+                            <!-- <label class="item item-icon-left item-radio" style="border: none">
                                 <input type="radio" name="group" value="draw" ng-model="bets.answerTeam">
                                 <div class="item-content">
                                     draw
                                 </div>
                                 <i class="radio-icon ion-checkmark"></i>
-                            </label>
+                            </label> -->
                             <p class="padding-top">
                                 <button class="button btn-submit" ng-click="predict(bets,data)" ng-disabled="btnDisableWinner  || !bets.answerTeam"> SUBMIT</button>
                             </p>

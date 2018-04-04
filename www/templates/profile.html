@@ -1,34 +1,34 @@
-<ion-view view-title="predicto">
+<ion-view view-title="Predicto">
     <ion-content>
         <div class="user-profile">
             <div class="profile-img">
-                <img class="img-responsive" ng-src="{{userDetail.photo | serverimage}}" ng-if="!showuserProfImg">
+                <img class="img-responsive" ng-src="{{userDetail.socialLoginPhoto | serverimage}}" ng-if="!showuserProfImg">
                 <img src="img/download.png" ng-if="showuserProfImg">
             </div>
             <h4 class="font-Play-Bold text-center">{{userDetail.name}}</h4>
         </div>
         <div>
             <table class="table-data">
-                <tr>
+                <!-- <tr>
                     <td>birthday:</td>
                     <td>
                         <span>{{userDetail.dob|date}}</span>
                     </td>
-                </tr>
-                <tr>
+                </tr> -->
+                <!-- <tr>
                     <td>number:</td>
                     <td>
                         <span>{{userDetail.mobile}}</span>
                     </td>
-                </tr>
+                </tr> -->
                 <tr>
-                    <td>email:</td>
+                    <td>Email:</td>
                     <td>
                         <span>{{userDetail.email}}</span>
                     </td>
                 </tr>
                 <tr>
-                    <td>score:</td>
+                    <td>Score:</td>
                     <td>
                         <span>{{userDetail.points}}</span>
                     </td>

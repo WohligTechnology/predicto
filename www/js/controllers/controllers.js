@@ -40,10 +40,13 @@ myApp.controller('AppCtrl', function($scope, $ionicModal, $timeout, $log, Predic
         }, 1000);
     };
     $scope.showMenu = false;
+   
     $scope.getMenu = function() {
+      
         if ($scope.showMenu == false) {
             // alert('test');
             $scope.showMenu = true;
+           
 
         } else {
             $scope.showMenu = false;

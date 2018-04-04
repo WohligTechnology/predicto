@@ -9978,7 +9978,10 @@ h4 {
   background-color: #000; }
 
 .padd-9 {
-  padding: 9px 0px; }
+  padding: 5px 0px; }
+
+.pad-tb {
+  padding: 20px 0px; }
 
 .page-title h2 {
   padding: 21px;
@@ -10025,6 +10028,9 @@ a.item-content {
 .item-content.activated {
   background-color: #b200e2 !important;
   color: #000; }
+
+.bg-purpal .item-complex .item-content {
+  background-color: #b200e2 !important; }
 
 .btn-header {
   border: none;
@@ -10277,18 +10283,18 @@ a.item-content {
 .bor-right:after {
   content: "";
   position: absolute;
-  height: 72%;
-  top: 15%;
-  left: 56%;
+  height: 47%;
+  top: 27%;
+  left: 50%;
   border-right: 1px solid #c0baba; }
 
 .date-time {
   float: right; }
   .date-time img {
     width: 17%;
-    margin-top: 7px; }
+    margin-top: 20px; }
   .date-time span {
-    font-size: 20px;
+    font-size: 19px;
     font-family: 'Play-Regular'; }
 
 .calender .card {

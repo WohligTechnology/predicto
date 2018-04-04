@@ -70,7 +70,7 @@ myApp.controller('HomeCtrl', function($scope, $log, $window, Predict, $statePara
                     Predict.callApiWithData("UserBets/save", bets, function(data) {
                         console.log("$$$$$$$$$$$$$$$", data);
                         var myPopup = $ionicPopup.show({
-                            title: 'bet successful',
+                            title: 'Predict successful',
                             scope: $scope
                         });
                         $timeout(function() {
@@ -80,7 +80,7 @@ myApp.controller('HomeCtrl', function($scope, $log, $window, Predict, $statePara
                 } else {
                     console.log("bet has already been done");
                     var myPopup = $ionicPopup.show({
-                        title: 'bet has already been done',
+                        title: 'Predict has already been done',
                         scope: $scope
                     });
                     $timeout(function() {
