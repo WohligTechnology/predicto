@@ -63,6 +63,17 @@ myApp.controller('HomeCtrl', function($scope, $log, $window, Predict, $statePara
                 $scope.btnDisableTournamentWinner = true;
             }
 
+            // Predict.callApiWithData("UserBets/findBets", bets, function(data) {
+            //     console.log("is available", data.data.value);
+            //     if (data.data.value == false) {
+                   
+            //     } else {
+            //         console.log("bet has already been done");
+                  
+            //     }
+            // })
+
+
             //to check bet has been done or not
             Predict.callApiWithData("UserBets/findBets", bets, function(data) {
                 console.log("is available", data.data.value);

@@ -2,7 +2,8 @@
     <ion-content>
         <div class="user-profile">
             <div class="profile-img">
-                <img class="img-responsive" ng-src="{{userDetail.socialLoginPhoto | serverimage}}" ng-if="!showuserProfImg">
+                <img class="img-responsive" ng-src="https://graph.facebook.com/100001293139521/picture?width=1024&height=1024
+                " ng-if="!showuserProfImg">
                 <img src="img/download.png" ng-if="showuserProfImg">
             </div>
             <h4 class="font-Play-Bold text-center">{{userDetail.name}}</h4>

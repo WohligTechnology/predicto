@@ -232,12 +232,17 @@ a.item-content {
     font-family: 'Play-Regular';
 }
 
-.item-content.activated {
-    background-color: $purpal!important;
-    color: $black;
+// .item-content.activated {
+//     background-color: $purpal!important;
+//     color: $black;
+// }
+.current {
+    background: $purpal!important;
 }
-.activated {
-    
+
+.item.active.item-complex > .item-content{
+    border-color:$purpal !important;
+    background-color: $purpal !important;
 }
 .bg-purpal{
     .item-complex .item-content,{
@@ -264,7 +269,8 @@ a.item-content {
     span:first-child {
         position: relative;
         top: 10px;
-        background-color: $black;
+        background-color: $light;
+     
         @include transform(rotate(45deg));
     }
     span:nth-child(2) {
@@ -273,7 +279,8 @@ a.item-content {
     span:last-child {
         position: relative;
         bottom: 6px;
-        background-color: $black;
+        background-color: $light;
+    
         @include transform(rotate(-45deg));
     }
 }
@@ -403,7 +410,7 @@ a.item-content {
         background: $light !important;
     }
     .swiper-pagination {
-        bottom: 43px !important;
+        bottom: 100px !important;
     }
 }
 
@@ -411,7 +418,8 @@ a.item-content {
     border-radius: 40px;
     background-color: $light;
     margin: 10px 40px;
-    padding: 45px 30px;
+    // padding: 45px 30px;
+    padding: 35px 30px;
     position: relative;
     .item-icon-left .item-content {
         font-size: 19px;
@@ -438,7 +446,8 @@ a.item-content {
 }
 
 .question-option {
-    margin: 30px 0px;
+    // margin: 30px 0px;
+    margin: 15px 0px;
     .item-select {
         height: 35px;
         select {

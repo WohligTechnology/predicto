@@ -10025,9 +10025,12 @@ a.item-content {
   font-size: 17px;
   font-family: 'Play-Regular'; }
 
-.item-content.activated {
-  background-color: #b200e2 !important;
-  color: #000; }
+.current {
+  background: #b200e2 !important; }
+
+.item.active.item-complex > .item-content {
+  border-color: #b200e2 !important;
+  background-color: #b200e2 !important; }
 
 .bg-purpal .item-complex .item-content {
   background-color: #b200e2 !important; }
@@ -10049,7 +10052,7 @@ a.item-content {
 .hamburger-cross span:first-child {
   position: relative;
   top: 10px;
-  background-color: #000;
+  background-color: #fff;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg); }
 
@@ -10059,7 +10062,7 @@ a.item-content {
 .hamburger-cross span:last-child {
   position: relative;
   bottom: 6px;
-  background-color: #000;
+  background-color: #fff;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg); }
 
@@ -10163,13 +10166,13 @@ a.item-content {
   .slide-height .swiper-pagination-bullet {
     background: #fff !important; }
   .slide-height .swiper-pagination {
-    bottom: 43px !important; }
+    bottom: 100px !important; }
 
 .match-slider {
   border-radius: 40px;
   background-color: #fff;
   margin: 10px 40px;
-  padding: 45px 30px;
+  padding: 35px 30px;
   position: relative; }
   .match-slider .item-icon-left .item-content {
     font-size: 19px;
@@ -10192,7 +10195,7 @@ a.item-content {
   font-family: 'Play-Regular'; }
 
 .question-option {
-  margin: 30px 0px; }
+  margin: 15px 0px; }
   .question-option .item-select {
     height: 35px; }
     .question-option .item-select select {
