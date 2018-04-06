@@ -1,6 +1,6 @@
 <ion-view view-title="Predicto">
-    <ion-content class="calender">
-        <div class="card text-center" ng-repeat="match in matchList">
+    <ion-content class="calender bg-black">
+        <!-- <div class="card text-center" ng-repeat="match in matchList">
             <div class="item item-divider" ui-sref="app.home({id:match._id})">
                 <div class="text-center">
              <strong> Match No {{match.matchNumber}}</strong> 
@@ -36,6 +36,21 @@
                     Predict Here
                 </div>
                </div>
+        </div> -->
+
+        <div ng-repeat="match in matchList">
+            <div class="day-bg">
+                <div class="d-inline">FRI, {{match.startingTime|date}}</div>
+                <div class="d-inline match-time">{{match.startingTime|date:'HH:mm'}}</div>
+            </div>
+            <div class="matches">
+                <p>Match No {{match.matchNumber}}, {{match.startingTime|date:'EEEE'}}</p>
+                <h4 class="font-Play-Bold">{{match.team1.teamName}}</h4>
+                <h4 class="font-Play-Bold">{{match.team2.teamName}}</h4>
+                <div class="predict-here" ui-sref="app.home({id:match._id})">
+                    Predict here
+                </div>
+            </div>
         </div>
-    </ion-content>
+   </ion-content>
 </ion-view>

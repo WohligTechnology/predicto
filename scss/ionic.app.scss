@@ -14,9 +14,11 @@ $dark: #444 !default;
 */
 
 $yellow:#fae90c !default;
-$black:#000 !default;
+$black:#f0f0f0 !default;
+$darkblack:#000 !default;
 $darkgray:#282828 !default;
 $light:#fff !default;
+$grayelight:#ecf0f1!default;
 $lightgray:#d2d2d2 !default;
 $graydark:#b2b2b2 !default;
 $edarkgray:#c0baba !default;
@@ -178,7 +180,7 @@ h4 {
 .page-title {
     h2 {
         padding: 21px;
-        color: $light;
+        color: $darkblack;
         font-size: 30px;
         background-color: $black;
         font-family: 'Play-Regular';
@@ -190,7 +192,7 @@ h4 {
     .title {
         font-size: 30px;
         font-family: 'Lobster-Regular';
-        margin-top: 15px;
+        margin-top: 12px;
     }
     .button.button-clear {
         margin-top: 20px;
@@ -242,17 +244,27 @@ a.item-content {
 
 .item.active.item-complex > .item-content{
     border-color:$purpal !important;
+    // color:#000;
     background-color: $purpal !important;
+    color:$light!important;
 }
+.item-complex .item-content,{
+   
+   color:#000 !important;
+  
+}
+
 .bg-purpal{
     .item-complex .item-content,{
         background-color: $purpal!important;
+       color:#000 !important;
+      
     }
 }
 //btn toggle
 .btn-header {
     border: none;
-    margin-top: 15px;
+    // margin-top: 15px;
     span {
         @include transition(all 300ms linear);
     }
@@ -298,14 +310,17 @@ a.item-content {
 
 .login-section {
     .login-title {
-        background-color: $purpal;
-        margin: 30% 9% 17%;
+        margin: 30% 7% 17%;
         border-radius: 15px;
+        color: #b200e2;
         h3 {
             padding: 17px;
-            font-size: 27px !important;
-            font-family: 'Play-Regular';
-            color: #fff;
+            font-size: 45px;
+            font-family: 'Play-Bold';
+            // color: #fff;
+            color: #b200e2;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
     }
     .item-input-inset {
@@ -361,7 +376,7 @@ a.item-content {
 
 .social-btn {
     .button {
-        font-size: 17px !important;
+        // font-size: 17px !important;
         background-color: $darkblue;
         font-family: 'OpenSans-Regular';
     }
@@ -370,14 +385,15 @@ a.item-content {
     .button-large.icon-left:before,
     .button-large.icon-right:before {
         padding-bottom: 2px;
-        font-size: 33px !important;
-        line-height: 35px !important;
+    font-size: 35px !important;
+    line-height: 35px !important;
+    padding-top: 4px;
     }
     .button-large {
         padding: 0 16px;
         min-height: 47px;
         font-size: 20px;
-        line-height: 40px;
+        line-height: 46px;
         border-radius: 0px;
     }
     .button-twitter {
@@ -532,13 +548,15 @@ a.item-content {
 }
 
 .table-data {
-    margin: 40px 30px;
+  width: 100%;
     td {
         font-size: 20px;
-        padding: 4px 10px;
+        padding: 7px 10px;
     }
-    span {
-        font-size: 17px;
+    p{
+        padding-top: 10px;
+        font-size: 35px;
+        color:$purpal;
     }
 }
 
@@ -561,35 +579,64 @@ a.item-content {
     }
 }
 
-.bor-right:after {
-    content: "";
-    position: absolute;
-    height: 47%;
-    top: 27%;
-    left: 50%;
-    border-right: 1px solid #c0baba;
-}
+// .bor-right:after {
+//     content: "";
+//     position: absolute;
+//     height: 47%;
+//     top: 27%;
+//     left: 50%;
+//     border-right: 1px solid #c0baba;
+// }
 
-.date-time {
+// .date-time {
+//     float: right;
+//     img {
+//         width: 17%;
+//         margin-top: 20px;
+//     }
+//     span {
+//         font-size: 19px;
+//         font-family: 'Play-Regular';
+//     }
+// }
+
+// .calender {
+//     .card {
+//         // margin: 20px 23px;
+//         border-radius: 15px;
+//     }
+// }
+
+.day-bg{
+    padding: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: $black;
+    letter-spacing: 1px;
+  
+ 
+}
+.match-time{
     float: right;
-    img {
-        width: 17%;
-        margin-top: 20px;
-    }
-    span {
-        font-size: 19px;
-        font-family: 'Play-Regular';
-    }
 }
-
-.calender {
-    .card {
-        // margin: 20px 23px;
-        border-radius: 15px;
-    }
+.matches{
+    padding: 10px 15px;
+    background-color: $light;
+   p{
+// padding: 3px;
+margin: 0px;
+font-size: 15px;
+color:#a2a2a2;
+    } 
+   h4{
+    margin-top: 8px;
+    margin-bottom: 10px;
+   }
 }
-
-
+.predict-here{
+    color:$purpal;
+    font-size: 18px;
+}
 /*---------------------7 live-----------------*/
 
 .score-detail {

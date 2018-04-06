@@ -9,12 +9,12 @@
                     <span class="left-buttons">
                         <!-- <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
                         </button> -->
-                        <button type="button" class="navbar btn-header"  menu-toggle="left" ng-class="{'hamburger-cross' : showMenu == true, '': showMenu == false}"
-                        ng-click="getMenu();">
-                        <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    </button>
+                        <button type="button" class="navbar btn-header" menu-toggle="left" ng-class="{'hamburger-cross' : showMenu == true, '': showMenu == false}"
+                            ng-click="getMenu();">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
                     </span>
                 </div>
             </ion-nav-back-button>
@@ -34,23 +34,27 @@
                 <!-- <ion-item ui-sref-active="actives" menu-close ui-sref="app.home" ng-class="{'hamburger-cross' : showMenu == true, '': showMenu == false}" ng-click="getMenu();">
                     home
                 </ion-item> -->
-                <ion-item ui-sref-active="active" menu-close ui-sref="app.leaderboard" ng-class="{'hamburger-cross' : showMenu == true, '': showMenu == false}" ng-click="getMenu();">
+                <ion-item ui-sref-active="active" menu-close ui-sref="app.calender" ng-class="{'hamburger-cross' : showMenu == true, '': showMenu == false}"
+                    ng-click="getMenu();">
+                    Predict
+                </ion-item>
+                <ion-item ui-sref-active="active" menu-close ui-sref="app.leaderboard" ng-class="{'hamburger-cross' : showMenu == true, '': showMenu == false}"
+                    ng-click="getMenu();">
                     Leaderboard
                 </ion-item>
-                <ion-item  ui-sref-active="active" menu-close ui-sref="app.profile" ng-class="{'hamburger-cross' : showMenu == true, '': showMenu == false}" ng-click="getMenu();">
+                <ion-item ui-sref-active="active" menu-close ui-sref="app.profile" ng-class="{'hamburger-cross' : showMenu == true, '': showMenu == false}"
+                    ng-click="getMenu();">
                     Profile
-                </ion-item>
-                
-                <ion-item ui-sref-active="active" menu-close ui-sref="app.calender" ng-class="{'hamburger-cross' : showMenu == true, '': showMenu == false}" ng-click="getMenu();">
-                    Predict
                 </ion-item>
                 <!-- <ion-item menu-close ui-sref="app.live" ng-class="{'hamburger-cross' : showMenu == true, '': showMenu == false}" ng-click="getMenu();">
                     all mathches
                 </ion-item> -->
-                <ion-item ui-sref-active="active" menu-close ui-sref="app.prize" ng-class="{'hamburger-cross' : showMenu == true, '': showMenu == false}" ng-click="getMenu();">
+                <ion-item ui-sref-active="active" menu-close ui-sref="app.prize" ng-class="{'hamburger-cross' : showMenu == true, '': showMenu == false}"
+                    ng-click="getMenu();">
                     Gratification
                 </ion-item>
-                <ion-item ui-sref-active="active" menu-close ui-sref="app.terms" ng-class="{'hamburger-cross' : showMenu == true, '': showMenu == false}" ng-click="getMenu();">
+                <ion-item ui-sref-active="active" menu-close ui-sref="app.terms" ng-class="{'hamburger-cross' : showMenu == true, '': showMenu == false}"
+                    ng-click="getMenu();">
                     Terms and Conditions
                 </ion-item>
             </ion-list>
