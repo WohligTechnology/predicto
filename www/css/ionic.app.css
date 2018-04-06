@@ -9991,7 +9991,7 @@ h4 {
   font-family: 'Play-Regular'; }
 
 .bar.bar-energized {
-  background-color: #4870A6; }
+  background-color: #387ef5; }
   .bar.bar-energized .title {
     font-size: 30px;
     font-family: 'Lobster-Regular';
@@ -10026,18 +10026,18 @@ a.item-content {
   font-family: 'Play-Regular'; }
 
 .current {
-  background: #4870A6 !important; }
+  background: #387ef5 !important; }
 
 .item.active.item-complex > .item-content {
-  border-color: #4870A6 !important;
-  background-color: #4870A6 !important;
+  border-color: #387ef5 !important;
+  background-color: #387ef5 !important;
   color: #fff !important; }
 
 .item-complex .item-content {
   color: #000 !important; }
 
 .bg-purpal .item-complex .item-content {
-  background-color: #4870A6 !important;
+  background-color: #387ef5 !important;
   color: #000 !important; }
 
 .btn-header {
@@ -10117,7 +10117,7 @@ a.item-content {
   margin-bottom: 4px !important;
   font-size: 17px;
   font-family: 'AmericanTypewriterRegular';
-  background-color: #4870A6;
+  background-color: #387ef5;
   color: #fff;
   border-radius: 0px;
   line-height: 31px;
@@ -10277,7 +10277,7 @@ a.item-content {
   padding-top: 7px !important;
   padding-bottom: 5px !important;
   right: auto;
-  color: #4870A6 !important;
+  color: #387ef5 !important;
   font-size: 20px !important; }
 
 .item-radio input ~ .radio-icon {
@@ -10324,7 +10324,7 @@ a.item-content {
   .table-data p {
     padding-top: 10px;
     font-size: 35px;
-    color: #4870A6; }
+    color: #387ef5; }
 
 .icon-color {
   font-size: 40px;
@@ -10360,7 +10360,7 @@ a.item-content {
     margin-bottom: 10px; }
 
 .predict-here {
-  color: #4870A6;
+  color: #387ef5;
   font-size: 18px; }
 
 /*---------------------7 live-----------------*/
@@ -10381,7 +10381,7 @@ a.item-content {
   top: -35px;
   right: 0;
   left: 0;
-  background-color: #4870A6; }
+  background-color: #387ef5; }
   .score .score-area {
     color: #f0f0f0;
     font-size: 19px; }
@@ -10490,7 +10490,7 @@ a.item-content {
     width: 100%;
     height: 170px;
     content: "";
-    background-color: #4870A6;
+    background-color: #387ef5;
     position: absolute;
     top: 45%;
     left: 0;
