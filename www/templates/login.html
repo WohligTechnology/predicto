@@ -1,62 +1,16 @@
-<!-- <ion-modal-view>
-  <ion-header-bar>
-    <h1 class="title">Login</h1>
-    <div class="buttons">
-      <button class="button button-clear" ng-click="closeLogin()">Close</button>
-    </div>
-  </ion-header-bar>
-  <ion-content>
-    <form ng-submit="doLogin()">
-      <div class="list">
-        <label class="item item-input">
-          <span class="input-label">Username</span>
-          <input type="text" ng-model="loginData.username">
-        </label>
-        <label class="item item-input">
-          <span class="input-label">Password</span>
-          <input type="password" ng-model="loginData.password">
-        </label>
-        <label class="item">
-          <button class="button button-block button-positive" type="submit">Log in</button>
-        </label>
-      </div>
-    </form>
-  </ion-content>
-</ion-modal-view> -->
-<ion-view view-title="Login">
-    <ion-content class="bg-black">
-        <div class="list login-section">
-            <div class="login-title text-center">
-                <h3> welcome to predicto</h3>
-            </div>
-            <div class="padd-lr">
-                <form novalidate ng-submit="">
-                    <!-- <div class="item-input-inset">
-                        <label class="item-input-wrapper">
-                  <input type="number" placeholder="Mobile Number" name="mobile" ng-model="userData.mobile">
-                </label>
-                    </div>
-                    <div class="item-input-inset">
-                        <label class="item-input-wrapper">
-                  <input type="password" placeholder="Password" name="password" ng-model="userData.password">
-                </label>
-                    </div> -->
-                    <div class="login-btn">
-                        <!-- <button class="button button-block btn-yellow">login</button> -->
-                        <div class="text-center social-btn" ng-click="facebookLogin()">
-                            <a class="button button-block icon-left button-large ion-social-facebook button-positive btn-facebook">Connect with facebook</a>
-                        </div>
-                        <!-- <div class="text-center social-btn twitter-btn">
-                            <a class="button button-block icon-left button-large ion-social-twitter button-twitter" ng-click="twitterLogin()">Connect</a>
-                        </div>
-                        <div class="text-center social-btn">
-                            <a class="button button-block icon-left button-large button-google ion-social-google" ng-click="login(userData)">Connect</a>
-                        </div>
-                        <ion-checkbox class="checkbox-square">Keep me logged in.</ion-checkbox>
-                        <a href="">Forgot Password?</a> -->
-                    </div>
-                </form>
-            </div>
+<ion-view class="scroll-bg">
+    <!--
+    <ion-header-bar class="bar-positive">
+        <h1 class="title">Login</h1>
+    </ion-header-bar>
+-->
+    <div class="login-in">
+        <div class="wraptocenter logo">
+            <img src="img/logo.png" alt="" class="w100">
         </div>
-    </ion-content>
+        <div class="login-set">
+            <a  ng-click="facebookLogin()" class="fb-btn"><i class="icon ion-social-facebook"></i>login with facebook</a>
+        </div>
+     
+    </div>
 </ion-view>

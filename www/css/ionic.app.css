@@ -9991,7 +9991,7 @@ h4 {
   font-family: 'Play-Regular'; }
 
 .bar.bar-energized {
-  background-color: #b200e2; }
+  background-color: #4870A6; }
   .bar.bar-energized .title {
     font-size: 30px;
     font-family: 'Lobster-Regular';
@@ -10026,18 +10026,18 @@ a.item-content {
   font-family: 'Play-Regular'; }
 
 .current {
-  background: #b200e2 !important; }
+  background: #4870A6 !important; }
 
 .item.active.item-complex > .item-content {
-  border-color: #b200e2 !important;
-  background-color: #b200e2 !important;
+  border-color: #4870A6 !important;
+  background-color: #4870A6 !important;
   color: #fff !important; }
 
 .item-complex .item-content {
   color: #000 !important; }
 
 .bg-purpal .item-complex .item-content {
-  background-color: #b200e2 !important;
+  background-color: #4870A6 !important;
   color: #000 !important; }
 
 .btn-header {
@@ -10117,7 +10117,7 @@ a.item-content {
   margin-bottom: 4px !important;
   font-size: 17px;
   font-family: 'AmericanTypewriterRegular';
-  background-color: #b200e2;
+  background-color: #4870A6;
   color: #fff;
   border-radius: 0px;
   line-height: 31px;
@@ -10162,6 +10162,53 @@ a.item-content {
 .twitter-btn a.button.icon:before,
 .twitter-btn a.button.icon-left:before {
   font-size: 20px !important; }
+
+.scroll-bg {
+  background: #fff;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%; }
+
+.login-in {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  bottom: 0; }
+
+.logo {
+  text-align: center;
+  width: 100%;
+  height: 100%; }
+
+.login-set {
+  text-align: center;
+  margin: 0 auto;
+  position: absolute;
+  width: 100%;
+  bottom: 100px; }
+
+.login-set .fb-btn {
+  color: #fff;
+  padding: 10px 50px;
+  font-size: 14px;
+  font-weight: 100;
+  text-transform: uppercase;
+  background: #4465ac;
+  min-width: 300px;
+  display: inline-block; }
+
+.login-set i {
+  font-size: 20px;
+  padding-right: 10px;
+  vertical-align: middle; }
+
+.ion-social-facebook.icon-notice {
+  color: #4870A6; }
+
+.w100 {
+  width: 100%; }
 
 /*------------------------4 home-------------*/
 .home-city {
@@ -10230,7 +10277,7 @@ a.item-content {
   padding-top: 7px !important;
   padding-bottom: 5px !important;
   right: auto;
-  color: #b200e2 !important;
+  color: #4870A6 !important;
   font-size: 20px !important; }
 
 .item-radio input ~ .radio-icon {
@@ -10277,7 +10324,7 @@ a.item-content {
   .table-data p {
     padding-top: 10px;
     font-size: 35px;
-    color: #b200e2; }
+    color: #4870A6; }
 
 .icon-color {
   font-size: 40px;
@@ -10313,7 +10360,7 @@ a.item-content {
     margin-bottom: 10px; }
 
 .predict-here {
-  color: #b200e2;
+  color: #4870A6;
   font-size: 18px; }
 
 /*---------------------7 live-----------------*/
@@ -10334,7 +10381,7 @@ a.item-content {
   top: -35px;
   right: 0;
   left: 0;
-  background-color: #b200e2; }
+  background-color: #4870A6; }
   .score .score-area {
     color: #f0f0f0;
     font-size: 19px; }
@@ -10443,7 +10490,7 @@ a.item-content {
     width: 100%;
     height: 170px;
     content: "";
-    background-color: #b200e2;
+    background-color: #4870A6;
     position: absolute;
     top: 45%;
     left: 0;
