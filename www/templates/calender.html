@@ -37,14 +37,15 @@
                 </div>
                </div>
         </div> -->
+      
 
         <div ng-repeat="match in matchList">
             <div class="day-bg">
                 <div class="d-inline">FRI, {{match.startingTime|date}}</div>
-                <div class="d-inline match-time">{{match.startingTime|date:'HH:mm'}}</div>
+                <div class="d-inline match-time">{{match.startingTime|date:'hh:mm'}}</div>
             </div>
             <div class="matches" ui-sref="app.home({id:match._id})">
-                    <span class="close-time">Close time: 12</span>
+                    <span class="close-time">Close time: {{match.startingTime|timeFilter}}</span>
                 <p>Match No {{match.matchNumber}}, {{match.startingTime|date:'EEEE'}}</p>
               
                 <h4 class="font-Play-Bold">{{match.team1.teamName}}</h4>
