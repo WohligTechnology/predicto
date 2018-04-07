@@ -128,10 +128,6 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     clear: both;
 }
 
-.has-header {
-    top: 70px;
-}
-
 .color-yellow {
     color: $yellow;
 }
@@ -159,10 +155,6 @@ body {
     font-family: 'Play-Regular';
 }
 
-h4 {
-    font-size: 19px !important;
-}
-
 .has-bottom {
     margin-bottom: 200px;
 }
@@ -179,20 +171,21 @@ h4 {
 }
 .page-title {
     h2 {
-        padding: 21px;
-        color: $darkblack;
-        font-size: 30px;
-        background-color: $black;
+        padding: 10px 20px;
+        color: #000;
+        font-size: 24px;
+        background-color: #f0f0f0;
         font-family: 'Play-Regular';
+        letter-spacing: 1px;
     }
 }
 
 .bar.bar-energized {
     background-color: $purpal;
     .title {
-        font-size: 30px;
+        font-size: 27px;
         font-family: 'Lobster-Regular';
-        margin-top: 12px;
+        // margin-top: 12px;
     }
     .button.button-clear {
         margin-top: 20px;
@@ -218,17 +211,62 @@ h4 {
     right: 10px;
 }
 
-.bar {
-    height: 70px !important;
-}
-
 .platform-ios.bar {
     height: 70px !important;
 }
 
 
 /*---------------2 header side menu-----------------------*/
-
+.playlists{
+    .item{
+        border-width: 0px;
+    }
+    i{
+        color: #1c7ccc;
+        padding-right: 10px;
+    }
+   
+}
+.pictop{
+    padding-top:15px;
+}
+.profile-content {
+    padding: 0 0 10px
+}
+.profile-content h4 {
+    margin: 4px 0;
+    font-size: 15px
+}
+.thin {
+    font-size: 17px;
+    font-weight: 300
+}
+.profile-content h3 {
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin: 0 0 5px
+}
+.profile-content h2 {
+    font-weight: 500;
+    font-size: 22px;
+    color: #1c7ccc
+}
+.profile-content .col+.col {
+    border-left: 1px solid #ccc
+}
+.profile-content .row {
+    padding: 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc
+}
+.menu-profile-img{
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto;
+}
 a.item-content {
     font-size: 17px;
     font-family: 'Play-Regular';
@@ -247,6 +285,9 @@ a.item-content {
     // color:#000;
     background-color: $purpal !important;
     color:$light!important;
+}
+.item.active.item-complex >.item-content i{
+    color:$light;
 }
 .item-complex .item-content,{
    
@@ -461,6 +502,10 @@ a.item-content {
 .w100{
     width: 100%;
 }
+.max-auto{
+    max-height: 100%;
+    max-width: 100%;
+}
 /*------------------------4 home-------------*/
 
 .home-city {
@@ -470,7 +515,7 @@ a.item-content {
 .slide-height {
     height: 490px !important;
     .swiper-pagination-bullet {
-        background: $light !important;
+        background: $purpal !important;
     }
     .swiper-pagination {
         bottom: 100px !important;
@@ -485,9 +530,10 @@ a.item-content {
     padding: 35px 30px;
     position: relative;
     .item-icon-left .item-content {
-        font-size: 19px;
+        font-size: 20px;
         font-family: 'Play-Regular';
-        margin: 3px 0px;
+        margin: 5px 0px;
+        padding-right: 0;
     }
     .match-restriction {
         padding: 0px 15px;
@@ -503,7 +549,7 @@ a.item-content {
 }
 
 .question {
-    font-size: 20px;
+    font-size: 22px;
     line-height: 28px;
     font-family: 'Play-Regular';
 }
@@ -522,7 +568,6 @@ a.item-content {
 
 .btn-submit {
     font-size: 13px;
-    background-color: $black;
     color: $light;
     padding: 5px 20px;
     margin-left: 18px;
@@ -530,6 +575,7 @@ a.item-content {
     min-height: 20px;
     border-radius: 0px;
     font-family: 'Play-Bold';
+    background: $purpal;
 }
 
 //radio buttons
@@ -595,15 +641,20 @@ a.item-content {
 }
 
 .table-data {
-  width: 100%;
-    td {
-        font-size: 20px;
-        padding: 7px 10px;
+  padding: 25px 0;
+    .title {
+        font-size: 25px;
+        padding: 0px 10px 0px;
+        color: #387ef5;
+    }
+    .email{
+        font-size: 18px;
+        padding: 10px 20px 40px;
     }
     p{
-        padding-top: 10px;
-        font-size: 35px;
-        color:$purpal;
+        padding-top: 20px;
+        font-size: 36px;
+        color: #444444;
     }
 }
 
@@ -617,12 +668,15 @@ a.item-content {
 
 .mumbai-vs-riders {
     h4 {
-        // font-size: 19px;
+        font-size: 28px;
         font-family: 'Play-Regular';
+        color: #387ef5;    
     }
     span {
-        font-size: 25px;
+        font-size: 18px;
         font-family: 'Play-Regular';
+        color: #387ef5;
+    
     }
 }
 
@@ -815,14 +869,39 @@ color:#a2a2a2;
 /*---------------------------------9 leaderboard css------------------*/
 
 .leaderboard-desc {
-    .item:first-child {
-        padding-top: 30px;
-    }
+    // .item:first-child {
+    //     padding-top: 30px;
+    // }
     .list:first-child {
         margin-top: -11px;
     }
 }
-
+.leaderboard-list{
+    .item h2,p{
+        font-family: 'Play-Regular';
+        font-size: 17px;
+        padding-left: 10px;
+    }
+    h2{
+        line-height: 0.9;
+      
+    }
+    span{
+        padding-left: 10px;
+    }
+}
+.item-note{
+    font-size: 16px;
+    padding-top: 20px;
+    color: #000;
+    font-family: 'Play-Regular';
+}
+.item-avatar {
+    img{
+        max-width: 52px !important;
+        max-height: 52px !important;
+    }
+}
 .leaderboard-desc {
     .name {
         font-size: 17px;
@@ -847,7 +926,14 @@ color:#a2a2a2;
 
 .prize-desc-area {
     padding: 50px 0;
+    margin-top: 50%;
     position: relative;
+    h2{
+        color:$light;
+        font-family: 'Play-Regular';
+        margin: 20px 0px ;
+        margin-bottom: 0px;
+    }
     .prize-img {
         width: 240px;
         margin: auto;
@@ -883,4 +969,8 @@ color:#a2a2a2;
 /////////////////////////////////
 .input-bor {
     border: 1px solid gray !important;
+}
+
+i.radio-icon.ion-checkmark {
+    font-size: 28px !important;
 }

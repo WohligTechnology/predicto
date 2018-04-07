@@ -43,11 +43,11 @@
                 <div class="d-inline">FRI, {{match.startingTime|date}}</div>
                 <div class="d-inline match-time">{{match.startingTime|date:'HH:mm'}}</div>
             </div>
-            <div class="matches">
+            <div class="matches" ui-sref="app.home({id:match._id})">
                 <p>Match No {{match.matchNumber}}, {{match.startingTime|date:'EEEE'}}</p>
                 <h4 class="font-Play-Bold">{{match.team1.teamName}}</h4>
                 <h4 class="font-Play-Bold">{{match.team2.teamName}}</h4>
-                <div class="predict-here" ui-sref="app.home({id:match._id})">
+                <div class="predict-here" >
                     Predict here
                 </div>
             </div>

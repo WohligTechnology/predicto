@@ -1,17 +1,39 @@
-<ion-view view-title="Predicto">
+<ion-view view-title="Leaderboard">
     <ion-content>
         <div class="leaderboard-section">
-            <div class="page-title text-center">
+            <!-- <div class="page-title text-center">
                 <h2 class="padding">Leaderboard</h2>
-            </div>
+            </div> -->
             <div class="leaderboard-desc">
-                <ul class="list leaderboard-list padding-left padding-right">
-                    <li class="item" ng-repeat="item in leaderboard">
+                <!-- <ul class="list leaderboard-list padding-left padding-right"> -->
+                    <!-- <li class="item" ng-repeat="item in leaderboard">
                         <span class="name">{{item.name}}</span>
                         <strong class="item-note item-number">{{item.points}}</strong>
-                    </li>
-               </ul>
-            </div>
+                    </li> -->
+                    <div class="list leaderboard-list">
+                        <a class="item item-avatar" href="#" ng-repeat="item in leaderboard">
+                          <img src="img/download.png">
+
+                          <span class="item-note">
+                                200
+                              </span>
+                              <span>#{{$index + 1}}</span>
+                          <h2>{{item.name}}</h2>
+                          <p>Predicts : 25</p>
+                        </a>
+                        <a class="item item-avatar" href="#" ng-repeat="item in leaderboard">
+                                <img src="img/download.png">
+      
+                                <span class="item-note">
+                                      200
+                                    </span>
+                                    <span>#{{$index + 1}}</span>
+                                <h2>{{item.name}}</h2>
+                                <p>Predicts : 25</p>
+                              </a>
+                    </div>
+               <!-- </ul> -->
+            <!-- </div> -->
         </div>
     </ion-content>
 </ion-view>

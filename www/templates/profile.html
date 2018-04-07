@@ -9,7 +9,7 @@
             <h4 class="font-Play-Bold text-center">{{userDetail.name}}</h4>
         </div>
         <div>
-            <table class="table-data text-center">
+            <div class="table-data text-center">
                 <!-- <tr>
                     <td>birthday:</td>
                     <td>
@@ -22,23 +22,17 @@
                         <span>{{userDetail.mobile}}</span>
                     </td>
                 </tr> -->
-                <tr>
-                    <td>Email</td>
-                </tr>
-                <tr class="padding" >
-                    <td >
+                    <div class="title">Email</div>
+
+                <div class="padding email">
                     {{userDetail.email}}kishoei.bihade@gmail.com
-                    </td>
-                </tr>
-                <tr class="padding">
-                    <td>Score:</td>
-                 </tr>
-                <tr class="mar-t">
-                    <td >
+                </div>
+                <div class="padding title">Score:
+                 </div>
+                <div class="mar-t">
                         <p>{{userDetail.points}}456</p>
-                    </td>
-                </tr>
-            </table>
+                </div>
+            </div>
         </div>
 
     </ion-content>

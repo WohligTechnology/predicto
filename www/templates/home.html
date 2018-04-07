@@ -1,4 +1,4 @@
-<ion-view view-title="predicto" class="bg-black has-bottom">
+<ion-view view-title="Predicto" class="bg-black has-bottom">
     <ion-content scroll="true">
         <div class="mumbai-vs-riders text-center home-city">
             <h4 class="color-white">{{matchName.team1.teamName}}</h4>
@@ -74,16 +74,16 @@
                                 </div>
                                 <i class="radio-icon ion-checkmark"></i>
                             </label> -->
-                            <p class="padding-top">
-                                <button class="button btn-submit" ng-click="predict(bets,data)" ng-disabled="btnDisableWinner  || !bets.answerTeam"> SUBMIT</button>
-                            </p>
+                            <div class="padding-top">
+                                <button class="button button-positive btn-submit" ng-click="predict(bets,data)" ng-disabled="btnDisableWinner  || !bets.answerTeam"> SUBMIT</button>
+                            </div>
                         </form>
                     </div>
                     <div class="question-option" ng-if="data.betName=='IstInningScore'">
                         <form novalidate>
                             <div class="list">
                                 <label class="item item-input">
-                              <input type="number" ng-model="bets.answer">
+                              <input type="text" maxlength="3" ng-model="bets.answer">
                             </label>
                             </div>
                             <!-- <div>
@@ -97,7 +97,7 @@
                             <h5>Player Name: {{matchName.player}}</h5>
                             <div class="list">
                                 <label class="item item-input">
-                                    <input type="number" ng-model="bets.answer">
+                                    <input type="text"  ng-model="bets.answer">
                                 </label>
                             </div>
                             <!-- <div>
