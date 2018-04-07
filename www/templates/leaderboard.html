@@ -12,7 +12,7 @@
                     </li> -->
                     <div class="list leaderboard-list">
                         <a class="item item-avatar" href="#" ng-repeat="item in leaderboard">
-                          <img src={{photo}}>
+                          <img src={{item.userId|serverimage}}>
 
                           <span class="item-note">
                                 {{item.points}}
