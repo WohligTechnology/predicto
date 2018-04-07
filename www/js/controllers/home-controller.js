@@ -89,7 +89,6 @@ myApp.controller('HomeCtrl', function($scope, $log, $window, Predict, $statePara
                             console.log("userId", userId)
                             Predict.callApiWithData("User/predictCount", { _id: userId }, function(count) {
                             console.log("Predicts", count);
-                            window.location.reload();
                             })
                         var myPopup = $ionicPopup.show({
                             title: 'Predict successful',
