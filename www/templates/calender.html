@@ -44,7 +44,9 @@
                 <div class="d-inline match-time">{{match.startingTime|date:'HH:mm'}}</div>
             </div>
             <div class="matches" ui-sref="app.home({id:match._id})">
+                    <span class="close-time">Close time: 12</span>
                 <p>Match No {{match.matchNumber}}, {{match.startingTime|date:'EEEE'}}</p>
+              
                 <h4 class="font-Play-Bold">{{match.team1.teamName}}</h4>
                 <h4 class="font-Play-Bold">{{match.team2.teamName}}</h4>
                 <div class="predict-here" >

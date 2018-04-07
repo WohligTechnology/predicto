@@ -10391,6 +10391,12 @@ a.item-content {
   font-family: 'Play-Regular';
   color: #387ef5; }
 
+.close-time {
+  color: #a2a2a2;
+  float: right;
+  font-size: 15px;
+  font-family: 'Play-Regular'; }
+
 .day-bg {
   padding: 15px;
   font-size: 15px;
