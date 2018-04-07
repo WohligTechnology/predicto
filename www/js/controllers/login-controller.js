@@ -137,7 +137,8 @@ myApp.controller('LoginCtrl', function($scope, $ionicModal, $timeout, $log, $win
                     $scope.socialLoginData = {
                         name: $scope.profileData.name,
                         email: $scope.profileData.email,
-                        socailLoginPhoto: $scope.profileData.picture.data.url
+                        socailLoginPhoto: $scope.profileData.picture.data.url,
+                        userId:$scope.profileData.id
                             // state: Socialstate[1],
                             // city: Socialstate[0],
                             // country: "India"

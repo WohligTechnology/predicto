@@ -40,20 +40,19 @@
                 <div class="backgrounder">
                     <div class="pictop text-center">
                         <div class="menu-profile-img">
-                            <img class="img-responsive" ng-src="https://graph.facebook.com/100001293139521/picture?width=1024&height=1024
-                                                " ng-if="!showuserProfImg">
-                            <img src="img/download.png" ng-if="showuserProfImg">
+                            <img class="img-responsive" ng-src="{{photo}}">
+                            <!-- <img src="img/download.png" ng-if="showuserProfImg"> -->
                         </div>
-                        <h4 class="font-Play-Regular">Ganesh</h4>
+                        <h4 class="font-Play-Regular">{{userDetail.name}}</h4>
                     </div>
                     <div class="profile-content text-center">
                         <div class="row">
                             <div class="col">
-                                <h2 class="font-Play-Regular">2940</h2>
+                                <h2 class="font-Play-Regular">{{userDetail.points}}</h2>
                                 <h3 class="font-Play-Regular">Points</h3>
                             </div>
                             <div class="col">
-                                <h2 class="font-Play-Regular">47596</h2>
+                                <h2 class="font-Play-Regular">{{userDetail.predicts}}</h2>
                                 <h3 class="font-Play-Regular">Predicts</h3>
                             </div>
                         </div>

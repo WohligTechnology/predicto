@@ -15,13 +15,13 @@
                           <img src="img/download.png">
 
                           <span class="item-note">
-                                200
+                                {{item.points}}
                               </span>
                               <span>#{{$index + 1}}</span>
                           <h2>{{item.name}}</h2>
-                          <p>Predicts : 25</p>
+                          <p>Predicts : {{item.predicts}}</p>
                         </a>
-                        <a class="item item-avatar" href="#" ng-repeat="item in leaderboard">
+                        <!-- <a class="item item-avatar" href="#" ng-repeat="item in leaderboard">
                                 <img src="img/download.png">
       
                                 <span class="item-note">
@@ -30,7 +30,7 @@
                                     <span>#{{$index + 1}}</span>
                                 <h2>{{item.name}}</h2>
                                 <p>Predicts : 25</p>
-                              </a>
+                              </a> -->
                     </div>
                <!-- </ul> -->
             <!-- </div> -->

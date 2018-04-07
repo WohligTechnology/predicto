@@ -2,6 +2,10 @@ myApp.controller('LeaderBoardCtrl', function($scope, $log, $window,Predict,$http
 Predict.callApiWithoutData("User/leaderboard",function(data){
     console.log(data.data.data)
     $scope.leaderboard=data.data.data
+    // if($scope.leaderboard.points==null){
+    //     $scope.leaderboard.points=0
+    // }
+   
 })
 
 // $scope.leaderboard = [

@@ -59,11 +59,16 @@ myApp.controller('AppCtrl', function($scope, $ionicModal, $timeout, $log, Predic
     Predict.callApiWithData("User/getone", { _id: userId }, function(userData) {
         $log.log("userData", userData.data.data);
         $scope.userDetail = userData.data.data;
+        if($scope.userDetail.points==''){
+            $scope.userDetail.points=0
+        }
+        // $scope.photo='https://graph.facebook.com/100001293139521/picture?width=1024&height=1024';
+         $scope.photo="https://graph.facebook.com/"+userData.data.data.userId+"/picture?width=1024&height=1024";
 
         // to check if user's profile image is set or not
-        if ($scope.userDetail.photo == "") {
-            $scope.showuserProfImg = true;
-        }
+        // if ($scope.userDetail.photo == "") {
+        //     $scope.showuserProfImg = true;
+        // }
     })
 })
 
