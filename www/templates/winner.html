@@ -1,0 +1,21 @@
+<ion-view view-title="Predict">
+    <ion-content>
+        <div class="text-center ipl-winner">
+            <img src="img/trophy.png" alt="trophyimg">
+            <div class="match-slider">
+                <h4 class="font-Play-Bold">Who will win the IPL?</h4>
+                <form novalidate>
+                 <select>
+                     <option></option>
+                        <option ng-repeat="list in teamList">{{list.teamName}}</option>
+                    </select>
+                    <p>
+                        <button class="button btn-submit" ng-click="predict(bets,data)" ng-disabled="btnDisableTournamentWinner || !bets.answerFinal">
+                        SUBMIT</button>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </ion-content>
+
+</ion-view>

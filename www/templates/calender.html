@@ -37,8 +37,15 @@
                 </div>
                </div>
         </div> -->
-      
-
+        <div>
+           <div class="matches" ui-sref="app.winner">
+               <img src="img/trophy.png" alt="trophyimg" class="trophy">
+                <h4 class="font-Play-Bold d-inline">Who will win the IPL?</h4>
+               <div class="predict-here">
+                Predict here
+            </div>
+        </div>
+        </div>
         <div ng-repeat="match in matchList">
             <div class="day-bg">
                 <div class="d-inline"> {{match.startingTime|date}}</div>
@@ -47,8 +54,7 @@
             <div class="matches" ui-sref="app.home({id:match._id})">
                     <span class="close-time">Close time: {{match.startingTime|timeFilter}}</span>
                 <p>Match No {{match.matchNumber}}, {{match.startingTime|date:'EEEE'}}</p>
-              
-                <h4 class="font-Play-Bold">{{match.team1.teamName}}</h4>
+               <h4 class="font-Play-Bold">{{match.team1.teamName}}</h4>
                 <h4 class="font-Play-Bold">{{match.team2.teamName}}</h4>
                 <div class="predict-here" >
                     Predict here

@@ -101,6 +101,16 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider)
                 }
             }
         })
+        .state('app.winner', {
+            url: '/winner',
+
+           views: {
+                'menuContent': {
+                    templateUrl: 'templates/winner.html',
+                    controller: 'WinnerCtrl'
+                }
+            }
+        })
         .state('app.profile', {
             url: '/profile',
             views: {

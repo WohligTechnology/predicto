@@ -744,6 +744,25 @@ color:#a2a2a2;
     color:$purpal;
     font-size: 18px;
 }
+
+.trophy{
+    width: 20px;
+    margin-right: 10px;
+}
+/*---------------winner------------*/
+.ipl-winner{
+    img{
+        margin-top: 40px;
+    }
+  select{
+    width: 90%;
+    padding: 9px;
+    margin: 5px 0px 20px;
+  }
+    .match-slider{
+        padding: 5px 30px;
+    }
+}
 /*---------------------7 live-----------------*/
 
 .score-detail {
