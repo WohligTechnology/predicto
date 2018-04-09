@@ -6,17 +6,16 @@ myApp.controller('HomeCtrl', function($scope, $log, $window, Predict, $statePara
     Predict.callApiWithData("Match/getone", { _id: matchId }, function(data) {
         $scope.matchName = data.data.data
         console.log("***********************************", data)
-        //var endTime=new Date()
-        var endTime = moment.utc(new Date()).add(30,'minutes').format()
+            //var endTime=new Date()
+        var endTime = moment.utc(new Date()).add(30, 'minutes').format()
         var startTime = $scope.matchName.startingTime
         console.log("start time", startTime)
         console.log("end time", endTime)
-        console.log("comparison",moment(endTime).isAfter(startTime));
-        if(moment(endTime).isAfter(startTime))
-        {
-            $scope.matchRestriction=true
-        }else{
-            $scope.matchRestriction=false
+        console.log("comparison", moment(endTime).isAfter(startTime));
+        if (moment(endTime).isAfter(startTime)) {
+            $scope.matchRestriction = true
+        } else {
+            $scope.matchRestriction = false
         }
     })
 
@@ -25,10 +24,10 @@ myApp.controller('HomeCtrl', function($scope, $log, $window, Predict, $statePara
         $scope.slider = data.slider;
     });
 
-    Predict.callApiWithoutData("betType/search", function(data) {
-        $scope.teamSlider = data.data.data.results
-        console.log("$scope.teamSlider", data)
-            // if($scope.teamSlider.betName==IstInningScore){
+    Predict.callApiWithData("betType/getBetType", { user: userId, match: matchId }, function(data) {
+        $scope.teamSlider = data.data.data
+        console.log("betType", data.data.data)
+
     });
     Predict.callApiWithoutData("Team/search", function(data) {
         $scope.teamList = data.data.data.results
@@ -71,10 +70,10 @@ myApp.controller('HomeCtrl', function($scope, $log, $window, Predict, $statePara
             // Predict.callApiWithData("UserBets/findBets", bets, function(data) {
             //     console.log("is available", data.data.value);
             //     if (data.data.value == false) {
-                   
+
             //     } else {
             //         console.log("bet has already been done");
-                  
+
             //     }
             // })
 
@@ -83,21 +82,21 @@ myApp.controller('HomeCtrl', function($scope, $log, $window, Predict, $statePara
             Predict.callApiWithData("UserBets/findBets", bets, function(data) {
                 console.log("is available", data.data.value);
                 if (data.data.value == false) {
-                    Predict.callApiWithData("UserBets/save", bets, function(data) {
+                    Predict.callApiWithData("UserBets/addUserBets", bets, function(data) {
                         console.log("$$$$$$$$$$$$$$$", data);
                         if (data.data.value == true) {
                             console.log("userId", userId)
                             Predict.callApiWithData("User/predictCount", { _id: userId }, function(count) {
-                            console.log("Predicts", count);
+                                console.log("Predicts", count);
                             })
-                        var myPopup = $ionicPopup.show({
-                            title: 'Predict successful',
-                            scope: $scope
-                        });
-                        $timeout(function() {
-                            myPopup.close();
-                        }, 1500);
-                    }
+                            var myPopup = $ionicPopup.show({
+                                title: 'Predict successful',
+                                scope: $scope
+                            });
+                            $timeout(function() {
+                                myPopup.close();
+                            }, 1500);
+                        }
                     });
                 } else {
                     console.log("bet has already been done");
