@@ -5,12 +5,12 @@
             <div class="match-slider">
                 <h4 class="font-Play-Bold">Who will win the IPL?</h4>
                 <form novalidate>
-                 <select>
+                    <select ng-model="bets.answerFinal">
                      <option></option>
-                        <option ng-repeat="list in teamList">{{list.teamName}}</option>
+                        <option ng-repeat="list in teamList" value="{{list._id}}">{{list.teamName}}</option>
                     </select>
                     <p>
-                        <button class="button btn-submit" ng-click="predict(bets,data)" ng-disabled="btnDisableTournamentWinner || !bets.answerFinal">
+                        <button class="button btn-submit" ng-click="predict(bets)" ng-disabled="btnDisableTournamentWinner || !bets.answerFinal">
                         SUBMIT</button>
                     </p>
                 </form>
