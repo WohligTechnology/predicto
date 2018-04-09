@@ -41,7 +41,7 @@
 
         <div ng-repeat="match in matchList">
             <div class="day-bg">
-                <div class="d-inline">FRI, {{match.startingTime|date}}</div>
+                <div class="d-inline"> {{match.startingTime|date}}</div>
                 <div class="d-inline match-time">{{match.startingTime|date:'hh:mm'}}</div>
             </div>
             <div class="matches" ui-sref="app.home({id:match._id})">
