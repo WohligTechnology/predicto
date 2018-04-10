@@ -29,6 +29,11 @@ myApp.controller('HomeCtrl', function($scope, $log, $window, Predict, $statePara
         console.log("betType", data.data.data)
 
     });
+    // Predict.callApiWithData("betType/search", { user: userId, match: matchId }, function(data) {
+    //     $scope.teamSlider = data.data.data.results
+    //     console.log("betType", data.data.data.results)
+
+    // });
     Predict.callApiWithoutData("Team/search", function(data) {
         $scope.teamList = data.data.data.results
         console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%", data)
