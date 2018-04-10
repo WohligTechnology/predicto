@@ -37,7 +37,7 @@
                 </div>
                </div>
         </div> -->
-        <div>
+        <div ng-if="!teamSlider.betDone">
            <div class="matches" ui-sref="app.winner">
                <img src="img/trophy.png" alt="trophyimg" class="trophy">
                 <h4 class="font-Play-Bold d-inline">Who will win the IPL?</h4>
@@ -61,5 +61,14 @@
                 </div>
             </div>
         </div>
+        <div ng-if="teamSlider.betDone">
+            <div class="matches">
+                <img src="img/trophy.png" alt="trophyimg" class="trophy">
+                 <h4 class="font-Play-Bold d-inline">Who will win the IPL?</h4>
+                <div class="predict-here">
+                 Predict Done
+             </div>
+         </div>
+         </div>
    </ion-content>
 </ion-view>

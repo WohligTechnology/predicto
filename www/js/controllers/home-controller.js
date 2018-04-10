@@ -88,7 +88,12 @@ myApp.controller('HomeCtrl', function($scope, $log, $window, Predict, $statePara
                 console.log("is available", data.data.value);
                 if (data.data.value == false) {
                     Predict.callApiWithData("UserBets/addUserBets", bets, function(data) {
-                        console.log("$$$$$$$$$$$$$$$", data);
+                        console.log("$$$$$$$$$$$$$$$", data);  
+                        Predict.callApiWithData("betType/getBetType", { user: userId, match: matchId }, function(data) {
+                            $scope.teamSlider = data.data.data
+                            console.log("betType", data.data.data)
+                            
+                        });
                         if (data.data.value == true) {
                             console.log("userId", userId)
                             Predict.callApiWithData("User/predictCount", { _id: userId }, function(count) {

@@ -6,7 +6,7 @@
 // 'starter.controllers' is found in controllers.js
 var myApp = angular.module('starter', ['ionic', 'starter.controllers','starter.services','ngCordova','ngCordovaOauth']);
 
-myApp.run(function ($ionicPlatform) {
+myApp.run(function ($ionicPlatform,$rootScope, $state) {
     $ionicPlatform.ready(function () {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
@@ -20,7 +20,25 @@ myApp.run(function ($ionicPlatform) {
             StatusBar.styleDefault();
         }
     });
-})
+
+    $ionicPlatform.registerBackButtonAction(function (e) {
+        console.log("hello")
+        if ($state.current.name == 'tab.calender') {
+          ionic.Platform.exitApp();
+          console.log("hello")
+        } else {
+          navigator.app.backHistory();
+          console.log("hello")
+        }
+      }, 100);
+  
+      $rootScope.$on('SendUp', function (event, args) {
+        $rootScope.font = args.message;
+        console.log($rootScope.font);
+      })
+     
+    })
+
 
 myApp.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
 

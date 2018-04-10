@@ -10,8 +10,8 @@
         <div>
         </div>
         <ion-slides options="options" slider="data.slider" class="slide-height">
-            <ion-slide-page ng-repeat="data in teamSlider track by $index">
-                <div class="match-slider">
+            <ion-slide-page ng-repeat="data in teamSlider track by $index" ng-if="data.betName!='tournamentWinner'">
+                <div class="match-slider" >
                     <div class="match-restriction text-center" ng-if="matchRestriction">
                         <div class="d-table">
                             <div class="match-restriction-title d-cell align-middle">
@@ -52,7 +52,7 @@
                             </p>
                         </form>
                     </div>
-                    <div ng-if="data.betName=='Winner' ">
+                    <div ng-if="data.betName=='Winner'">
                         <form>
                             <label class="item item-icon-left item-radio" style="border: none">
                                 <input type="radio" name="group" value="team1" ng-model="bets.answerTeam">
@@ -107,7 +107,7 @@
                             <p> <button class="button btn-submit" ng-click="predict(bets,data)" ng-disabled="btnDisableIstPlayerScore || !bets.answer"> SUBMIT</button> </p>
                         </form>
                     </div>
-                    <div class="question-option" ng-if="data.betName=='tournamentWinner'">
+                    <!-- <div class="question-option" ng-if="data.betName=='tournamentWinner'">
                         <form novalidate>
                             <div class="list">
 
@@ -122,7 +122,7 @@
                             </p>
                         </form>
                     </div>
-                </div>
+                </div> -->
             </ion-slide-page>
         </ion-slides>
     </ion-content>
