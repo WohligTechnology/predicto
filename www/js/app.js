@@ -23,7 +23,7 @@ myApp.run(function ($ionicPlatform,$rootScope, $state) {
 
     $ionicPlatform.registerBackButtonAction(function (e) {
         console.log("hello")
-        if ($state.current.name == 'tab.calender') {
+        if ($state.current.name == 'app.calender') {
           ionic.Platform.exitApp();
           console.log("hello")
         } else {

@@ -48,7 +48,7 @@
                                 <i class="radio-icon ion-checkmark"></i>
                             </label> -->
                             <p class="padding-top">
-                                <button class="button btn-submit" ng-click="predict(bets,data)" ng-disabled="btnDisableTossWinner || !bets.answerTeam"> SUBMIT</button>
+                                <button class="button btn-submit" ng-click="predict(bets,data)" ng-disabled="btnDisableTossWinner || !bets.answerTeam" ng-if="!data.betDone"> SUBMIT</button>
                             </p>
                         </form>
                     </div>
@@ -76,7 +76,7 @@
                                 <i class="radio-icon ion-checkmark"></i>
                             </label> -->
                             <div class="padding-top">
-                                <button class="button button-positive btn-submit" ng-click="predict(bets,data)" ng-disabled="btnDisableWinner  || !bets.answerTeam"> SUBMIT</button>
+                                <button class="button button-positive btn-submit" ng-click="predict(bets,data)" ng-disabled="btnDisableWinner  || !bets.answerTeam" ng-if="!data.betDone"> SUBMIT</button>
                             </div>
                         </form>
                     </div>
@@ -90,7 +90,7 @@
                             <!-- <div>
                                 <input type="number" class="input-bor" ng-model="bets.answer">
                             </div> -->
-                            <p> <button class="button btn-submit" ng-click="predict(bets,data)" ng-disabled="btnDisableIstInningScore || !bets.answer"> SUBMIT</button> </p>
+                            <p> <button class="button btn-submit" ng-click="predict(bets,data)" ng-disabled="btnDisableIstInningScore || !bets.answer" ng-if="!data.betDone"> SUBMIT</button> </p>
                         </form>
                     </div>
                     <div ng-if="data.betName=='playerScore'">
@@ -104,7 +104,7 @@
                             <!-- <div>
                                 <input type="number" class="input-bor" ng-model="bets.answer">
                             </div> -->
-                            <p> <button class="button btn-submit" ng-click="predict(bets,data)" ng-disabled="btnDisableIstPlayerScore || !bets.answer"> SUBMIT</button> </p>
+                            <p> <button class="button btn-submit" ng-click="predict(bets,data)" ng-disabled="btnDisableIstPlayerScore || !bets.answer" ng-if="!data.betDone"> SUBMIT</button> </p>
                         </form>
                     </div>
                     <!-- <div class="question-option" ng-if="data.betName=='tournamentWinner'">

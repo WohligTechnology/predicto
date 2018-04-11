@@ -7331,11 +7331,12 @@ ion-slides {
   box-sizing: border-box;
   /* Center slide text vertically */ }
   .swiper-slide img {
-    /* width: auto; */
-    /* height: auto; */
-    float: right;
+    /* width: auto;
+    height: auto; */
     max-width: 100%;
-    max-height: 100%; }
+    max-height: 100%; 
+    float: right;
+  }
 
 .scroll-refresher {
   position: absolute;

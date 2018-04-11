@@ -13,7 +13,7 @@ myApp.controller('WinnerCtrl', function($scope, $log, Predict,$ionicPopover, $ti
     
     $scope.predict = function(bets) {
         bets.user = userId
-        bets.betType = '5ab8aac1e041644734ddcef2'
+        bets.betType = '5acd99f19becf316c7d3bca8'
         if($scope.teamSlider.betDone){
             var myPopup = $ionicPopup.show({
                 title: 'Predict already done',
@@ -28,7 +28,7 @@ myApp.controller('WinnerCtrl', function($scope, $log, Predict,$ionicPopover, $ti
             Predict.callApiWithData("betType/getBetTypeFinal", { user: userId, betName: 'tournamentWinner'}, function(data) {
                 $scope.teamSlider = data.data.data
                 console.log("betType", data.data.data)
-                
+                window.location.reload()
             });
         })
         var myPopup = $ionicPopup.show({

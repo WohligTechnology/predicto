@@ -11,7 +11,7 @@
                         <option ng-repeat="list in teamList" value="{{list._id}}">{{list.teamName}}</option>
                     </select>
                     <p>
-                        <button class="button btn-submit" ng-click="predict(bets)" ng-disabled="btnDisableTournamentWinner || !bets.answerFinal">
+                        <button class="button btn-submit" ng-click="predict(bets)" ng-disabled="btnDisableTournamentWinner || !bets.answerFinal" ng-if="!teamSlider.betDone">
                         SUBMIT</button>
                     </p>
                 </form>
