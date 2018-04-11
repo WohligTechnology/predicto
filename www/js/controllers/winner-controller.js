@@ -5,7 +5,7 @@ myApp.controller('WinnerCtrl', function($scope, $log, Predict,$ionicPopover, $ti
         console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%", data)
             // if($scope.teamSlider.betName==IstInningScore){
     });
-    Predict.callApiWithData("betType/getBetTypeFinal", { user: userId, betType: '5ab8aac1e041644734ddcef2' }, function(data) {
+    Predict.callApiWithData("betType/getBetTypeFinal", { user: userId, betName: 'tournamentWinner' }, function(data) {
         $scope.teamSlider = data.data.data
         console.log("betType", data.data.data)
 
@@ -25,7 +25,7 @@ myApp.controller('WinnerCtrl', function($scope, $log, Predict,$ionicPopover, $ti
         }else{
         Predict.callApiWithData("UserBets/addUserBets", bets, function(saveResult) {
             console.log(saveResult)
-            Predict.callApiWithData("betType/getBetTypeFinal", { user: userId, betType: '5ab8aac1e041644734ddcef2'}, function(data) {
+            Predict.callApiWithData("betType/getBetTypeFinal", { user: userId, betName: 'tournamentWinner'}, function(data) {
                 $scope.teamSlider = data.data.data
                 console.log("betType", data.data.data)
                 
