@@ -7,8 +7,6 @@ myApp.controller('WinnerCtrl', function($scope, $log, Predict,$ionicPopover, $ti
     });
     Predict.callApiWithData("betType/getBetTypeFinal", { user: userId, betName: 'tournamentWinner' }, function(data) {
         $scope.teamSlider = data.data.data
-        console.log("betType", data.data.data)
-
     });
     
     $scope.predict = function(bets) {

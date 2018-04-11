@@ -2,7 +2,7 @@
     <ion-content>
         <div class="text-center ipl-winner">
             <img src="img/trophy.png" alt="trophyimg">
-            <img src="img/index.png" alt="answer" class="ans" ng-if="teamSlider.betDone">
+            
             <div class="match-slider">
                 <h4 class="font-Play-Bold">Who will win the IPL?</h4>
                 <form novalidate>
@@ -10,10 +10,14 @@
                      <option></option>
                         <option ng-repeat="list in teamList" value="{{list._id}}">{{list.teamName}}</option>
                     </select>
-                    <p>
+                    
+                        <div class="padding-top text-center">
+                                <p>
                         <button class="button btn-submit" ng-click="predict(bets)" ng-disabled="btnDisableTournamentWinner || !bets.answerFinal" ng-if="!teamSlider.betDone">
-                        SUBMIT</button>
-                    </p>
+                        SUBMIT</button> </p>
+                        <img src="img/index.png" alt="answer" class="ans" ng-if="teamSlider.betDone">
+                    </div>
+                   
                 </form>
             </div>
         </div>
